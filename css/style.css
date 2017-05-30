@@ -57,7 +57,7 @@ body {
 
 #linksHeader{
     float: left;
-    color: #fff;
+    color: #555;
     text-transform: uppercase;
     font-style: italic;
 
@@ -72,7 +72,7 @@ body {
 }
 
 ul.nav.navbar-nav.navbar-right li {
-    color : white;
+    color: #555;
 }
 
 /*#main-nav{*/
