@@ -9,9 +9,14 @@ body {
 }
 
 
+#theCarousel{
+
+}
+
 
 .slide1{
     background-image: url("../img/tmuxfinal.png");
+    background-attachment: fixed;
     height: 975px;
     background-repeat: no-repeat;
     background-position: center;
@@ -19,7 +24,7 @@ body {
 }
 .slide2{
     background-image: url('../img/italian-landscape-mountains-nature.jpg');
-
+    background-attachment: fixed;
     height: 975px;
     background-repeat: no-repeat;
     background-position: center;
@@ -27,7 +32,7 @@ body {
 }
 .slide3{
     background-image: url('../img/tmuxfinal.png');
-
+    background-attachment: fixed;
     height: 975px;
     background-repeat: no-repeat;
     background-position: center;
