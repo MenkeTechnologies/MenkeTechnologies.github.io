@@ -8,6 +8,11 @@ body {
     padding: 0;
 }
 
+h4{
+    font-family: 'Pacifico';
+    font-size: 100px;
+}
+
 
 .slide1{
     background-image: url("../img/tmuxfinal.png");
