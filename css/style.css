@@ -8,10 +8,6 @@ body {
     padding: 0;
 }
 
-h4{
-    font-family: 'Pacifico';
-    font-size: 100px;
-}
 
 
 .slide1{
@@ -181,6 +177,13 @@ h4 {
     font-size: 24px;
     margin: 0px 0px 50px 0px;
 }
+
+h5{
+    font-family: 'Pacifico';
+    font-size: 100px;
+}
+
+
 
 p {
     color: #333;
