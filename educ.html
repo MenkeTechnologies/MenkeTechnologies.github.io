@@ -79,7 +79,6 @@
 </div>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
 
@@ -89,10 +88,44 @@
 
 
 
+        var anim = "Default";
+
+        var title = "h3";
+
+        var elem = "h3";
+
+        var div = ".products";
+
+        $(elem).css("position", "relative");
+//
+        $(elem).css("left", "1000px");
+
+
+        var self = this;
+
+        $(elem).each(function (index) {
+
+                $(this).slideDown();
+
+
+
+
+                $(this).animate({
+                    left: 0
+
+                }, 100*(index +1), function () {
+
+                });
+
+
+
+            }
+
+        );
 
         $("h5").fadeOut(0);
 
-        $("h5").fadeIn(1000);
+        $("h5").fadeIn(2000);
 
 
     });
