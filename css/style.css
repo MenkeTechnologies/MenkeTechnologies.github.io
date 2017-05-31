@@ -163,7 +163,14 @@ h2 {
     font-weight: 300;
     text-align: center;
 }
+.first, h3:first-letter{
+    font-weight: 900;
+    font-size: 30px;
+    color: #335;
+    text-transform: uppercase;
 
+
+}
 
 
 
