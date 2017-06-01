@@ -221,11 +221,12 @@ a {
 
 .products {
     border-radius: 10px;
-    background: #EEEFF1;
+    background: #fafafa;
     box-sizing: border-box;
     width: 90%;
     margin: 20px auto;
     padding: 20px 0px;
+    padding-top: 50px;
     text-align: center;
 }
 
@@ -234,6 +235,11 @@ a {
     margin: 0px 2% 80px 2%;
     text-align: center;
     width: 45%;
+}
+
+.well.form-horizontal{
+    background: transparent;
+    border: none;
 }
 
 .product img {
