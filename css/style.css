@@ -250,6 +250,16 @@ a {
     color: #14213D !important;
 }
 
+li:hover, .btn:hover{
+    -webkit-transform: scale(1.02);
+}
+
+.btn:hover{
+    color: whitesmoke;
+
+}
+
+
 @media only screen and ( max-width: 800px) {
 
     h2{

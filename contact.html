@@ -429,9 +429,9 @@
 
         $(elem).css("position", "relative");
 //
+
+
         $(elem).css("top", "1000px");
-
-
         var self = this;
 
         $("div").each(function () {
@@ -439,15 +439,40 @@
 
         });
 
+        $(function() {
+            var $elie = $("h5"), degree = 0, timer;
+
+            rotate();
+            function rotate() {
+
+                $elie.css({ WebkitTransform: 'rotate(' + degree + 'deg)'});
+                $elie.css({ '-moz-transform': 'rotate(' + degree + 'deg)'});
+                timer = setTimeout(function() {
+
+                    degree+=8; rotate();
+                },1);
+                if (degree >= 360){
+                    clearTimeout(timer);
+                }
+            }
+
+
+
+
+
+        });
+
+
 
         $(elem).each(function (index) {
 
 
 
                 $(this).animate({
-                    top: 0
+                    top: 0,
+                    right: 0
 
-                }, 200*index, "linear", function () {
+                }, 100*(index+1*20), "easeInOutElastic", function () {
 
                 });
 
