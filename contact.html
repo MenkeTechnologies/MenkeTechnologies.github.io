@@ -429,7 +429,7 @@
 
         $(elem).css("position", "relative");
 //
-        $(elem).css("left", "1000px");
+        $(elem).css("top", "1000px");
 
 
         var self = this;
@@ -445,9 +445,9 @@
 
 
                 $(this).animate({
-                    left: 0
+                    top: 0
 
-                }, 100*index, function () {
+                }, 200*index, "linear", function () {
 
                 });
 
