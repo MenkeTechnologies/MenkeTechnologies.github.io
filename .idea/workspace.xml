@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f7cfad3c-d765-4342-923f-e2e2f2d317c0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contact.html" afterPath="$PROJECT_DIR$/contact.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -42,8 +40,8 @@
       <file leaf-file-name="contact.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/contact.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="451" column="29" lean-forward="false" selection-start-line="451" selection-start-column="29" selection-end-line="451" selection-end-column="29" />
+            <state relative-caret-position="334">
+              <caret line="457" column="0" lean-forward="true" selection-start-line="457" selection-start-column="0" selection-end-line="457" selection-end-column="0" />
               <folding>
                 <marker date="1496293926000" expanded="true" signature="17895:17907" ph="..." />
               </folding>
@@ -377,12 +375,12 @@
       <workItem from="1496270067522" duration="4188000" />
       <workItem from="1496276419010" duration="63000" />
       <workItem from="1496290935493" duration="985000" />
-      <workItem from="1496292435097" duration="1449000" />
+      <workItem from="1496292435097" duration="1520000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17158000" />
+    <option name="totallyTimeSpent" value="17229000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="868" y="24" width="1070" height="1172" extended-state="0" />
@@ -821,8 +819,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/contact.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="451" column="29" lean-forward="false" selection-start-line="451" selection-start-column="29" selection-end-line="451" selection-end-column="29" />
+        <state relative-caret-position="334">
+          <caret line="457" column="0" lean-forward="true" selection-start-line="457" selection-start-column="0" selection-end-line="457" selection-end-column="0" />
           <folding>
             <marker date="1496293926000" expanded="true" signature="17895:17907" ph="..." />
           </folding>
