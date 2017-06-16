@@ -181,6 +181,13 @@ h3 {
 		text-align: center;
 		text-transform: uppercase;
 }
+h6 {
+		color: #14213D;
+		font-family: 'Abel', sans-serif;
+		font-size: 28px;
+		text-align: center;
+		text-transform: uppercase;
+}
 
 h4 {
 		color: #FCA311;
