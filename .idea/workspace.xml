@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f7cfad3c-d765-4342-923f-e2e2f2d317c0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/educ.html" afterPath="$PROJECT_DIR$/educ.html" />
-    </list>
+    <list default="true" id="f7cfad3c-d765-4342-923f-e2e2f2d317c0" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -53,8 +50,8 @@
       <file leaf-file-name="educ.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/educ.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="64" column="66" lean-forward="false" selection-start-line="64" selection-start-column="66" selection-end-line="64" selection-end-column="66" />
+            <state relative-caret-position="209">
+              <caret line="63" column="63" lean-forward="false" selection-start-line="63" selection-start-column="63" selection-end-line="63" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -378,12 +375,12 @@
       <workItem from="1496290935493" duration="985000" />
       <workItem from="1496292435097" duration="1520000" />
       <workItem from="1497019700115" duration="69000" />
-      <workItem from="1497066872753" duration="59000" />
+      <workItem from="1497066872753" duration="117000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17357000" />
+    <option name="totallyTimeSpent" value="17415000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="44" y="23" width="1920" height="1172" extended-state="0" />
@@ -824,8 +821,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/educ.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="64" column="66" lean-forward="false" selection-start-line="64" selection-start-column="66" selection-end-line="64" selection-end-column="66" />
+        <state relative-caret-position="209">
+          <caret line="63" column="63" lean-forward="false" selection-start-line="63" selection-start-column="63" selection-end-line="63" selection-end-column="63" />
           <folding />
         </state>
       </provider>
