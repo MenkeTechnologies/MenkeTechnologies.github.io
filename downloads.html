@@ -2,21 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style.css">
+    <title>Downloads</title>
     <link href="https://fonts.googleapis.com/css?family=Abel|Amatic+SC|Roboto:100|Pacifico|Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
-
     <link rel="stylesheet" href="css/startup.css">
-
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-    <title>Education</title>
+
+
 </head>
 <body>
+
 <nav class="navbar navbar-fixed-top navbar-default" id="main-nav">
     <div class="container">
 
@@ -59,95 +59,53 @@
 </nav>
 
 
-<div class="products" >
-    <h5>Degrees</h5>
-    <h3><span class="first">BS</span> Computer Science 2018</h3>
-    <h3pwd><span class="first">AS</span>  C++ Programming 2018</h3pwd
-    >
-    <h3><span class="first">AAS</span> Electronics Technology 2018</h3>
-    <h3><span class="first">AS</span> Java Programming</h3>
-    <h3><span class="first">BS</span>  Biology</h3>
-    <h3><span class="first">BA</span>  German Studies, Government</h3>
+<div class="products">
+    <h3 class="blue">Downloads</h3>
+    <div class="product">
+        <img src="img/bluewolf.png" width="1000px">
+        <h3>Bluewolf Vim Colorscheme</h3>
+        <p>Works with Markology.</p>
 
-    <h5><span class=first">C</span>ertificates</h5>
-    <h3><span class="first">W</span>eb Database Programming</h3>
-    <h3><span class="first">J</span>ava Programming</h3>
-    <h3><span class="first">E</span>lectronics Tech</h3>
-    <h3><span class="first">M</span>anufactoring Processes</h3>
-    <h3><span class="first">C</span>++ Programming</h3>
+        <a href="downloads/bluewolf.vim" class="btn">Download</a>
+    </div>
 
+    <div class="product">
+        <img src="img/tmuxrc.png">
+        <h3>Tmux Configuration</h3>
+        <p>Powerline-Oriented Tmux Setup</p>
 
+        <a href="downloads/.tmux.conf" class="btn">Download</a>
+
+    </div>
+
+    <div class="product">
+        <img src="img/vimrc.png">
+        <h3>Vim Configuration</h3>
+        <p>Includes Custom VimL Functions</p>
+
+        <a href="downloads/.vimrc" class="btn">Download</a>
+
+    </div>
+
+    <div class="product">
+        <img src="img/zshrc.png">
+        <h3>Zsh Configuration</h3>
+        <p>Includes My Custom Powerlevel 9k Prompt</p>
+
+        <a href="downloads/.shell_aliases_functions.sh" class="btn">Download</a>
+
+    </div>
+</div>
+
+<a href="https://www.youtube.com/channel/UCLOQFBXPrcVvO2Wb3wna8Ow" target="_blank"><h6 id="youtubeLink">Watch My Tutorials <span class="glyphicon glyphicon-hd-video"</h6></a>
+<h3>Built in Ann Arbor Michigan</h3>
 
 </div>
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
 
-
-<script>
-
-//    var h3s = document.getElementsBycl
-//
-//    for (var i = 0; i < h3s.length; i++){
-//        var text = h3s[i].innerHTML;
-//
-//        var endText = "<strong>" + text[0] + "</strong>" + text.slice(1);
-//        h3s[i].innerHTML = endText;
-//
-//
-//    }
-
-
-    $(document).ready(function () {
-
-
-
-        var anim = "Default";
-
-        var title = "h3";
-
-        var elem = "h3";
-
-        var div = ".products";
-
-        $(elem).css("position", "relative");
-//
-        $(elem).css("right", "1000px");
-
-
-        var self = this;
-
-        $(elem).each(function (index) {
-
-                $(this).slideDown();
-
-
-
-
-                $(this).animate({
-                    right: 0
-
-                }, 100*(index +1), function () {
-
-                });
-
-
-
-            }
-
-        );
-
-//        $("h5").fadeOut(0);
-
-        $("h5").animate({
-            opacity: 1
-        }, 2000);
-
-
-
-    });
-</script>
 
 </body>
 </html>
