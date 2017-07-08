@@ -312,7 +312,6 @@ humanReadable(){
     mp4(){
         youtube-dl --no-playlist -f mp4 "$1"
     }
-
     prettyPrint(){
         if [[ ! -z "$1" ]]; then
             printf "\e[1m$1\e[0m\n"
@@ -321,11 +320,9 @@ humanReadable(){
             return 1
         fi
     }
-
     tac(){
     sed '1!G;h;$!d' "$@"
     }
     #}}}***********************************************************
 
     source "$HOME/.tokens.sh"
-
