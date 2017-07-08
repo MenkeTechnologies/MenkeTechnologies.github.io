@@ -207,17 +207,14 @@ humanReadable(){
     }
     {gsub(/^[0-9]+/, human($1));print}'
     }
-
     f(){
         cd "$1"
         clearList
     }
-
     execpy(){
         python3 $PYSCRIPTS/"$1"
 
     }
-
     search(){
         if [[ -z $2 ]];then
             grep -iRnC 5 "$1" *
@@ -226,12 +223,10 @@ humanReadable(){
         fi
 
     }
-
     cd(){
         builtin cd "$@";
         clearList
     }
-
     gitCommitAndPush(){
         printf "\e[1m"
         /usr/local/bin/git add .
@@ -239,7 +234,6 @@ humanReadable(){
         /usr/local/bin/git push
         printf "\e[0m"
     }
-
     replacer(){
         orig="$1"
         shift
@@ -248,7 +242,6 @@ humanReadable(){
         sed -i'' "s/$orig/$replace/g" $@
 
     }
-
     createGIF(){
         outFile=out.gif
         res=600x400
@@ -268,7 +261,6 @@ humanReadable(){
 
         ffmpeg -i "$1" -s "$res" -pix_fmt rgb24 -r 10 -f gif - | gifsicle --optimize=3 --delay=3 > "$outFile" 
     }
-
     hub_create(){
         printf "\e[1m"
         git init
@@ -281,7 +273,6 @@ humanReadable(){
         printf "\e[0m"
 
     }
-
     hub_delete(){
         if [[ -z "$1" ]]; then
             echo "need a REPO NAME" >&2
@@ -304,26 +295,20 @@ humanReadable(){
         bash $SCRIPTS/myWatchNoBlink.sh 'pstree -g 2 -u jacobmenke | sed s/jacobmenke// | sed s@/.*/@@ | tail -75'
 
     }
-
     return2(){
         exec 2> /dev/tty
     }
-
     color2(){
         exec 2> >(redText.sh)
     }
-
     escapeRemove(){
         while read INPUT; do
             echo "$INPUT" | sed -e 's/\e\[.\{1,5\}m//g'
         done
-
     }
-
     mp3(){
         youtube-dl --extract-audio --audio-format mp3 "$1"
     }
-
     mp4(){
         youtube-dl --no-playlist -f mp4 "$1"
     }
