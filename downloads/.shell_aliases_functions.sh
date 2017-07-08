@@ -207,14 +207,17 @@ humanReadable(){
     }
     {gsub(/^[0-9]+/, human($1));print}'
     }
+
     f(){
         cd "$1"
         clearList
     }
+
     execpy(){
         python3 $PYSCRIPTS/"$1"
 
     }
+
     search(){
         if [[ -z $2 ]];then
             grep -iRnC 5 "$1" *
@@ -223,12 +226,12 @@ humanReadable(){
         fi
 
     }
+
     cd(){
         builtin cd "$@";
-
         clearList
-
     }
+
     gitCommitAndPush(){
         printf "\e[1m"
         /usr/local/bin/git add .
@@ -236,6 +239,7 @@ humanReadable(){
         /usr/local/bin/git push
         printf "\e[0m"
     }
+
     replacer(){
         orig="$1"
         shift
@@ -244,6 +248,7 @@ humanReadable(){
         sed -i'' "s/$orig/$replace/g" $@
 
     }
+
     createGIF(){
         outFile=out.gif
         res=600x400
