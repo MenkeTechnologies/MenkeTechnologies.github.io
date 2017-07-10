@@ -1,6 +1,6 @@
-#!/usr/bin/env bash
 
-set -x
+
+#set -x
 
 #make cursor visible and get rid of bold
 trap 'tput cnorm; printf "\e[0m"; exit' INT
