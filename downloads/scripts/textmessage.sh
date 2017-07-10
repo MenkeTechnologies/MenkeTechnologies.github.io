@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+
+
 
 prettyPrint () {
 	if [[ ! -z "$1" ]]
