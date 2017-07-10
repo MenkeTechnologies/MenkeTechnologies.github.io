@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+
+
 printf "${BLUE}Downloading $*\n"
 for i in "$@"; do
 	scp -P1234 -r "$i" jacobmenke@localhost:~/Desktop
