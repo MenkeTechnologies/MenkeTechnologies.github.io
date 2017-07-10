@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-#created by JAKOBMENKE --> Fri Jan 13 22:25:46 EST 2017 
 
 #for debugging uncomment next line
 # set -x
