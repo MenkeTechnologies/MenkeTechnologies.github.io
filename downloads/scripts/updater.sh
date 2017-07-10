@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 # clear screen
 clear
 
