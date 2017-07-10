@@ -1,9 +1,9 @@
-#!/usr/bin/env 
+#!/usr/bin/env bash
 #{{{                    MARK:Header
 #**************************************************************
 #####   Author: JACOBMENKE
 #####   Date: Mon Jul 10 19:30:05 EDT 2017
-#####   Purpose:  script to  
+#####   Purpose: bash script to upload file to NAS
 #####   Notes: 
 #}}}***********************************************************
 echo -e "\e[44;37mUploading $*"
