@@ -6,6 +6,7 @@
 #####   Purpose: bash script to monitor log files in color
 #####   Notes: 
 #}}}***********************************************************
+shopt -s globa
 
 colortail -k $HOME/.colortailconf -f /var/log/*.log /var/log/*.out 
 
