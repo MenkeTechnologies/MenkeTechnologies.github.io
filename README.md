@@ -1,4 +1,7 @@
-# MenkeTechnologies.github.io
+# jakobmenke.com
+
+
+
 
 
 # My Personal Website (Work in Progress)
