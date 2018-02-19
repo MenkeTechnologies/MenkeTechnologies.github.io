@@ -406,6 +406,15 @@ clipboard(){
 #automatically add closing punct
 
 surround(){
+    next=$((CURSOR+1))
+
+    char=${BUFFER[$CURSOR]}
+    nextChar=${BUFFER[$next]}
+    echo char is $char >> $LOGFILE
+    echo nextChar is $nextChar >> $LOGFILE
+
+
+    #TODO =i
 
     case "$KEYS" in
         '"')
@@ -435,29 +444,43 @@ surround(){
 
 #delete the next matching closing punct
 deleteMatching(){
-    x=$CURSOR
+    next=$((CURSOR+1))
 
     char=${BUFFER[$CURSOR]}
+    nextChar=${BUFFER[$next]}
     echo char is $char >> $LOGFILE
+    echo nextChar is $nextChar >> $LOGFILE
 
     case "$char" in
         '"')
-            BUFFER="$LBUFFER${RBUFFER/$char/}"
+            if [[ "$nextChar" == "$char" ]]; then
+                BUFFER="$LBUFFER${RBUFFER/$char/}"
+            fi
             ;;
         '`')
-            BUFFER="$LBUFFER${RBUFFER/$char/}"
+            if [[ "$nextChar" == "$char" ]]; then
+                BUFFER="$LBUFFER${RBUFFER/$char/}"
+            fi
             ;;
         "'")
-            BUFFER="$LBUFFER${RBUFFER/$char/}"
+            if [[ "$nextChar" == "$char" ]]; then
+                BUFFER="$LBUFFER${RBUFFER/$char/}"
+            fi
             ;;
         '{')
-            BUFFER="$LBUFFER${RBUFFER/\}/}"
+            if [[ "$nextChar" == "}" ]]; then
+                BUFFER="$LBUFFER${RBUFFER/\}/}"
+            fi
             ;;
         "[")
-            BUFFER="$LBUFFER${RBUFFER/\]/}"
+            if [[ "$nextChar" == "]" ]]; then
+                BUFFER="$LBUFFER${RBUFFER/\]/}"
+            fi
             ;;
         "(")
-          BUFFER="$LBUFFER${RBUFFER/)/}"
+            if [[ "$nextChar" == ")" ]]; then
+              BUFFER="$LBUFFER${RBUFFER/)/}"
+            fi
             ;;
         *) 
             ;;
