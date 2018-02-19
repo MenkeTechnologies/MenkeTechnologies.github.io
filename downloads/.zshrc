@@ -413,8 +413,25 @@ surround(){
     echo char is $char >> $LOGFILE
     echo nextChar is $nextChar >> $LOGFILE
 
+    count=$(echo "$BUFFER" | grep -c "$KEYS")
 
-    #TODO =i
+    #TODO = only if next char is space or end of line then insert quotes
+    case "$nextChar" in
+        [a-zA-Z0-9]*) 
+            BUFFER="$LBUFFER$KEYS$RBUFFER"
+            zle .vi-forward-char
+            return 0
+            ;;
+       *)
+               ;;
+    esac
+
+
+    if (( $count % 2 == 1 )); then
+            BUFFER="$LBUFFER$KEYS$RBUFFER"
+            zle .vi-forward-char
+            return 0
+    fi
 
     case "$KEYS" in
         '"')
@@ -448,8 +465,8 @@ deleteMatching(){
 
     char=${BUFFER[$CURSOR]}
     nextChar=${BUFFER[$next]}
-    echo char is $char >> $LOGFILE
-    echo nextChar is $nextChar >> $LOGFILE
+    #echo char is $char >> $LOGFILE
+    #echo nextChar is $nextChar >> $LOGFILE
 
     case "$char" in
         '"')
