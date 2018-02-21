@@ -265,7 +265,7 @@ nnoremap <silent> <C-E> :q!<CR>
 vnoremap <silent> <C-E> :<C-C>:q!<CR>
 inoremap <silent> <C-D>C <C-[>:q!<CR>
 
-vnoremap <
+vnoremap <RightMouse> "*y`>
 
 "comment out
 inoremap <silent> <C-B> <ESC>I//<ESC>ji
