@@ -259,11 +259,13 @@ inoremap <silent> <C-C> <C-[>:wq!<CR>:qa!<CR>
 
 
 nnoremap <silent> <C-V> :q!<CR>
-nnoremap <silent> <C-E> :q!<CR>
-vnoremap <silent> <C-V> :<C-C>:q!<CR>
-vnoremap <silent> <C-E> :<C-C>:q!<CR>
 inoremap <silent> <C-V> <C-[>:q!<CR>
+
+nnoremap <silent> <C-E> :q!<CR>
+vnoremap <silent> <C-E> :<C-C>:q!<CR>
 inoremap <silent> <C-D>C <C-[>:q!<CR>
+
+vnoremap <
 
 "comment out
 inoremap <silent> <C-B> <ESC>I//<ESC>ji
@@ -282,6 +284,9 @@ nnoremap <silent> <leader>h :sp<CR>
 nnoremap <silent> <leader>t :tabnew<CR>
 
 onoremap <silent> i# ?#<CR>jV/#<CR>kc
+
+vnoremap Y y`>
+nnoremap Y yy`>
 
 fun GoToNextMarker(searchTerm, backwardsSearch)
     let oldwrap = &wrapscan
