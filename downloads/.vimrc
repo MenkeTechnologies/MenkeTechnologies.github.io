@@ -257,15 +257,11 @@ nnoremap <silent> <C-C> :wq!<CR>:qa!<CR>
 "vnoremap <silent> <C-C> :<C-C>:wq!<CR>:qa!<CR>
 inoremap <silent> <C-C> <C-[>:wq!<CR>:qa!<CR>
 
+nnoremap <silent> <C-F> :q!<CR>
+vnoremap <silent> <C-F> :<C-C>:q!<CR>
 
-nnoremap <silent> <C-V> :q!<CR>
-inoremap <silent> <C-V> <C-[>:q!<CR>
-
+autocmd VimEnter * inoremap <silent> <C-F> <C-[>:q!<CR>
 inoremap <silent> <C-Z> <C-[>:suspend<CR>
-
-nnoremap <silent> <C-E> :q!<CR>
-vnoremap <silent> <C-E> :<C-C>:q!<CR>
-inoremap <silent> <C-D>c <C-[>:q!<CR>
 
 vnoremap <RightMouse> "*y`>
 inoremap <Home> <C-[>ggi
@@ -714,9 +710,9 @@ function TmuxRepeatGeneric()
 endfunction
 
 " reassing readline plugin mapping
-autocmd VimEnter * inoremap <silent> <C-F> <ESC>:w<CR>:call TmuxRepeat()<CR>a
+autocmd VimEnter * inoremap <silent> <C-V> <ESC>:w<CR>:call TmuxRepeat()<CR>a
 
-nnoremap <silent> <C-F> :w<CR>:call TmuxRepeat()<CR>
+nnoremap <silent> <C-V> :w<CR>:call TmuxRepeat()<CR>
 
 vnoremap <silent> <ESC>/ :call NERDComment("x","Toggle")<CR>`>
 nnoremap <silent> <ESC>/ :call NERDComment("x","Toggle")<CR>`>
@@ -730,8 +726,8 @@ nnoremap <silent> <C-D>d :update<CR>
 vnoremap <silent> <C-D>d :<C-C>:update<CR>
 inoremap <silent> <C-D>d <C-[>:update<CR>a
 
-nnoremap <silent> <C-D>f :w<CR>:call TmuxRepeatGeneric()<CR>
-inoremap <silent> <C-D>f <C-[>:w<CR>:call TmuxRepeatGeneric()<CR>a
+nnoremap <silent> <C-D>v :w<CR>:call TmuxRepeatGeneric()<CR>
+inoremap <silent> <C-D>v <C-[>:w<CR>:call TmuxRepeatGeneric()<CR>a
 inoremap <silent> <C-D>g <Esc>:silent !open -t %:p:h<CR>:redraw!<CR>a
 nnoremap <silent> <C-D>g :silent !open -t %:p:h<CR>:redraw!<CR>
 
