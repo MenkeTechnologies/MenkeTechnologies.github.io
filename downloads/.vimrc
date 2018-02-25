@@ -663,7 +663,7 @@ map  <expr> ; repmo#LastKey('<Plug>Sneak_;')|sunmap ;
 map  <expr> , repmo#LastRevKey('<Plug>Sneak_,')|sunmap ,
 
 map  <expr> s repmo#ZapKey('<Plug>Sneak_s')|ounmap s|sunmap s
-map  <expr> S repmo#ZapKey('<Plug>Sneak_S')|ounmap S|sunmap S
+"map  <expr> S repmo#ZapKey('<Plug>Sneak_S')|ounmap S|sunmap S
 omap <expr> z repmo#ZapKey('<Plug>Sneak_s')
 omap <expr> Z repmo#ZapKey('<Plug>Sneak_S')
 map  <expr> f repmo#ZapKey('<Plug>Sneak_f')|sunmap f
