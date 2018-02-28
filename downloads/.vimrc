@@ -203,12 +203,14 @@ noremap <c-k> 4k
 noremap <c-h> 4h
 noremap <c-l> 4l
 
+"reselect after indenting
 vnoremap < <gv
 vnoremap > >gv
 
-"copy to system clipboard
+"copy to system clipboard and move cursor to end of selection
 vnoremap <C-B> "*y`>
 
+"indenting and focus line at center of editor
 inoremap <silent> <C-L> <ESC>mbgg=G`bzza
 
 "transpose words (like emacs `transpose-words')
