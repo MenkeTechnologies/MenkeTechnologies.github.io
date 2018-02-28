@@ -70,6 +70,7 @@ set showcmd
 "for copying to system clipboard
 "set clipboard=unnamed
 
+"show trailing spaces and tabs
 set list listchars=tab:\ \ ,trail:·
 ""}}}***********************************************************
 
@@ -84,7 +85,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'TerryMa/vim-multiple-cursors'
 Plugin 'luochen1990/rainbow'
-
 Plugin 'craigemery/vim-autotag'
 Plugin 'beloglazov/vim-online-thesaurus'
 
