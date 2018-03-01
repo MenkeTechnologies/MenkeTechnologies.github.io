@@ -40,20 +40,22 @@ set autoread
 set ignorecase
 set smartcase
 set tabstop=4
-set statusline+=%F
-set statusline+=%=
-set statusline+=Row:\%l
-set statusline+=/
-set statusline+=%L
-set statusline+=\  
-set statusline+=Col:\ %c
+"using powerline status bar instead
+"set statusline+=%F
+"set statusline+=%=
+"set statusline+=Row:\%l
+"set statusline+=/
+"set statusline+=%L
+"set statusline+=\  
+"set statusline+=Col:\ %c
+"status bar always shown
 set laststatus=2
 set wrapscan
 set t_Co=256
 set backspace=2
 set encoding=utf8
 set autoindent
-se showmatch
+set showmatch
 set showmode
 set hlsearch
 set incsearch
