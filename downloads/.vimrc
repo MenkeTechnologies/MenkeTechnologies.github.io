@@ -282,6 +282,11 @@ nnoremap <silent> <leader>t :tabnew<CR>
 
 onoremap <silent> i# ?#<CR>jV/#<CR>kc
 
+"#**************************************************************
+"}}}
+
+"{{{                    MARK:Custom Fxns
+"**************************************************************
 "navigate to next or previous vim fold marker
 fun GoToNextMarker(searchTerm, backwardsSearch)
     let oldwrap = &wrapscan
@@ -576,6 +581,12 @@ function Quoter(type)
 
 endfunction
 
+"**************************************************************
+"}}}
+
+
+"{{{                    MARK:Blacklists
+"**************************************************************
 let blacklist=['md', 'zsh','sh','hs', 'pl']
 
 augroup indentGroup
@@ -605,6 +616,9 @@ elseif os == "Linux"
     map <ESC>[D <C-Left>
 endif
 
+"}}}***********************************************************
+
+
 "{{{                    MARK:Quoter Mappings
 "**************************************************************
 nnoremap <silent> <leader>" :call Quoter("double")<CR>
@@ -621,6 +635,11 @@ vnoremap <silent> <leader>( :call InsertQuoteVisualMode("paren")<CR>
 
 
 "}}}***********************************************************
+"
+#{{{                    MARK:
+#**************************************************************
+
+#}}}***********************************************************
 
 nnoremap <Tab> :SaveSession!<CR><CR>
 nnoremap <silent> <leader>n :n<CR>
