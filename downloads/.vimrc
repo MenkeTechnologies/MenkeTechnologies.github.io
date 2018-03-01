@@ -282,7 +282,7 @@ nnoremap <silent> <leader>t :tabnew<CR>
 
 onoremap <silent> i# ?#<CR>jV/#<CR>kc
 
-
+"navigate to next or previous vim fold marker
 fun GoToNextMarker(searchTerm, backwardsSearch)
     let oldwrap = &wrapscan
     set nowrapscan
@@ -307,6 +307,7 @@ fun GoToNextMarker(searchTerm, backwardsSearch)
     unlet oldwrap
 endf
 
+"indent, get rid of pairs of new lines and move cursor to middle of screen
 function! IndentSqueeze()
     silent! exe "normal! mbgg=G"
     silent! exe "1,$!cat -s"
@@ -314,6 +315,7 @@ function! IndentSqueeze()
     redraw!
 endfunction
 
+"indent and move cursor to middle of screen
 function! Indent()
     exe ":normal mbgg=G"
     exe ":normal `bzz"
