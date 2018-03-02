@@ -182,7 +182,7 @@ gitCommitAndPush "$BUFFER" && {
 
 tutsUpdate() {
     commitMessage="$BUFFER"
-    if [[ ! -z "$commitMessage" ]]; then
+    if [[ "$commitMessage" ]]; then
         if [[ "$commitMessage" =~ ^\ +$ ]]; then
             printf "No commit message\n" >&2
             zle .accept-line
@@ -1019,6 +1019,7 @@ source "$HOME/.opam/opam-init/init.zsh" &> /dev/null
 
 #{{{                    MARK:ColorTest
 #**************************************************************
+#print 2d array of colors
 colortest(){
     for backgroundColor in ${(ko)bg}; do
         print -n "$bg[$backgroundColor]"
