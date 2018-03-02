@@ -96,25 +96,24 @@ plugins=(zsh-more-completions fzf-zsh zsh-completions zsh-syntax-highlighting zs
 
     plugins+=(systemd)
 
-distroName="$(grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d \")"
+    distroName="$(grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d \")"
 
-case $distroName in
-    (debian|raspbian|kali) 
-        plugins+=(debian)
-        ;;
-    (ubuntu) 
-        plugins+=(ubuntu)
-        ;;
-    (centos|rhel) 
-        plugins+=(yum dnf)
-        ;;
-    (fedora) 
-        plugins+=(yum fedora dnf)
-        ;;
-    (*) :
-        ;;
-esac
-
+    case $distroName in
+        (debian|raspbian|kali) 
+            plugins+=(debian)
+            ;;
+        (ubuntu) 
+            plugins+=(ubuntu)
+            ;;
+        (centos|rhel) 
+            plugins+=(yum dnf)
+            ;;
+        (fedora) 
+            plugins+=(yum fedora dnf)
+            ;;
+        (*) :
+            ;;
+    esac
 }
 #}}}***********************************************************
 
@@ -161,7 +160,7 @@ gitfunc () {
         zle .accept-line-and-down-history
         return 0
     }
-    #leaky simonoff
+    #leaky simonoff theme for ANSI
     printf "\x1b[0;34m"
 
 gitCommitAndPush "$BUFFER" && {
