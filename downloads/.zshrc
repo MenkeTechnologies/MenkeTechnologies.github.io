@@ -940,9 +940,9 @@ alias -g NE="2> /dev/null"
 alias -g G='|& egrep -i'
 
 if [[ "$(uname)" == Darwin ]]; then
-    alias -g P='| pbcopy'
+    alias -g P='| pbcopy -pboard general'
 else
-    alias -g P='| xclip'
+    alias -g P='| xclip -selection clipboard'
 fi
 
 #export ZPLUG_HOME=/usr/local/opt/zplug
