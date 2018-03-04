@@ -934,6 +934,8 @@ zstyle ':completion:*:manuals' separate-sections true
 #{{{                    MARK:Global Aliases
 #**************************************************************
 alias -g L='|less -MN'
+alias -g A="| awk '{printf \"%s\\n\", \$1}'"
+alias -g S="| sed 's@ @@g'"
 alias -g W='| wc -l'
 alias -g N="> /dev/null 2>&1"
 alias -g NE="2> /dev/null"
@@ -1163,7 +1165,6 @@ bindkey -M viins "\e " magic-space
 bindkey -M isearch '^A' beginning-of-line
 
 #}}}***********************************************************
-
 
 #{{{                    MARK:override default FTP completion
 #**************************************************************
