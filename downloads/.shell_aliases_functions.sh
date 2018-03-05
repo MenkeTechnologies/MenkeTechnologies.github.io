@@ -135,7 +135,7 @@ alias curl='curl -fsSL'
 alias lr='grc -c "$HOME/conf.gls" gls -iAlhFR --color=always'
 alias mount='grc --colour=auto -c "$HOME/conf.mount" mount'
 alias ifconfig='grc --colour=auto -c "$HOME/conf.ifconfig" ifconfig'
-alias df='grc --colour=auto -c "$HOME/conf.df" df'
+#alias df='grc --colour=auto -c "$HOME/conf.df" df'
 
 if [[ "$(uname)" == "Darwin" ]]; then
     #Darwin specific aliases
