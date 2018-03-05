@@ -631,7 +631,16 @@ my-accept-line () {
         print "$BUFFER" | egrep -q "$regex" && {
             __WILL_CLEAR=true
         }
-        done
+    done
+
+    mywords=("${(z)BUFFER}")
+    for GL in $(alias -g | awk -F= '{print $1}'); do
+        if [[ $mywords[-1] == $GL ]]; then
+            mywords[-1]='"'$GL'"'
+            BUFFER="$mywords"
+            #echo we got $mywords>> $LOGFILE
+        fi
+    done
 
     zle .accept-line 
     #leaky simonoff theme so reset ANSI escape sequences
@@ -942,7 +951,7 @@ alias -g W='| wc -l'
 alias -g N="> /dev/null 2>&1"
 alias -g NE="2> /dev/null"
 alias -g G='git add . && git commit -m "" && git push'
-alias -g E='|& fgrep -v "grep" |& egrep -i'
+alias -g e='|& fgrep -v "grep" |& egrep -i'
 alias -g P="| perl -lanE ''"
 alias -g C="| cut -d ' ' -f1"
 
