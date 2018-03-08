@@ -641,20 +641,22 @@ my-accept-line () {
         }
     done
 
+    [[ -z "$__GLOBAL_ALIAS_PREFIX"]]
     [[ -z "$BUFFER" ]] && zle .accept-line && return 0
 
     mywords=("${(z)BUFFER}")
 
-        if [[ ! -z $(alias -g $mywords[1]) ]];then
-            line="$(cat $HOME/.common_aliases | grep "^$mywords[1]=.*" | awk -F= '{print $2}')"
-            if [[ -z $line ]];then
-                #fxn
-                BUFFER="\\$mywords"
-            else
-                #non global alias
-                BUFFER="${line:1:-1} $mywords[2,$]"
-            fi
+    if [[ ! -z $(alias -g $mywords[1]) ]];then
+        line="$(cat $HOME/.common_aliases | grep "^$mywords[1]=.*" | awk -F= '{print $2}')"
+        if [[ -z $line ]];then
+            #fxn
+            BUFFER="\\$mywords"
+        else
+            #non global alias
+            
+            print "$line" | fgrep "'" && BUFFER="${line:1:-1} $mywords[2,$]" || BUFFER="$line $mywords[2,$]"
         fi
+    fi
 
     zle .accept-line 
     #leaky simonoff theme so reset ANSI escape sequences
@@ -1194,6 +1196,7 @@ export FZF_DEFAULT_COMMAND='find * | ag -v ".git/"'
 export FZF_DEFAULT_OPTS="$__COMMON_FZF_ELEMENTS --reverse --border --height 100%" 
 export FZF_CTRL_T_OPTS="$__COMMON_FZF_ELEMENTS --preview \"[[ -f {} ]] && rougify -t $ROUGIFY_THEME {} 2>/dev/null || stat {} | fold -80 | head -500\""
 
+#completion trigger plus tab, defaults to ~~
 export FZF_COMPLETION_OPTS="$__COMMON_FZF_ELEMENTS --preview  \"[[ -f {} ]] &&
     rougify -t $ROUGIFY_THEME {} 2>/dev/null || {
         [[ -e {} ]] && {
