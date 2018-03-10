@@ -93,7 +93,7 @@ plugins=(fzf-zsh zsh-more-completions zsh-completions zsh-syntax-highlighting zs
 [[ "$(uname)" == "Darwin" ]] && {
     plugins+=(zsh-xcode-completions brew osx pod)
 } || {
-
+    #linux
     plugins+=(systemd)
     distroName="$(grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d \")"
 
@@ -108,7 +108,7 @@ plugins=(fzf-zsh zsh-more-completions zsh-completions zsh-syntax-highlighting zs
             plugins+=(yum dnf)
             ;;
         (opensuse) 
-            plugins+=(suse)
+            plugins+=(suse z)
             ;;
         (fedora) 
             plugins+=(yum fedora dnf)
@@ -129,6 +129,7 @@ source $ZSH/oh-my-zsh.sh
 #has all my aliases and functions
 
 source ~/.shell_aliases_functions.sh
+alias -r > "$HOME/.common_aliases"
 
 #}}}***********************************************************
 
@@ -234,7 +235,7 @@ expand-aliases() {
     (($+functions[_expand-aliases])) &&
     BUFFER=${functions[_expand-aliases]#$'\t'} &&
     CURSOR=$#BUFFER
-    }
+}
 __COUNTER=0
 
 changeQuotes(){
@@ -384,7 +385,9 @@ clipboard(){
         print -sr "$BUFFER"
         print -n "$BUFFER" | pbcopy
         echo
-        print  "\x1b[0;34mCopied \x1b[1m\"$BUFFER\"\x1b[0;34m to System Clipboard!"
+        print -n "\x1b[0;34mCopied \x1b[1m\""
+        print -n "$BUFFER"
+        print  "\"\x1b[0;34m to System Clipboard!"
         echo
         zle .redisplay
     }  || {
@@ -392,7 +395,9 @@ clipboard(){
         print -sr "$BUFFER"
         print -n "$BUFFER" | xclip -selection c -i
         echo
-        print  "\x1b[0;34mCopied \x1b[1m\"$BUFFER\"\x1b[0;34m to System Clipboard!"
+        print -n "\x1b[0;34mCopied \x1b[1m\""
+        print -nR "$BUFFER"
+        print  "\"\x1b[0;34m to System Clipboard!"
         echo
         zle .redisplay
         } || { 
@@ -593,8 +598,8 @@ bindkey '\e[1;2D' sub
 #press both escape and control f then oo
 bindkey '\e^f' sub
 #bound to control spacebar
-bindkey -M vicmd '^@' sshRegain
-bindkey -M viins '^@' sshRegain
+bindkey -M vicmd '\e ' sshRegain
+bindkey -M viins '\e ' sshRegain
 
 #F1 key
 bindkey '\eOP' updater
@@ -636,27 +641,26 @@ my-accept-line () {
         }
     done
 
-    #mywords=("${(z)BUFFER}")
+    [[ -z "$__GLOBAL_ALIAS_PREFIX" ]] && {
+    
+        [[ -z "$BUFFER" ]] && zle .accept-line && return 0
 
-    #if [[ $#mywords == 1 ]]; then
-        #unalias -g $mywords[1]
-        #statements
-        #mywords[-1]='"'$GL'"'
-        #BUFFER="$mywords"
-        #zle .accept-line 
-        #alias -g $mywords[1]
-    #else
-        #zle .accept-line
-    #fi
-    #for GL in $(alias -g | awk -F= '{print $1}'); do
-        #if [[ $mywords[-1] == $GL ]]; then
-            #mywords[-1]='"'$GL'"'
-            #BUFFER="$mywords"
-            #echo we got $mywords>> $LOGFILE
-        #fi
-    #done
-        zle .accept-line
+        mywords=("${(z)BUFFER}")
 
+        if [[ ! -z $(alias -g $mywords[1]) ]];then
+            line="$(cat $HOME/.common_aliases | grep "^$mywords[1]=.*" | awk -F= '{print $2}')"
+            if [[ -z $line ]];then
+                #fxn
+                BUFFER="\\$mywords"
+            else
+                #non global alias
+                print "$line" | fgrep "'" && BUFFER="${line:1:-1} $mywords[2,$]" || BUFFER="$line $mywords[2,$]"
+            fi
+        fi
+    
+    }
+
+    zle .accept-line 
     #leaky simonoff theme so reset ANSI escape sequences
     printf "\x1b[0m"
 }
@@ -956,29 +960,32 @@ zstyle ':completion:*:manuals' separate-sections true
 
 #{{{                    MARK:Global Aliases
 #**************************************************************
-alias -g jl='|less -MN'
-alias -g jb='&>> "$LOGFILE" &; disown %1; ps -ef | grep -v grep | grep $!'
-alias -g ja="| awk 'BEGIN {} {printf \"%s\\n\", \$1} END {}'"
-alias -g jap="| awk -F: 'BEGIN {} {printf \"%s\\n\", \$1} END {}'"
-alias -g js="| sed -E 's@@@g'"
-alias -g jt="| tr '' "
-alias -g ji="| tail" 
-alias -g jw='| wc -l'
-alias -g jn="> /dev/null 2>&1"
-alias -g jo='&>> "$LOGFILE"'
-alias -g jne="2> /dev/null"
-alias -g jg='git add . && git commit -m "" && git push'
-alias -g je='|& fgrep -v "grep" |& egrep -i'
-alias -g jp="| perl -lanE 'say'"
-alias -g jc="| cut -d ' ' -f1"
-alias -g jr="| sort"
-alias -g ju="| awk '{print \$1}' | uniq -c | sort -rn | head -10"
+__GLOBAL_ALIAS_PREFIX=
+alias -g ${__GLOBAL_ALIAS_PREFIX}l='| less -MN'
+alias -g ${__GLOBAL_ALIAS_PREFIX}lo='"$LOGFILE"'
+alias -g ${__GLOBAL_ALIAS_PREFIX}x='| tr a-z A-Z'
+alias -g ${__GLOBAL_ALIAS_PREFIX}b='&>> "$LOGFILE" &; disown %1; ps -ef | grep -v grep | grep $!'
+alias -g ${__GLOBAL_ALIAS_PREFIX}k="| awk 'BEGIN {} {printf \"%s\\n\", \$1} END {}'"
+alias -g ${__GLOBAL_ALIAS_PREFIX}ap="| awk -F: 'BEGIN {} {printf \"%s\\n\", \$1} END {}'"
+alias -g ${__GLOBAL_ALIAS_PREFIX}s="| sed -E 's@@@g'"
+alias -g ${__GLOBAL_ALIAS_PREFIX}t="| tr '' "
+alias -g ${__GLOBAL_ALIAS_PREFIX}ta="| tail" 
+alias -g ${__GLOBAL_ALIAS_PREFIX}w='| wc -l'
+alias -g ${__GLOBAL_ALIAS_PREFIX}n="> /dev/null 2>&1"
+alias -g ${__GLOBAL_ALIAS_PREFIX}o='&>> "$LOGFILE"'
+alias -g ${__GLOBAL_ALIAS_PREFIX}ne="2> /dev/null"
+alias -g ${__GLOBAL_ALIAS_PREFIX}g='git add . && git commit -m "" && git push'
+alias -g ${__GLOBAL_ALIAS_PREFIX}e='|& fgrep -v "grep" |& egrep -i'
+alias -g ${__GLOBAL_ALIAS_PREFIX}p="| perl -lanE 'say'"
+alias -g ${__GLOBAL_ALIAS_PREFIX}c="| cut -d ' ' -f1"
+alias -g ${__GLOBAL_ALIAS_PREFIX}r="| sort"
+alias -g ${__GLOBAL_ALIAS_PREFIX}u="| awk '{print \$1}' | uniq -c | sort -rn | head -10"
 
 if [[ "$(uname)" == Darwin ]]; then
-    alias -g jv='| pbcopy -pboard general'
+    alias -g ${__GLOBAL_ALIAS_PREFIX}v='| pbcopy -pboard general'
     alias ge="exe 'z src;gl;getrc;nz'"
 else
-    alias -g jv='| xclip -selection clipboard'
+    alias -g ${__GLOBAL_ALIAS_PREFIX}v='| xclip -selection clipboard'
 fi
 
 
@@ -1029,17 +1036,24 @@ supernatural-space() {
 
     alias $LBUFFER | egrep -q '(grc|_z|cd|cat)' || {
             #if [[ $LBUFFER =~ ' [a-z][a-z]?$' ]];then
-               [[ -z $RBUFFER ]] && zle _expand_alias
+    [[ -z $RBUFFER ]] && [[ -z $(alias -g $LBUFFER) ]] && zle _expand_alias
             #fi
     }
      zle expand-history
      zle self-insert
 }
 
+terminate-space(){
+[[ -z $RBUFFER ]] && zle magic-space || { zle end-of-line; zle magic-space}
+
+
+}
+
 zle -N supernatural-space
+zle -N terminate-space
 
 bindkey -M viins " " supernatural-space
-bindkey -M viins "\e " magic-space
+bindkey -M viins "^@" terminate-space
 bindkey -M isearch '^A' beginning-of-line
 
 #export ZPLUG_HOME=/usr/local/opt/zplug
@@ -1068,7 +1082,7 @@ bindkey -M isearch '^A' beginning-of-line
 #go to desktop if not root
 if [[ "$(uname)" = Darwin ]]; then
     if [[ "$UID" != "0" ]]; then
-         builtin cd "$D" && clear
+         #builtin cd "$D" && clear
         clear
         type figlet > /dev/null 2>&1 && {
             printf "\e[1m"
@@ -1178,13 +1192,14 @@ colortest(){
 #**************************************************************
 ROUGIFY_THEME="github"
 __COMMON_FZF_ELEMENTS="--prompt='-->>> '"
-alias -g F=' "$(fzf --reverse --border '"$__COMMON_FZF_ELEMENTS"' --preview "[[ -f {} ]] && rougify -t $ROUGIFY_THEME {} 2>/dev/null || stat {} | fold -80 | head -500")"'
+alias -g ${__GLOBAL_ALIAS_PREFIX}f=' "$(fzf --reverse --border '"$__COMMON_FZF_ELEMENTS"' --preview "[[ -f {} ]] && rougify -t $ROUGIFY_THEME {} 2>/dev/null || stat {} | fold -80 | head -500")"'
 
 #to include dirs files in search
 export FZF_DEFAULT_COMMAND='find * | ag -v ".git/"'
 export FZF_DEFAULT_OPTS="$__COMMON_FZF_ELEMENTS --reverse --border --height 100%" 
 export FZF_CTRL_T_OPTS="$__COMMON_FZF_ELEMENTS --preview \"[[ -f {} ]] && rougify -t $ROUGIFY_THEME {} 2>/dev/null || stat {} | fold -80 | head -500\""
 
+#completion trigger plus tab, defaults to ~~
 export FZF_COMPLETION_OPTS="$__COMMON_FZF_ELEMENTS --preview  \"[[ -f {} ]] &&
     rougify -t $ROUGIFY_THEME {} 2>/dev/null || {
         [[ -e {} ]] && {
@@ -1248,6 +1263,9 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS
 #**************************************************************
 _comps[ftp]=_ftp
 _comps[passwd]=_passwd
+_comps[ksh]=_ksh
+_comps[tcsh]=_tcsh
+_comps[csh]=_tcsh
 #}}}***********************************************************
 
 #{{{                    MARK:Groovy
@@ -1257,7 +1275,10 @@ unset GROOVY_HOME # when set this messes up classpath
 #{{{                    MARK:Suffix aliases
 #**************************************************************
 alias -s txt='vim'
-alias > "$HOME/.common_aliases"
+
+alias numcmd='print -rlo -- $commands | wc -l'
+
+export KEYTIMEOUT=1
 #}}}***********************************************************
 #
 #
