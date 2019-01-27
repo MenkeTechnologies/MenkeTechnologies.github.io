@@ -56,6 +56,7 @@ function titleCase(str) {
 
     return finalStr.slice(0, -1);
 }
+
 //
 // console.log(titleCase("I'm a little tea pot"));
 //
@@ -354,6 +355,7 @@ function compare(choice1, choice2) {
         }
     }
 }
+
 //
 // console.log(computerChoice);
 
@@ -537,10 +539,12 @@ function Animal(name, numLegs) {
     this.numLegs = numLegs;
     this.isAlive = true;
 }
+
 function Penguin(name) {
     this.name = name;
     this.numLegs = 2;
 }
+
 function Emperor(name) {
     this.name = name;
     this.saying = "Waddle waddle";
@@ -611,23 +615,23 @@ var cashRegister = {
     },
     scan: function (item, quantity) {
 
-            switch (item) {
-                case "eggs":
-                    this.add(0.98*quantity);
-                    break;
+        switch (item) {
+            case "eggs":
+                this.add(0.98 * quantity);
+                break;
 
-                case "milk":
-                    this.add(1.23*quantity);
-                    break;
-                case "magazine":
-                    this.add(4.99*quantity);
-                    break;
-                case "chocolate":
-                    this.add(0.45*quantity);
-                    break;
-                //Add other 2 items here
+            case "milk":
+                this.add(1.23 * quantity);
+                break;
+            case "magazine":
+                this.add(4.99 * quantity);
+                break;
+            case "chocolate":
+                this.add(0.45 * quantity);
+                break;
+            //Add other 2 items here
 
-            }
+        }
 
         return true;
     }
@@ -641,62 +645,65 @@ var cashRegister = {
 // //Show the total bill
 // console.log('Your bill is '+cashRegister.total);
 
-
 var cashRegister = {
-    total:0,
-    lastTransactionAmount:0,
+    total: 0,
+    lastTransactionAmount: 0,
     //Dont forget to add your property
-    add: function(itemCost) {
-        this.total +=  itemCost;
+    add: function (itemCost) {
+        this.total += itemCost;
         this.lastTransactionAmount = itemCost;
     },
-    scan: function(item,quantity) {
+    scan: function (item, quantity) {
         switch (item) {
-            case "eggs": this.add(0.98 * quantity); break;
-            case "milk": this.add(1.23 * quantity); break;
-            case "magazine": this.add(4.99 * quantity); break;
-            case "chocolate": this.add(0.45 * quantity); break;
+            case "eggs":
+                this.add(0.98 * quantity);
+                break;
+            case "milk":
+                this.add(1.23 * quantity);
+                break;
+            case "magazine":
+                this.add(4.99 * quantity);
+                break;
+            case "chocolate":
+                this.add(0.45 * quantity);
+                break;
         }
         return true;
     },
-    voidLastTransaction: function(){
+    voidLastTransaction: function () {
 
         this.total -= this.lastTransactionAmount;
     },
     applyStaffDiscount: function (employee) {
-        this.total *= 1-employee.discountPercent/100;
+        this.total *= 1 - employee.discountPercent / 100;
     }
     //Add the voidLastTransaction Method here
 
-
 };
 
-
-cashRegister.scan('eggs',1);
-cashRegister.scan('milk',1);
-cashRegister.scan('magazine',1);
-cashRegister.scan('chocolate',4);
+cashRegister.scan('eggs', 1);
+cashRegister.scan('milk', 1);
+cashRegister.scan('magazine', 1);
+cashRegister.scan('chocolate', 4);
 
 //Void the last transaction and then add 3 instead
 
 cashRegister.voidLastTransaction();
-cashRegister.scan('chocolate',3);
+cashRegister.scan('chocolate', 3);
 //Show the total bill
-console.log('Your bill is '+cashRegister.total);
-
-
+console.log('Your bill is ' + cashRegister.total);
 
 function diffArray(arr1, arr2) {
     var newArr = [];
 
-    for (var i = 0; i < arr1.length; i++){
-        if (arr2.indexOf(arr1[i]) < 0){
+    for (var i = 0; i < arr1.length; i++) {
+        if (arr2.indexOf(arr1[i]) < 0) {
             newArr.push(arr1[i])
         }
     }
 
-    for (var i = 0; i < arr2.length; i++){
-        if (arr1.indexOf(arr2[i]) < 0 && newArr.indexOf(arr2[i] < 0) ){
+    for (var i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) < 0 && newArr.indexOf(arr2[i] < 0)) {
             newArr.push(arr2[i])
         }
     }
@@ -707,9 +714,6 @@ function diffArray(arr1, arr2) {
 
 function convertToRoman(num) {
 
-
-
 }
-
 
 console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]));

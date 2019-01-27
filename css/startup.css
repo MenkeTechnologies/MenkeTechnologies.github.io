@@ -1,18 +1,15 @@
-html, body, .cover{
+html, body, .cover {
     height: 100%;
 }
 
-.navbar.navbar-fixed-top.navbar-default{
+.navbar.navbar-fixed-top.navbar-default {
     /*background: transparent;*/
     border: 1px;
 
 }
 
 
-
-
-
-.cover{
+.cover {
     background: url("../img/270_mounatin_landscape.jpg") top left no-repeat;
     background-size: cover;
     /*Vertical center*/
@@ -22,7 +19,7 @@ html, body, .cover{
 
 }
 
-.cover-text{
+.cover-text {
     text-align: center;
     color: white;
     /*Vertical center*/
@@ -30,7 +27,7 @@ html, body, .cover{
     vertical-align: middle;
 }
 
-.cover-text h1{
+.cover-text h1 {
     margin: 0;
     font-size: 70px;
     letter-spacing: -5px;
@@ -39,28 +36,27 @@ html, body, .cover{
 }
 
 
-
 /*nav.navbar-default{*/
-    /*background: rgba(0,0,0,0);*/
+/*background: rgba(0,0,0,0);*/
 
 /*}*/
 
 /*a#linksHeader{*/
-    /*color: black;*/
+/*color: black;*/
 /*}*/
 
 /*.navbar-default .navbar-nav>li>a.mylinks{*/
-    /*color: black;*/
-    /*font-size: 30px;*/
-    /*font-family: Roboto;*/
+/*color: black;*/
+/*font-size: 30px;*/
+/*font-family: Roboto;*/
 /*}*/
 
 
-.testimonial{
-    background: rgba(0,0,0,0.02);
+.testimonial {
+    background: rgba(0, 0, 0, 0.02);
 }
 
-#blocky{
+#blocky {
     border: none;
     margin: 0;
     font-family: Roboto;
@@ -70,7 +66,7 @@ html, body, .cover{
 
 }
 
-#blocky cite{
+#blocky cite {
     display: block;
     text-align: right;
     text-transform: uppercase;
@@ -81,24 +77,24 @@ html, body, .cover{
 
 }
 
-section{
-    padding:5px;
+section {
+    padding: 5px;
 }
 
-.myheads{
-    text-transform:  uppercase;
+.myheads {
+    text-transform: uppercase;
     font-weight: bold;
     text-align: center;
     margin-bottom: 30px;
 
 }
 
-h2 + p{
+h2 + p {
     text-align: center;
     margin-top: -30px;
 }
 
-footer{
+footer {
     background: #222;
     color: white;
     text-align: center;
@@ -109,15 +105,15 @@ footer{
 /*Media Queries - style css depending on screen size*/
 
 @media only screen and ( max-width: 568px) {
-    section{
+    section {
         padding: 20px;
     }
 
-    .cover{
-       height: 70%;
+    .cover {
+        height: 70%;
     }
 
-    .cover h1{
+    .cover h1 {
         font-size: 40px;
     }
 }

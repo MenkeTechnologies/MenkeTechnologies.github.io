@@ -13,10 +13,6 @@ app1.controller('ctrl1', function ($scope) {
 
     $scope.n = "cool";
 
-
-
     // $scope.scopers = "cool duogs";
-
-
 
 });

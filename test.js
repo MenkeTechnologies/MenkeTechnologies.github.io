@@ -3,6 +3,7 @@
  */
 
 var orderCount = 0;
+
 function takeOrder(topping, crustType) {
     orderCount++;
     console.log('Order: ' + crustType + 'pizza topped with ' + topping);
@@ -15,6 +16,7 @@ function getSubTotal(itemCount) {
 function getTax() {
     return getSubTotal(orderCount) * 0.06;
 }
+
 function getTotal() {
     return getSubTotal(orderCount) + getTax();
 }
@@ -112,10 +114,7 @@ function lookUpProfile(firstName, prop) {
 // Change these values to test your function
 console.log(lookUpProfile("Bob", "number"));
 
-
-
-
-var Bike = function() {
+var Bike = function () {
 
     var gear = 0;
 
@@ -129,7 +128,6 @@ var Bike = function() {
     };
 
 };
-
 
 b = new Bike();
 
