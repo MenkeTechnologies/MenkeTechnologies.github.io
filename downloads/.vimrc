@@ -4,7 +4,6 @@
 if &compatible
     set nocompatible               " Be iMproved
 endif
-
 """" Required:
 "set runtimepath+=~/.vim/bundle/neobundle.vim/
 
@@ -27,7 +26,7 @@ filetype plugin indent on
 
 ""{{{                    MARK:Settings
 ""**************************************************************
-"backslash replaced by comma
+"backslash replaced by space for leader keybindings
 let mapleader = "\<SPACE>"
 
 set nocompatible              " be iMproved, required
@@ -40,6 +39,10 @@ set autoread
 set ignorecase
 set smartcase
 set tabstop=4
+"snap to nearest tabstop
+set shiftround
+set cindent
+set ttyfast
 "60 ms wait for next key in mappings
 "set timeoutlen=300
 "using powerline status bar instead
@@ -56,7 +59,6 @@ set wrapscan
 set t_Co=256
 set backspace=2
 set encoding=utf8
-set autoindent
 set showmatch
 set showmode
 set hlsearch
@@ -64,15 +66,27 @@ set incsearch
 set mouse=a
 set shiftwidth=4 "indent set to four spaces
 set expandtab
+set linebreak
+set showbreak=--> 
 set number
+set backupdir=~/tmp
 set wildmenu "tab completion in command mode cycles through menu
+set wildignorecase "globbing is case insensitive
 syntax on
 set grepprg=ag
 
+"visual selection automatically into system clipboard
+set guioptions+=a
+set guifont=Hack\ Nerd\ Font:h14
+"start browsing in current dir
+set browsedir=current
+"reduce enter key after message alerts
+set shortmess=a
+
 "show the leader
 set showcmd
-"for copying to system clipboard
-"set clipboard=unnamed
+"visual mode automatically copies to system clipboard
+set clipboard=autoselect
 
 "show trailing spaces and tabs
 set list listchars=tab:\ \ ,trail:·
@@ -91,6 +105,8 @@ Plugin 'TerryMa/vim-multiple-cursors'
 Plugin 'luochen1990/rainbow'
 Plugin 'craigemery/vim-autotag'
 Plugin 'beloglazov/vim-online-thesaurus'
+
+let g:indentLine_setColors = 1
 
 let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 
@@ -186,10 +202,13 @@ let g:NERDTreeDisableExactMatchHighlight = 1
 let g:NERDTreeDisablePatternMatchHighlight = 1
 
 "too slow with icons
-let g:webdevicons_enable_nerdtree=0
+let g:webdevicons_enable_nerdtree=1
 
 "matches JetBrains IDE mappings
-let g:multi_cursor_next_key='<C-G>'
+let g:multi_cursor_use_default_mapping=0
+let g:multi_cursor_start_word_key      = '<C-g>'
+let g:multi_cursor_next_key  = '<C-g>'
+let g:multi_cursor_quit_key            = '<Esc>'
 
 call vundle#end()            " required
 
@@ -206,6 +225,8 @@ noremap <c-j> 4j
 noremap <c-k> 4k
 noremap <c-h> 4h
 noremap <c-l> 4l
+noremap <leader>- 4-
+noremap <leader>= 4+
 
 "reselect after indenting
 vnoremap < <gv
@@ -256,6 +277,9 @@ nnoremap <silent> <C-F> :q!<CR>
 vnoremap <silent> <C-F> :<C-C>:q!<CR>
 
 autocmd VimEnter * inoremap <silent> <C-F> <C-[>:q!<CR>
+autocmd VimEnter * set background=dark
+" dont hide json quotes
+autocmd VimEnter * set conceallevel=0
 inoremap <silent> <C-Z> <C-[>:suspend<CR>
 
 vnoremap <RightMouse> "*y`>
@@ -509,6 +533,8 @@ function Quoter(type)
 
     let colIndex=col('.')
 
+    echohl ErrorMsg
+
     if a:type == "single"
         let quote="'"
         "if matches echo .* L=echo R=last non space
@@ -541,6 +567,8 @@ function Quoter(type)
         "echo "matching index ]]".matchingIndexDblB
         "echo "matching index ]".matchingIndexB
         "echo "least index ]".least
+        "
+        "
 
         let lineToPunct=strpart(lineToEnd, 1,least)
         "echo "line to punct: ".lineToPunct
@@ -589,11 +617,13 @@ function Quoter(type)
         echo "Unknown Quoting Option:".line
     endif
 
+    echohl None
+
 endfunction
 
 "}}}***********************************************************
 
-"{{{                    MARK:Blacklists
+"{{{                    MARK:Blacklists for indentation
 "**************************************************************
 let blacklist=['md', 'zsh','sh','hs', 'pl']
 
@@ -609,7 +639,6 @@ augroup indentGroup
         endif
     endif
 augroup end
-
 
 "}}}***********************************************************
 
@@ -627,12 +656,10 @@ vnoremap <silent> <leader>[ :call InsertQuoteVisualMode("bracket")<CR>
 vnoremap <silent> <leader>{ :call InsertQuoteVisualMode("curlybracket")<CR>
 vnoremap <silent> <leader>( :call InsertQuoteVisualMode("paren")<CR>
 
-
 "}}}***********************************************************
 
 "{{{                    MARK:Plugin Mappings
 "**************************************************************
-nnoremap <Tab> :SaveSession!<CR><CR>
 nnoremap <silent> <leader>n :n<CR>
 inoremap <F8> <ESC>:%s@@@g<Left><Left><Left>
 nnoremap <F8> :%s@@@g<Left><Left><Left>
@@ -657,11 +684,11 @@ map <silent> <leader><leader>e <Plug>(easymotion-bd-e)
 "map <silent> <leader><leader>b <Plug>(easymotion-bd-b)
 
 "for moving selection up and down, displacing other text 
-xmap <C-Right> >gv
-xmap <C-Left> <gv
+vnoremap <C-Right> >gv
+vnoremap <C-Left> <gv
 
-xmap <C-Down> :m '> + <CR> gv
-xmap <C-Up> :m '< -- <CR> gv
+vnoremap <C-Down> :m '> + <CR> gv
+vnoremap <C-Up> :m '< -- <CR> gv
 
 map  <expr> ; repmo#LastKey('<Plug>Sneak_;')|sunmap ;
 map  <expr> , repmo#LastRevKey('<Plug>Sneak_,')|sunmap ,
@@ -694,6 +721,12 @@ noremap <expr> } repmo#SelfKey('}', '{')|sunmap }
 noremap <expr> ( repmo#SelfKey('(', ')')|sunmap (
 noremap <expr> ) repmo#SelfKey(')', '(')|sunmap )
 
+noremap <expr> [[ repmo#SelfKey('[[', ']]')|sunmap [[
+noremap <expr> ]] repmo#SelfKey(']]', '[[')|sunmap ]]
+
+noremap <expr> ]m repmo#SelfKey(']m', '[m')|sunmap ]m
+noremap <expr> [m repmo#SelfKey('[m', ']m')|sunmap [m
+
 noremap <expr> j repmo#SelfKey('j', 'k')|sunmap j
 noremap <expr> k repmo#SelfKey('k', 'j')|sunmap k
 noremap <expr> h repmo#SelfKey('h', 'l')|sunmap h
@@ -702,21 +735,26 @@ noremap <expr> l repmo#SelfKey('l', 'h')|sunmap l
 map <expr> j repmo#Key('gj', 'gk')|sunmap j
 map <expr> k repmo#Key('gk', 'gj')|sunmap k
 
-function CompleteLine()
+function CompleteStatement()
     let SemiColon=['java','pl','c','cpp','js']
+    let doubleSemiColon=['ml']
     let exeFileType=expand('%:e')
     if index(SemiColon, exeFileType) >= 0
         inoremap <C-Space> <C-O>$;<Enter>
-        inoremap <C-D><Space> <ESC>+
-        nnoremap <C-D><Space> +
+        inoremap <C-\> <ESC>+
+        nnoremap <C-\> +
+    elseif index(doubleSemiColon, exeFileType) >= 0
+        inoremap <C-Space> <C-O>$;;<Enter>
+        inoremap <C-\> <ESC>+
+        nnoremap <C-\> +
     else
         inoremap <C-Space> <C-O>$<Enter>
-        inoremap <C-D><Space> <ESC>+
-        nnoremap <C-D><Space> +
-endif
+        inoremap <C-\> <ESC>+
+        nnoremap <C-\> +
+    endif
 endfunction
 
-autocmd VimEnter * call CompleteLine()
+autocmd VimEnter * call CompleteStatement()
 
 "}}}***********************************************************
 
@@ -726,55 +764,111 @@ set pastetoggle=<F9>
 
 " Repeat last command in the next tmux pane.
 function TmuxRepeat()
-let supportedTypes=['sh','py','rb','pl', 'clj', 'tcl', 'vim', 'lisp', 'hs', 'coffee', 'lua', 'java']
-let exeFileType=expand('%:e')
-if index(supportedTypes, exeFileType) >= 0
-    silent! exec "!tmux send-keys -t right C-c 'bash \"$SCRIPTS/runner.sh\"' ' \"' ".fnameescape(expand('%:p'))." '\"' C-m"
-    redraw!
-else
-    silent! exec "!tmux send-keys -t right C-c up C-m"
-    echom "Unknown Filetype '".exeFileType. "'. Falling Back to Prev Command!"
-    redraw!
-endif
-exe "normal! zz"
+    let supportedTypes=['sh','py','rb','pl', 'clj', 'tcl', 'vim', 'lisp', 'hs', 'ml', 'coffee', 'swift', 'lua', 'java', 'f90']
+    let exeFileType=expand('%:e')
+
+    if has("gui_running")
+        if index(supportedTypes, exeFileType) >= 0
+            silent! exec "!tmux send-keys -t vimmers:1. C-c ' bash \"$SCRIPTS/runner.sh\"' ' \"' ".fnameescape(expand('%:p'))." '\"' C-m"
+            redraw!
+        else
+            silent! exec "!tmux send-keys -t vimmer:1. C-c up C-m"
+            echom "Unknown Filetype '".exeFileType. "'. Falling Back to Prev Command!"
+            redraw!
+        endif
+    else
+        if index(supportedTypes, exeFileType) >= 0
+            silent! exec "!tmux send-keys -t right C-c ' bash \"$SCRIPTS/runner.sh\"' ' \"' ".fnameescape(expand('%:p'))." '\"' C-m"
+            redraw!
+        else
+            silent! exec "!tmux send-keys -t right C-c up C-m"
+            echom "Unknown Filetype '".exeFileType. "'. Falling Back to Prev Command!"
+            redraw!
+        endif
+
+    endif
+    exe "normal! zz"
 endfunction
 
 function TmuxRepeatGeneric()
-silent! exec "!tmux send-keys -t right C-c 'clear' C-m up up C-m"
-redraw!
-exe "normal! zz"
+    silent! exec "!tmux send-keys -t right C-c ' clear' C-m up up C-m"
+    redraw!
+    exe "normal! zz"
 endfunction
 
 " reassing readline plugin mapping
-autocmd VimEnter * inoremap <silent> <C-V> <ESC>:w<CR>:call TmuxRepeat()<CR>a
+autocmd VimEnter * inoremap <silent> <C-V> <ESC>:w!<CR>:call TmuxRepeat()<CR>a
 autocmd VimEnter * nunmap S
 
-nnoremap <silent> <C-V> :w<CR>:call TmuxRepeat()<CR>
-
-vnoremap <silent> <ESC>/ :call NERDComment("x","Toggle")<CR>`>
-nnoremap <silent> <ESC>/ :call NERDComment("x","Toggle")<CR>`>
+nnoremap <silent> <C-V> :w!<CR>:call TmuxRepeat()<CR>
 
 "vnoremap <silent> y y`>
 "nnoremap <silent> gp p`]
 vnoremap Y y`>j
 nnoremap Y yy`>
 
+function! Strip(input_string)
+    return substitute(a:input_string, '^\s*\(.\{-}\)\s*$', '\1', '')
+endfunction
+
+fun! GetRef()
+    let mystr = Strip(getline('.'))
+    echom "Copied " . mystr
+    let @* = expand('%:p').': '.line('.').' '.Strip(getline('.'))
+endfun
+
 "}}}***********************************************************
 
 "{{{                    MARK:C-D mappings
 "**************************************************************
+vnoremap <silent> <C-D>/ :call NERDComment("x","Toggle")<CR>`>
+nnoremap <silent> <C-D>/ :call NERDComment("x","Toggle")<CR>`>
+
 nnoremap <silent> <C-D>d :update<CR>
 vnoremap <silent> <C-D>d :<C-C>:update<CR>
 inoremap <silent> <C-D>d <C-[>:update<CR>a
 
-nnoremap <silent> <C-D>v :w<CR>:call TmuxRepeatGeneric()<CR>
-inoremap <silent> <C-D>v <C-[>:w<CR>:call TmuxRepeatGeneric()<CR>a
-inoremap <silent> <C-D>g <Esc>:silent !open -t %:p:h<CR>:redraw!<CR>a
+nnoremap <silent> <C-D>v :w!<CR>:call TmuxRepeatGeneric()<CR>
+inoremap <silent> <C-D>v <C-[>:w!<CR>:call TmuxRepeatGeneric()<CR>a
+inoremap <silent> <C-D>r <Esc>:silent !open -t %:p:h<CR>:redraw!<CR>a
 nnoremap <silent> <C-D>g :silent !open -t %:p:h<CR>:redraw!<CR>
 
-nnoremap <silent> <C-D>s :update<CR>:SyntasticCheck<CR>
-vnoremap <silent> <C-D>s :<C-C>:update<CR>:SyntasticCheck<CR>
-inoremap <silent> <C-D>s <C-[>:update<CR>:SyntasticCheck<CR>a
+nnoremap <silent> <C-D>y :update<CR>:SyntasticCheck<CR>
+vnoremap <silent> <C-D>y :<C-C>:update<CR>:SyntasticCheck<CR>
+inoremap <silent> <C-D>y <C-[>:update<CR>:SyntasticCheck<CR>a
+
+"insert mode keybindings for fzf-vim
+inoremap <silent> <C-D>f <C-O>:Files<CR>
+inoremap <silent> <C-D>c <C-O>:Colors<CR>
+inoremap <silent> <C-D>g <C-O>:Commits<CR>
+inoremap <silent> <C-D>b <C-O>:Buffers<CR>
+inoremap <silent> <C-D>a <C-O>:Ag<CR>
+inoremap <silent> <C-D>l <C-O>:Lines<CR>
+inoremap <silent> <C-D>m <C-O>:Marks<CR>
+inoremap <silent> <C-D>w <C-O>:Windows<CR>
+inoremap <silent> <C-D>n <C-O>:Snippets<CR>
+inoremap <silent> <C-D>h <C-O>:History:<CR>
+inoremap <silent> <C-D>s <C-O>:History/<CR>
+inoremap <silent> <C-D>p <C-O>:call GetRef()<CR>
+
+"normal mode keybindings for fzf-vim
+nnoremap <silent> <C-D>f :Files<CR>
+nnoremap <silent> <C-D>c :Colors<CR>
+nnoremap <silent> <C-D>g :Commits<CR>
+nnoremap <silent> <C-D>a :Ag<CR>
+nnoremap <silent> <C-D>l :Lines<CR>
+nnoremap <silent> <C-D>b :Buffers<CR>
+nnoremap <silent> <C-D>m :Marks<CR>
+nnoremap <silent> <C-D>w :Windows<CR>
+nnoremap <silent> <C-D>n :Snippets<CR>
+nnoremap <silent> <C-D>h :History:<CR>
+nnoremap <silent> <C-D>s :History/<CR>
+nnoremap <silent> <C-D>p :call GetRef()<CR>
+
+nmap [[ ?{<CR>w99[{
+nmap ][ /}<CR>b99]}
+nmap ]] j0[[%/{<CR>
+nmap [] k$][%?}<CR>]}]]}]]
 
 "}}}***********************************************************
 
@@ -789,6 +883,7 @@ autocmd filetype * call AutoCorrect()
 
 autocmd BufReadPre,FileReadPre *.[chy] set cindent
 autocmd BufRead * setlocal foldmethod=marker
+"open folds on startup
 autocmd BufRead * normal zR
 autocmd FileType java let b:dispatch = 'javac %'
 
@@ -799,6 +894,7 @@ fun! SetDiffColors()
     highlight DiffChange cterm=bold ctermfg=white ctermbg=DarkBlue
     highlight DiffText   cterm=bold ctermfg=white ctermbg=DarkRed
 endfun
+
 
 autocmd FilterWritePre * call SetDiffColors()
 
@@ -816,10 +912,20 @@ autocmd BufNewFile * exe "normal! G" | startinsert!
 execute pathogen#infect()
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
+"powerline-status pip package installs to different locations of different OS
 let os = substitute(system('uname'), "\n", "", "")
 
-"powerline-status pip package installs to different locations of different OS
 if os == "Darwin"
+    "if has('python3')
+    "command! -nargs=1 Py py3 <args>
+    "set pythonthreedll=/usr/local/Frameworks/Python.framework/Versions/3.7/Python
+    "set pythonthreehome=/usr/local/Frameworks/Python.framework/Versions/3.7
+    "else
+    "command! -nargs=1 Py py <args>
+    "set pythondll=/usr/local/Frameworks/Python.framework/Versions/2.7/Python
+    "set pythonhome=/usr/local/Frameworks/Python.framework/Versions/2.7
+    "endif
+
     set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
     map <ESC>[1;5A <C-Up>
     map <ESC>[1;5B <C-Down>
@@ -828,7 +934,13 @@ if os == "Darwin"
 elseif os == "Linux"
     let distro = substitute(system('grep "^ID=" /etc/os-release | cut -d= -f2 | tr -d \"'), "\n", "", "")
 
-    if distro == "raspbian"
+    if distro == "ubuntu"
+        set  rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
+        map <ESC>[A <C-Up>
+        map <ESC>[B <C-Down>
+        map <ESC>[C <C-Right>
+        map <ESC>[D <C-Left>
+    elseif distro == "raspbian"
         set  rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
         map <ESC>[A <C-Up>
         map <ESC>[B <C-Down>
@@ -848,15 +960,15 @@ elseif os == "Linux"
         map <ESC>[D <C-Left>
     else
         set  rtp+=/usr/lib/python2.7/site-packages/powerline/bindings/vim/
-        map <ESC>[A <C-Up>
-        map <ESC>[B <C-Down>
-        map <ESC>[C <C-Right>
-        map <ESC>[D <C-Left>
+        "map <ESC>[A <C-Up>
+        "map <ESC>[B <C-Down>
+        "map <ESC>[C <C-Right>
+        "map <ESC>[D <C-Left>
     endif
 
 endif
 
-"gf and :find will find file automatically in these locations
+"gf and :find will find files automatically in these locations
 set path+=~/Desktop
 set path+=~/Documents/shellScripts
 
@@ -876,10 +988,46 @@ set dictionary+=/usr/share/dict/words
 "thesaurus completion normally invoked in insert mode with C-X C-T
 set thesaurus+=~/mthesaur.txt
 
+source ~/.oh-my-zsh/custom/plugins/fzf/plugin/fzf.vim 
+
 "easier mapping for dict completion
 inoremap <silent> <F10> <C-X><C-K>
 "easier mapping for thesaurus completion
 inoremap <silent> <F11> <C-X><C-T>
+
+"default keybindings
+let g:fzf_action = {
+            \ 'ctrl-t': 'tab split',
+            \ 'ctrl-x': 'split',
+            \ 'ctrl-v': 'vsplit' }
+
+"default fzf location and size
+let g:fzf_layout = { 'down': '~50%' }
+
+"use vim colorscheme colors
+let g:fzf_colors =
+            \ { 'fg':      ['fg', 'Normal'],
+            \ 'bg':      ['bg', 'Normal'],
+            \ 'hl':      ['fg', 'Comment'],
+            \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+            \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+            \ 'hl+':     ['fg', 'Statement'],
+            \ 'info':    ['fg', 'PreProc'],
+            \ 'border':  ['fg', 'Ignore'],
+            \ 'prompt':  ['fg', 'Conditional'],
+            \ 'pointer': ['fg', 'Exception'],
+            \ 'marker':  ['fg', 'Keyword'],
+            \ 'spinner': ['fg', 'Label'],
+            \ 'header':  ['fg', 'Comment'] }
+
+"give :Ag preview window with first line of matched file matches fzf input
+command! -bang -nargs=* Agg call fzf#vim#ag(<q-args>, fzf#wrap('ag',  {'options': "--delimiter : --nth 4.. --preview 'pygmentize -g $(cut -d: -f1 <<< {}) | nl -b a | sed -n $(cut -d: -f2 <<< {}),\\$p | head -".&lines."'"}))
+
+command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, fzf#vim#with_preview({'options': '--delimiter : --nth 4..', 'bottom':'50%'}))
+"command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, fzf#wrap("with_preview", {"options": '--delimiter : --nth 4.. --preview'}))
+
+"give :Files preview window
+command! -bang -nargs=* Files call fzf#vim#files('', fzf#wrap('files', {'options': "--preview 'test -f {} && { pygmentize -g {} | nl -b a; } || stat {}'"}))
 
 
 "}}}*****************za******************************************
