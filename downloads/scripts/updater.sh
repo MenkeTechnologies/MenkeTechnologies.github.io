@@ -130,7 +130,7 @@ if [[ $skip != true ]]; then
             fi
         done
 
-        
+        prettyPrint "sudo needed: $needSudo for pip3 at $installDir"
 
         if [[ "$needSudo" == yes ]]; then
             for i in $outdated; do
@@ -165,6 +165,8 @@ if [[ $skip != true ]]; then
                 break
             fi
         done
+
+        prettyPrint "sudo needed: $needSudo for pip2 at $installDir"
 
         if [[ "$needSudo" == yes ]]; then
             for i in $outdated; do
