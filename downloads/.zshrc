@@ -959,8 +959,8 @@ bindkey -M vicmd -r '^F'
 bindkey -M viins '^F^L' list-choices
 bindkey -M vicmd '^F^L' list-choices
 
-bindkey -M viins '^K' alternateQuotes
-bindkey -M vicmd '^K' alternateQuotes
+bindkey -M viins '^F^K' alternateQuotes
+bindkey -M vicmd '^F^K' alternateQuotes
 
 bindkey -M viins '\e^D' capitalize-word
 bindkey -M vicmd '\e^D' capitalize-word
@@ -2672,8 +2672,8 @@ if [[ $ZPWR_LEARN != false ]]; then
 
 
     zle -N learn
-    bindkey -M viins '^J' learn
-    bindkey -M vicmd '^J' learn
+    bindkey -M viins '^k' learn
+    bindkey -M vicmd '^k' learn
 
 fi
 
