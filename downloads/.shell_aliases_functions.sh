@@ -456,7 +456,7 @@ alias docu="cd $ZPWR_DOC"
 alias mus='cd $HOME/Music'
 alias jobs="jobs -l"
 alias u8="bash $ZPWR_SCRIPTS/updater.sh"
-alias u8r="bash -l ZPWR_SCRIPTS/updater.sh -s"
+alias u8r="bash -l $ZPWR_SCRIPTS/updater.sh -s"
 alias sd="clear;ssh d "
 alias gitgo='$ZPWR_SCRIPTS/gitgo.sh'
 alias watchGit='bash $ZPWR_SCRIPTS/watchServiceFSWatchGit.sh'
@@ -2137,6 +2137,26 @@ function www(){
     while true; do
         eval "$@"
         sleep $time
+    done
+}
+
+function fordir(){
+    if [[ -z "$2" ]]; then
+       loggErr "fordir <cmd> <dirs> to run <cmd> in each dir"
+       return 1
+    fi
+    cmd="$1"
+    if [[ -d "$cmd" || -f "$cmd" ]]; then
+       loggErr "fordir <cmd> <dirs> to run <cmd> in each dir"
+       return 1
+    fi
+    shift
+    for dir in "$@"; do
+        if [[ -d "$dir" ]]; then
+            (
+                builtin cd "$dir" && prettyPrint "cd $dir && $cmd" && eval "$cmd"
+            )
+        fi
     done
 }
 
