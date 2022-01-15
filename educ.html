@@ -53,10 +53,10 @@
                     <li>GitHub</li>
                 </a>
                 <a href="https://www.youtube.com/channel/UCLOQFBXPrcVvO2Wb3wna8Ow" target="_blank">
-                    <li>YouTube <span class="glyphicon glyphicon-hd-video"/></li>
+                    <li>YouTube <span class="glyphicon glyphicon-hd-video"></span></li>
                 </a>
                 <a href="downloads.html">
-                    <li>Downloads <span class="glyphicon glyphicon-download-alt"/></li>
+                    <li>Downloads <span class="glyphicon glyphicon-download-alt"></span></li>
                 </a>
 
 
@@ -116,7 +116,7 @@
     <h3><span class="first">C</span>isco Certified Networking Professional 2021</h3>
     <h3><span class="first">A</span>udio Production and Engineering</h3>
 
-    
+
     <h5>Scholarships</h5>
     <h3>Google Mobile Web Development</h3>
     <h3>Intel Edge AI</h3>
@@ -125,17 +125,21 @@
     <h3>SUSE Linux Cloud Native</h3>
 
     <h5>Publications</h5>
-    <h3>Expression Analysis and Characterization of Tetratricopeptide Repeat Doman 39c (Ttc39c) in Skeletal Muscle - FASEB Journal 2016</h3>
-    <h3>Ttc39c is Upregulated During Skeletal Muscle Atrophy and Modules ERK1/2 Kinase and HedgeHog Signaling - Journal Cellular Physiology 2019</h3>
+    <h3>Expression Analysis and Characterization of Tetratricopeptide Repeat Doman 39c (Ttc39c) in Skeletal Muscle -
+        FASEB Journal 2016</h3>
+    <h3>Ttc39c is Upregulated During Skeletal Muscle Atrophy and Modules ERK1/2 Kinase and HedgeHog Signaling - Journal
+        Cellular Physiology 2019</h3>
 
     <h5>How I Learn</h5>
     <h3>1000s of Lynda.com and Udemy courses streaming to iPad during showers and while doing chores</h3>
     <h3>Humble Book Bundles</h3>
     <h3>Books gifted by professors</h3>
     <h3>Play Piano at on wakeup and at bedtime for at least 10 minutes</h3>
-    <h3>Store learning items in MySQL table named LearningCollection for fast recall.  Zsh keybindings and functions to accelerate select, insert and delete of learning items.  Recall items during daily life by browsing LearningCollection API.</h3>
+    <h3>Store learning items in MySQL table named LearningCollection for fast recall. Zsh keybindings and functions to
+        accelerate select, insert and delete of learning items. Recall items during daily life by browsing
+        LearningCollection API.</h3>
     <a href="https://github.com/MenkeTechnologies/LearningCollectionAPI" target="_blank">
-        <h3>LearningCollection API Code <span class="glyphicon glyphicon-cog"/></h3>
+        <h3>LearningCollection API Code <span class="glyphicon glyphicon-cog"></span></h3>
     </a>
 
 
@@ -148,54 +152,52 @@
 
 <script>
 
-    //    var h3s = document.getElementsBycl
-    //
-    //    for (var i = 0; i < h3s.length; ++i){
-    //        var text = h3s[i].innerHTML;
-    //
-    //        var endText = "<strong>" + text[0] + "</strong>" + text.slice(1);
-    //        h3s[i].innerHTML = endText;
-    //
-    //
-    //    }
+  //    var h3s = document.getElementsBycl
+  //
+  //    for (var i = 0; i < h3s.length; ++i){
+  //        var text = h3s[i].innerHTML;
+  //
+  //        var endText = "<strong>" + text[0] + "</strong>" + text.slice(1);
+  //        h3s[i].innerHTML = endText;
+  //
+  //
+  //    }
 
-    $(document).ready(function () {
+  $(document).ready(function () {
 
-        var anim = "Default";
+    var anim = "Default";
 
-        var title = "h3";
+    var title = "h3";
 
-        var elem = "h3";
+    var elem = "h3";
 
-        var div = ".products";
+    var div = ".products";
 
-        $(elem).css("position", "relative");
+    $(elem).css("position", "relative");
 //
-        $(elem).css("right", "1000px");
+    $(elem).css("right", "1000px");
 
-        var self = this;
+    $(elem).each(function (index) {
 
-        $(elem).each(function (index) {
+        $(this).slideDown();
 
-                $(this).slideDown();
+        $(this).animate({
+          right: 0
 
-                $(this).animate({
-                    right: 0
+        }, 100 * (index + 1), function () {
 
-                }, 100 * (index + 1), function () {
+        });
 
-                });
-
-            }
-        );
+      }
+    );
 
 //        $("h5").fadeOut(0);
 
-        $("h5").animate({
-            opacity: 1
-        }, 2000);
+    $("h5").animate({
+      opacity: 1
+    }, 2000);
 
-    });
+  });
 </script>
 
 </body>

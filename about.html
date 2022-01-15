@@ -62,10 +62,10 @@
                     <li>GitHub</li>
                 </a>
                 <a href="https://www.youtube.com/channel/UCLOQFBXPrcVvO2Wb3wna8Ow" target="_blank">
-                    <li>YouTube <span class="glyphicon glyphicon-hd-video"/></li>
+                    <li>YouTube <span class="glyphicon glyphicon-hd-video"></span></li>
                 </a>
                 <a href="downloads.html">
-                    <li>Downloads <span class="glyphicon glyphicon-download-alt"/></li>
+                    <li>Downloads <span class="glyphicon glyphicon-download-alt"></span></li>
                 </a>
 
                 <a href="contact.html">
@@ -87,8 +87,10 @@
     <h3>Interests: Programming and Electronics</h3>
     <h3>Creator of the World's Most Advanced UNIX Terminal Setup</h3>
     <h3>Creator of the World's Most Advanced Music Production Desk</h3>
-    <a href="https://github.com/MenkeTechnologies/zpwr" target="_blank"><h3>Install my custom terminal setup: zpwr <span class="glyphicon glyphicon-cog"/></h3></a>
-    <a href="https://crates.io/crates/temprs" target="_blank"><h3>Checkout my tempfile manager: temprs <span class="glyphicon glyphicon-list-alt"/></h3></a>
+    <a href="https://github.com/MenkeTechnologies/zpwr" target="_blank"><h3>Install my custom terminal setup: zpwr <span
+            class="glyphicon glyphicon-cog"></span></h3></a>
+    <a href="https://crates.io/crates/temprs" target="_blank"><h3>Checkout my tempfile manager: temprs <span
+            class="glyphicon glyphicon-list-alt"></span></h3></a>
 
     <h5>Experience</h5>
     <p>&nbsp;</p>
@@ -371,33 +373,29 @@
 
 
 <script>
-    $(document).ready(function () {
+  $(document).ready(function () {
 
-        var elem = "h3";
+    var elem = "h3";
 
-        var div = ".products";
-
-        $(elem).css("position", "relative");
+    $(elem).css("position", "relative");
 //
-        $(elem).css("left", "1000px");
+    $(elem).css("left", "1000px");
 
-        var self = this;
+    $(elem).each(function (index) {
 
-        $(elem).each(function (index) {
+        $(this).animate({
+          left: 0
 
-                $(this).animate({
-                    left: 0
+        }, 200 * (index + 1), function () {
 
-                }, 200 * (index + 1), function () {
+        });
 
-                });
+      }
+    );
 
-            }
-        );
-
-        $("h5").animate({
-            opacity: 1
-        }, 3000)
+    $("h5").animate({
+      opacity: 1
+    }, 3000)
 
 //        $("h5").animate({
 //
@@ -410,7 +408,7 @@
 //
 //        });
 
-    });
+  });
 </script>
 
 </body>
