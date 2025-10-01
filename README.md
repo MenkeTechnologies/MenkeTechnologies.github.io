@@ -4,7 +4,7 @@
 
 
 
-# My Personal Website (Work in Progress)
+# My Personal Website
 
 
 ![index.html screenshot](/index.png)
