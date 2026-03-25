@@ -1,0 +1,27 @@
+{
+  "name": "personalwebsite",
+  "version": "1.0.0",
+  "description": "![index.html screenshot](/index.png)",
+  "main": "freeCodeCamp.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MenkeTechnologies/MenkeTechnologies.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/MenkeTechnologies/MenkeTechnologies.github.io/issues"
+  },
+  "homepage": "https://github.com/MenkeTechnologies/MenkeTechnologies.github.io#readme",
+  "jest": {
+    "testPathIgnorePatterns": ["/node_modules/", "<rootDir>/test.js"]
+  },
+  "devDependencies": {
+    "jest": "^30.3.0"
+  }
+}
