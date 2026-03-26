@@ -211,6 +211,7 @@ ZPWR_GH_PLUGINS=(
 
 ZPWR_OMZ_PLUGINS=(
     rust
+    gcloud
     ruby
     rake
     yarn
@@ -255,7 +256,6 @@ ZPWR_OMZ_COMPS=(
     spring/_spring
     redis-cli/_redis-cli
     rust/_rustc
-    fd/_fd
     github/_hub
     meteor/_meteor
     yarn/_yarn
@@ -276,6 +276,10 @@ if zpwrCommandExists docker-compose; then
     ZPWR_OMZ_COMPS+=( docker-compose/_docker-compose )
 fi
 
+if zpwrCommandExists ngrok; then
+    ZPWR_OMZ_PLUGINS+=( ngrok)
+fi
+
 if zpwrCommandExists kubectl;then
     ZPWR_GH_PLUGINS+=( MenkeTechnologies/kubectl-aliases nnao45/zsh-kubectl-completion )
 fi
@@ -291,7 +295,6 @@ fi
 
 zpwrCommandExists subl && ZPWR_OMZ_PLUGINS+=( sublime )
 zpwrCommandExists svn && ZPWR_OMZ_PLUGINS+=( svn )
-zpwrCommandExists adb && ZPWR_OMZ_COMPS+=( adb/_adb )
 
 if [[ $ZPWR_OS_TYPE == linux ]]; then
     zpwrOsDebVsUbuntu \
@@ -470,7 +473,7 @@ if [[ "$ZPWR_PLUGIN_MANAGER" == zinit ]]; then
             local files=(music spotify) f
             for f in ${files[@]}; do
                 if [[ ! -f "$ZSH/snippets/OMZP::macos/$f" ]]; then
-                    wget -qP "$ZSH/snippets/OMZP::macos" https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/macos/$f
+                    wget -qP "$ZSH/snippets/OMZP::macos" https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/main/plugins/macos/$f
                 fi
             done
         fi
