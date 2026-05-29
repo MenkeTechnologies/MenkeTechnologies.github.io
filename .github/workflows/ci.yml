@@ -1,0 +1,77 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Jest tests (62-test suite under __tests__/)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies (lock-free — package-lock already pinned)
+        run: npm ci || npm install
+
+      - name: Run Jest
+        run: npx jest --ci
+
+      - name: Smoke require lib/utils.js + lib/freeCodeCamp.js
+        run: |
+          node -e "require('./lib/utils.js'); console.log('lib/utils.js loads OK')"
+          node -e "require('./lib/freeCodeCamp.js'); console.log('lib/freeCodeCamp.js loads OK')"
+
+  html-shape:
+    name: Static HTML/JSON sanity (no toolchain required)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Every shipped HTML file is non-empty + has <html or <!DOCTYPE
+        run: |
+          set -euo pipefail
+          fail=0
+          # b64.html is intentionally base64-encoded shell payload, NOT HTML.
+          # Skip via filename-block list.
+          excluded='b64.html test.html'
+          for f in *.html; do
+            [[ -f "$f" ]] || continue
+            if [[ " $excluded " == *" $f "* ]]; then
+              echo "skip $f (intentionally non-HTML payload)"
+              continue
+            fi
+            if [[ ! -s "$f" ]]; then
+              echo "::error file=$f::Empty HTML file"
+              fail=1
+              continue
+            fi
+            if ! head -3 "$f" | grep -qiE '<!doctype|<html'; then
+              echo "::error file=$f::Missing <!DOCTYPE or <html in first 3 lines"
+              fail=1
+            fi
+          done
+          exit $fail
+
+      - name: api.json parses as valid JSON
+        run: |
+          set -euo pipefail
+          # python is available on ubuntu-latest by default; jq would also work.
+          python3 -c "import json,sys; json.load(open('api.json')); print('api.json is valid JSON')"
