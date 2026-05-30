@@ -418,3 +418,61 @@ describe('mutation — empty-input edge pins', () => {
     expect(mutation(['', 'abc'])).toBe(false);
   });
 });
+
+// Round-4 pins — palindrome edge cases and truncateString boundary
+// arithmetic. These probe the exact branches that drift when someone
+// "optimizes" the implementation later.
+
+describe('palindrome — strict round-4 boundaries', () => {
+  test('empty string returns true (degenerate palindrome)', () => {
+    // After alphanumeric-strip, '' === ''.split('').reverse().join('').
+    // Removing this branch would force a special-case check that the
+    // current impl doesn't need.
+    expect(palindrome('')).toBe(true);
+  });
+
+  test('all-symbols string strips to empty and returns true', () => {
+    // Pin: '_!?-' all match the non-alphanumeric strip regex, yielding
+    // '' which is a palindrome. This proves the strip happens BEFORE
+    // the equality check, not after.
+    expect(palindrome('_!?-')).toBe(true);
+  });
+
+  test('digits-only palindrome is detected', () => {
+    expect(palindrome('12321')).toBe(true);
+  });
+
+  test('digits-only non-palindrome returns false', () => {
+    expect(palindrome('12345')).toBe(false);
+  });
+});
+
+describe('truncateString — strict round-4 boundary arithmetic', () => {
+  test('num=3 cutoff: branch routes to `substr(0,3)+...` regardless of length', () => {
+    // The implementation's `if (num <= 3)` branch ALWAYS appends "..."
+    // even when the source string is shorter. Pin both directions:
+    // longer input and equal-to-num input.
+    expect(truncateString('abcdef', 3)).toBe('abc...');
+    expect(truncateString('abc', 3)).toBe('abc...');
+  });
+
+  test('num=4 boundary: switches to `substr(0, num-3)+...` form (1 char + ...)', () => {
+    // At num=4, the else-branch fires: substr(0, 4-3) = substr(0,1).
+    // So a long input is truncated to a single char + "...". Pin the
+    // off-by-one boundary between num<=3 and num>3 paths.
+    expect(truncateString('abcdef', 4)).toBe('a...');
+  });
+
+  test('num exactly equal to length: original returned unchanged', () => {
+    // When str.length === num, the inner `if (str.length > num)` is
+    // false, so we hit the `final = str` line and return the input
+    // verbatim. Important contract: no "..." is appended on equality.
+    expect(truncateString('hello', 5)).toBe('hello');
+  });
+
+  test('num larger than length: original returned unchanged', () => {
+    // The else branch with `str.length > num` false also fires here.
+    // Pin so "num larger than input" stays a no-op.
+    expect(truncateString('hi', 100)).toBe('hi');
+  });
+});
