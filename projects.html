@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projects</title>
+    <link href="https://fonts.googleapis.com/css?family=Abel|Amatic+SC|Roboto:100|Pacifico|Raleway:100,200,300,400,500,600,700,800,900"
+          rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+    <meta name="description" content="Project docs index — links to every MenkeTechnologies project's GitHub Pages documentation site. 44 first-party docs/ sites across 6 tiers: the strykelang language, the zshrs shell, the fusevm bytecode VM, Rust CLI tools, Tauri desktop apps, Stryke ecosystem connectors, zsh plugin family, the meta umbrella.">
+
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/startup.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+    <style>
+        body { padding-top: 60px; }
+        .projects-main {
+            max-width: 80rem;
+            margin: 24px auto 60px;
+            padding: 0 20px;
+        }
+        .projects-main h3.blue { margin-top: 0; }
+        .tier-section {
+            background: #fafafa;
+            border-radius: 10px;
+            padding: 18px 22px 12px;
+            margin: 18px 0;
+            border-left: 5px solid #14213D;
+        }
+        .tier-section h4 {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            color: #14213D;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin: 0 0 6px;
+            font-size: 16px;
+        }
+        .tier-section p.tier-note {
+            color: #555;
+            margin: 0 0 14px;
+            font-size: 13px;
+        }
+        .proj-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+            gap: 12px;
+        }
+        .proj-card {
+            border: 1px solid #ddd;
+            border-left: 3px solid #14213D;
+            background: #fff;
+            padding: 12px 14px;
+            border-radius: 4px;
+            transition: box-shadow 0.15s, transform 0.15s;
+        }
+        .proj-card:hover {
+            box-shadow: 0 3px 12px rgba(20, 33, 61, 0.18);
+            transform: translateY(-1px);
+        }
+        .proj-card h5 {
+            margin: 0 0 6px;
+            font-family: 'Raleway', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            color: #14213D;
+        }
+        .proj-card h5 code {
+            background: transparent;
+            color: #14213D;
+            font-family: 'Roboto', monospace;
+            font-size: 14px;
+            padding: 0;
+        }
+        .proj-card p {
+            margin: 0 0 10px;
+            color: #555;
+            font-size: 12.5px;
+            line-height: 1.45;
+        }
+        .proj-links {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .proj-link {
+            display: inline-block;
+            padding: 4px 10px;
+            font-size: 11px;
+            text-decoration: none;
+            border-radius: 3px;
+            border: 1px solid #14213D;
+            color: #14213D;
+            background: #fff;
+            font-family: 'Raleway', sans-serif;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        .proj-link:hover {
+            background: #14213D;
+            color: #fff;
+            text-decoration: none;
+        }
+        .proj-link.primary {
+            background: #14213D;
+            color: #fff;
+        }
+        .proj-link.primary:hover {
+            background: #ff2a6d;
+            border-color: #ff2a6d;
+        }
+        .proj-summary {
+            margin: 8px 0 16px;
+            padding: 10px 14px;
+            background: #f0f3fa;
+            border-radius: 6px;
+            color: #14213D;
+            font-size: 13px;
+        }
+        .proj-summary strong {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="main-nav">
+    <div class="container">
+
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" data-target="#navbar-collapse" data-toggle="collapse"
+                    type="button">
+                <span class="sr-only">Toggle Navigation</span>
+
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+
+
+            </button>
+
+            <a class="navbar-brand" href="/index.html" id="linksHeader">Jacob Menke</a>
+
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+
+                <a href="index.html">
+                    <li>Home</li>
+                </a>
+                <a href="about.html">
+                    <li>About</li>
+                </a>
+                <a href="educ.html">
+                    <li>Education</li>
+                </a>
+                <a href="projects.html">
+                    <li>Projects <span class="glyphicon glyphicon-book"></span></li>
+                </a>
+
+                <a href="https://github.com/MenkeTechnologies" target="_blank" rel="noopener noreferrer">
+                    <li>GitHub</li>
+                </a>
+                <a href="https://www.youtube.com/channel/UCLOQFBXPrcVvO2Wb3wna8Ow" target="_blank" rel="noopener noreferrer">
+                    <li>YouTube <span class="glyphicon glyphicon-hd-video"></span></li>
+                </a>
+                <a href="downloads.html">
+                    <li>Downloads <span class="glyphicon glyphicon-download-alt"></span></li>
+                </a>
+
+
+                <a href="contact.html">
+                    <li>Contact <span class="glyphicon glyphicon-send"></span></li>
+                </a>
+
+            </ul>
+        </div>
+
+
+    </div>
+
+</nav>
+
+
+<div class="projects-main">
+    <h3 class="blue">Projects &mdash; Documentation Index</h3>
+
+    <div class="proj-summary">
+        <strong>44 GitHub Pages docs sites</strong> across 6 tiers &mdash; the
+        <code>strykelang</code> language, the <code>zshrs</code> shell, the
+        <code>fusevm</code> bytecode VM, Rust CLI tools, Tauri v2 desktop apps,
+        the 15-repo Stryke ecosystem, 28 zsh plugins, and the umbrella meta
+        repo that vendors them all. Every site is mirrored under
+        <code>https://menketechnologies.github.io/&lt;repo&gt;/</code>.
+    </div>
+
+    <!-- Umbrella -->
+    <div class="tier-section">
+        <h4>Umbrella &mdash; one-command setup for the entire stack</h4>
+        <p class="tier-note">Vendors every MenkeTechnologies project as a git submodule. One <code>git clone --recurse-submodules</code> produces a fully-loaded dev workstation.</p>
+        <div class="proj-grid">
+            <div class="proj-card">
+                <h5><code>MenkeTechnologiesMeta</code></h5>
+                <p>64-submodule umbrella: language, shell, VM, CLIs, GUIs, plugins, completions. Helper scripts, CI gate suite, per-tier README.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/MenkeTechnologiesMeta" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tier 1 — Core (12) -->
+    <div class="tier-section">
+        <h4>Tier 1 &mdash; Core (12)</h4>
+        <p class="tier-note">The set of projects sharing the unified strykelang-authored documentation template: README header, ToC convention <code>[0xNN]</code>, <code>docs/index.html</code> chrome, <code>docs/report.html</code> engineering report, man pages.</p>
+        <div class="proj-grid">
+            <div class="proj-card">
+                <h5><code>strykelang</code></h5>
+                <p>The fastest dynamic language for parallel ops. Perl 5 interpreter in Rust, bytecode VM + Cranelift JIT, 10,431 builtins.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/strykelang/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/strykelang/reference.html" target="_blank" rel="noopener noreferrer">Reference</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/strykelang" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zshrs</code></h5>
+                <p>The first compiled Unix shell. 1:1 zsh C-port + extensions, persistent worker pool, AOP intercept, rkyv bytecode cache.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/zshrs/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/zshrs/reference.html" target="_blank" rel="noopener noreferrer">Reference</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zshrs" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>fusevm</code></h5>
+                <p>Language-agnostic bytecode VM with fused superinstructions and 3-tier Cranelift JIT. The execution engine behind strykelang, zshrs, awkrs.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/fusevm/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/fusevm" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>lsofrs</code></h5>
+                <p>Rust rewrite of <code>lsof</code> &mdash; 5-21&times; faster, 7-tab TUI (ratatui), 31 cyberpunk themes.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/lsofrs/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/lsofrs" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>temprs</code></h5>
+                <p>Temporary file stack manager. Atomic <code>flock</code>-protected master record, dual indexing (position or <code>@name</code>).</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/temprs/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/temprs" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>awkrs</code></h5>
+                <p>AWK in Rust. Bytecode VM + Cranelift JIT + persistent rkyv bytecode cache + parallel records.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/awkrs/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/awkrs" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>iftoprs</code></h5>
+                <p>Real-time bandwidth monitor. TUI built on ratatui, 31 themes, process attribution via <code>lsof</code>, NDJSON streaming.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/iftoprs/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/iftoprs" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>Audio-Haxor</code></h5>
+                <p>Tauri v2 desktop GUI app + JUCE engine. VST2/VST3/AU/CLAP scanner, sample vault, DAW project index, KVR version checker.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/Audio-Haxor/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/Audio-Haxor" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>traderview</code></h5>
+                <p>Tauri v2 desktop GUI app &mdash; TraderVue-style trading journal with embedded Postgres, vanilla JS + uPlot frontend. Multi-user axum web service from the same workspace.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/traderview/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/traderview" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>nmaprs</code></h5>
+                <p>Rust port of <code>nmap</code>. Full async TCP/UDP/SCTP/IP-protocol scans, idle/zombie scans, NSE-style script probes.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/nmaprs/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/nmaprs" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>powerliners</code></h5>
+                <p>Mature Rust port of Python's <code>powerline-status</code>. 5-binary suite, sub-millisecond render replacing the ~100&nbsp;ms python startup tax.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/powerliners/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/powerliners/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/powerliners" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zpwr</code></h5>
+                <p>The terminal OS. 463+ verbs, 172k LOC, zinit-based, stryke-powered.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/zpwr/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zpwr" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tier 2 — Stryke ecosystem (15) -->
+    <div class="tier-section">
+        <h4>Tier 2 &mdash; Stryke Ecosystem (15)</h4>
+        <p class="tier-note">Per-service connector libraries for <code>stryke</code> &mdash; opt-in packages kept out of the daily-driver binary so the install stays slim.</p>
+        <div class="proj-grid">
+            <div class="proj-card">
+                <h5><code>stryke-arrow</code></h5>
+                <p>Apache Arrow + Parquet + Feather + arrow-CSV/JSON integration.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-arrow/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-arrow" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>stryke-aws</code></h5>
+                <p>AWS SDK bindings (S3, EC2, SQS, Lambda, &hellip;).</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-aws/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-aws" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>stryke-demo</code></h5>
+                <p>Demo scripts + example programs.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-demo/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-demo" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>stryke-docker</code></h5>
+                <p>Docker engine API client.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-docker/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-docker" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>stryke-duckdb</code></h5>
+                <p>DuckDB embedded analytics.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-duckdb/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-duckdb" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>stryke-gcp</code></h5>
+                <p>Google Cloud Platform SDK bindings.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-gcp/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-gcp" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>stryke-grpc</code></h5>
+                <p>gRPC client/server.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-grpc/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-grpc" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>stryke-k8s</code></h5>
+                <p>Kubernetes API client.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-k8s/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-k8s" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>stryke-kafka</code></h5>
+                <p>Kafka producer/consumer (rdkafka bindings).</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-kafka/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-kafka" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>stryke-mongo</code></h5>
+                <p>MongoDB driver.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-mongo/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-mongo" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>stryke-mysql</code></h5>
+                <p>MySQL/MariaDB driver.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-mysql/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-mysql" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>stryke-parquet</code></h5>
+                <p>Apache Parquet read/write.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-parquet/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-parquet" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>stryke-postgres</code></h5>
+                <p>PostgreSQL driver.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-postgres/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-postgres" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>stryke-redis</code></h5>
+                <p>Redis client.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-redis/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-redis" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>stryke-spark</code></h5>
+                <p>Apache Spark integration.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-spark/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-spark" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tier 3 — Completions Corpus (1) -->
+    <div class="tier-section">
+        <h4>Tier 3 &mdash; Completions Corpus (1)</h4>
+        <p class="tier-note">The largest curated zsh completion corpus in existence &mdash; data + completion functions, not an executable.</p>
+        <div class="proj-grid">
+            <div class="proj-card">
+                <h5><code>zsh-more-completions</code></h5>
+                <p>32,008-completion zsh corpus: 9,253 <code>src/</code> + 18,260 <code>more_src/</code> + 3,398 <code>man_src/</code> + 1,087 <code>architecture_src/</code> + 10 <code>override_src/</code>.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/zsh-more-completions/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zsh-more-completions" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tier 4 — Zsh plugins (14 with docs) -->
+    <div class="tier-section">
+        <h4>Tier 4 &mdash; Zsh Plugin Family (14)</h4>
+        <p class="tier-note">The plugin family that <code>zpwr</code> and any zsh user can load via zinit / oh-my-zsh.</p>
+        <div class="proj-grid">
+            <div class="proj-card">
+                <h5><code>zsh-expand</code></h5>
+                <p>Expand aliases / global aliases / typos on space.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/zsh-expand/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zsh-expand" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zsh-cargo-completion</code></h5>
+                <p>Cargo completion.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/zsh-cargo-completion/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zsh-cargo-completion" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zsh-learn</code></h5>
+                <p>MySQL/MariaDB-backed learning collection &mdash; save, query, quiz.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/zsh-learn/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zsh-learn" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zsh-git-acp</code></h5>
+                <p><code>git add commit push</code> in one keybinding.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/zsh-git-acp/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zsh-git-acp" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zsh-better-npm-completion</code></h5>
+                <p>Better npm completion.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/zsh-better-npm-completion/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zsh-better-npm-completion" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zsh-cpan-completion</code></h5>
+                <p>CPAN completion.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/zsh-cpan-completion/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zsh-cpan-completion" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zsh-dotnet-completion</code></h5>
+                <p>.NET completion.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/zsh-dotnet-completion/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zsh-dotnet-completion" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zsh-gem-completion</code></h5>
+                <p>Ruby gem completion.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/zsh-gem-completion/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zsh-gem-completion" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zsh-git-repo-cache</code></h5>
+                <p>Git repo cache helper.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/zsh-git-repo-cache/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zsh-git-repo-cache" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zsh-nginx</code></h5>
+                <p>nginx config completion.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/zsh-nginx/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zsh-nginx" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zsh-pip-description-completion</code></h5>
+                <p>pip completion with package descriptions.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/zsh-pip-description-completion/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zsh-pip-description-completion" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zsh-sed-sub</code></h5>
+                <p>sed substitution helper.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/zsh-sed-sub/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zsh-sed-sub" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zsh-sudo</code></h5>
+                <p><kbd>Esc Esc</kbd> to prepend <code>sudo</code> to the current line.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/zsh-sudo/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zsh-sudo" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zsh-xcode-completions</code></h5>
+                <p>Xcode CLI tools completion.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/zsh-xcode-completions/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zsh-xcode-completions" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tier 6 — Apps, extensions, supporting (1 with docs) -->
+    <div class="tier-section">
+        <h4>Tier 6 &mdash; Browser Extension (1)</h4>
+        <p class="tier-note">Chrome extension shipping its own GitHub Pages site.</p>
+        <div class="proj-grid">
+            <div class="proj-card">
+                <h5><code>zpwrchrome</code></h5>
+                <p>The fastest recent-tabs Chrome extension with the most keyboard shortcuts. Manifest V3, cross-window MRU stack, 49 commands, UNIX <code>pass</code> integration via the bundled <code>browserpass-host-rs</code> Rust port.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/zpwrchrome/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/zpwrchrome/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zpwrchrome" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p style="text-align: center; color: #888; font-size: 12px; margin-top: 30px;">
+        All sites mirrored under <code>https://menketechnologies.github.io/&lt;repo&gt;/</code> &middot;
+        <a href="https://github.com/MenkeTechnologies" target="_blank" rel="noopener noreferrer">github.com/MenkeTechnologies</a>
+    </p>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
