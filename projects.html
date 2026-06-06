@@ -637,10 +637,32 @@
         </div>
     </div>
 
-    <!-- Tier 6 — Apps, extensions, supporting -->
+    <!-- Tier 5 — Editor / multiplexer (2) -->
     <div class="tier-section">
-        <h4>Tier 6 &mdash; Extension &amp; Web APIs (2)</h4>
-        <p class="tier-note">Browser extension shipping its own GitHub Pages site, and the REST API generator.</p>
+        <h4>Tier 5 &mdash; Editor &amp; Multiplexer Plugins (2)</h4>
+        <p class="tier-note">Plugins that hook editors and the terminal multiplexer into the broader CLI environment.</p>
+        <div class="proj-grid">
+            <div class="proj-card">
+                <h5><code>VimColorSchemes</code></h5>
+                <p>732 hand-curated Vim colorschemes packaged as a single Pathogen / vim-plug / lazy.nvim bundle. The largest one-bundle scheme collection.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/VimColorSchemes" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>tmux-fzf-url</code></h5>
+                <p>Pop a fzf picker over every URL currently visible in the tmux pane; selected URL opens in the default browser.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/tmux-fzf-url" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tier 6 — Apps, extensions, web APIs, site (5) -->
+    <div class="tier-section">
+        <h4>Tier 6 &mdash; Apps, Extension, Web APIs &amp; Site (5)</h4>
+        <p class="tier-note">Browser extension, disk-usage TUI, web API services, the meta umbrella's own public site.</p>
         <div class="proj-grid">
             <div class="proj-card">
                 <h5><code>zpwrchrome</code></h5>
@@ -652,12 +674,35 @@
                 </div>
             </div>
             <div class="proj-card">
+                <h5><code>storageshower</code></h5>
+                <p>Disk-usage TUI in Rust (sibling to <code>iftoprs</code>). Walks a directory tree and presents space-by-folder with sort + drill-down.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/storageshower" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a class="proj-link" href="https://crates.io/crates/storageshower" target="_blank" rel="noopener noreferrer">crates.io</a>
+                </div>
+            </div>
+            <div class="proj-card">
                 <h5><code>api-rest-generator</code></h5>
                 <p>REST API generator from raw SQL DDL dumps. Targets Spring Boot (Java/Kotlin/Groovy) and Loco (Rust/Axum/SeaORM). Published on crates.io.</p>
                 <div class="proj-links">
                     <a class="proj-link primary" href="https://github.com/MenkeTechnologies/api-rest-generator" target="_blank" rel="noopener noreferrer">GitHub</a>
                     <a class="proj-link" href="https://crates.io/crates/api-rest-generator" target="_blank" rel="noopener noreferrer">crates.io</a>
                     <a class="proj-link" href="https://docs.rs/api-rest-generator" target="_blank" rel="noopener noreferrer">docs.rs</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>LearningCollectionAPI</code></h5>
+                <p>Java/Kotlin Spring Boot REST service — backing service for the <code>zsh-learn</code> plugin (save / query / quiz / search vocabulary cards over HTTP).</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/LearningCollectionAPI" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>MenkeTechnologies.github.io</code></h5>
+                <p>The public site &mdash; this index of project docs, the landing page, screenshot history. Source for <code>menketechnologies.github.io</code>.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/" target="_blank" rel="noopener noreferrer">Site</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/MenkeTechnologies.github.io" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
         </div>
