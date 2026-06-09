@@ -413,7 +413,7 @@
             </div>
             <div class="proj-card">
                 <h5><code>stryke-gui</code></h5>
-                <p>GUI automation bridge &mdash; <code>stryke-gui-helper</code> binary for mouse/keyboard synthesis (enigo) + screen capture (xcap). Isolates X11 / Wayland / CGEvent / SendInput linkage out of the stryke core.</p>
+                <p>GUI automation bridge &mdash; <code>stryke_gui</code> cdylib <code>dlopen</code>ed in-process on <code>use GUI</code>, fronting mouse/keyboard synthesis (enigo) + screen capture (xcap). Persistent <code>Enigo</code> handle in <code>OnceCell</code>, no fork-per-call. Isolates X11 / Wayland / CGEvent / SendInput linkage out of the stryke core.</p>
                 <div class="proj-links">
                     <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-gui/" target="_blank" rel="noopener noreferrer">Docs</a>
                     <a class="proj-link" href="https://menketechnologies.github.io/stryke-gui/report.html" target="_blank" rel="noopener noreferrer">Report</a>
