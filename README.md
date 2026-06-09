@@ -36,6 +36,7 @@
 │  /downloads      │  ● LIVE    │  Data Drops       │
 │  /startup        │  ● LIVE    │  Init Sequence    │
 │  /b64            │  ● LIVE    │  Crypto Toolkit   │
+│  /projects       │  ● LIVE    │  Projects Catalog │
 └──────────────────┴────────────┴───────────────────┘
 ```
 
