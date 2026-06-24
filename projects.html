@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Abel|Amatic+SC|Roboto:100|Pacifico|Raleway:100,200,300,400,500,600,700,800,900"
           rel="stylesheet">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
-    <meta name="description" content="Project docs index — links to every MenkeTechnologies project's GitHub Pages documentation site. 99 first-party projects across 6 tiers: the strykelang language, the zshrs shell, the fusevm bytecode VM, Rust CLI tools, Tauri desktop apps, Stryke ecosystem connectors, zsh plugin family, the meta umbrella.">
+    <meta name="description" content="Project docs index — links to every MenkeTechnologies project's GitHub Pages documentation site. 94 first-party projects across 6 tiers: the strykelang language, the zshrs shell, the fusevm bytecode VM, Rust CLI tools, Tauri desktop apps, Stryke ecosystem connectors, zsh plugin family, the meta umbrella.">
 
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/startup.css" rel="stylesheet">
@@ -198,7 +198,7 @@
     <h3 class="blue">Projects &mdash; Documentation Index</h3>
 
     <div class="proj-summary">
-        <strong>100 submodules</strong> across 6 tiers &mdash; the
+        <strong>103 submodules</strong> across 6 tiers &mdash; the
         <code>strykelang</code> language, the <code>zshrs</code> shell, the
         <code>fusevm</code> bytecode VM, Rust CLI tools, Tauri v2 desktop apps,
         the 31-repo Stryke ecosystem, 28 zsh plugins, and the umbrella meta
@@ -213,7 +213,7 @@
         <div class="proj-grid">
             <div class="proj-card">
                 <h5><code>MenkeTechnologiesMeta</code></h5>
-                <p>100-submodule umbrella: language, shell, VM, CLIs, GUIs, audio plugins, shared components, zsh plugins, completions. Helper scripts, CI gate suite, per-tier README.</p>
+                <p>103-submodule umbrella: language, shell, VM, CLIs, GUIs, audio plugins, shared components, zsh plugins, completions. Helper scripts, CI gate suite, per-tier README.</p>
                 <div class="proj-links">
                     <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/" target="_blank" rel="noopener noreferrer">Docs</a>
                     <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/report.html" target="_blank" rel="noopener noreferrer">Report</a>
@@ -223,9 +223,9 @@
         </div>
     </div>
 
-    <!-- Tier 1 — Core (17) -->
+    <!-- Tier 1 — Core (18) -->
     <div class="tier-section">
-        <h4>Tier 1 &mdash; Core (17)</h4>
+        <h4>Tier 1 &mdash; Core (18)</h4>
         <p class="tier-note">The set of projects sharing the unified strykelang-authored documentation template: README header, ToC convention <code>[0xNN]</code>, <code>docs/index.html</code> chrome, <code>docs/report.html</code> engineering report, man pages.</p>
         <div class="proj-grid">
             <div class="proj-card">
@@ -377,6 +377,15 @@
                 <p>Algorithmic music-production engine (Rust) &mdash; one action generates a complete, professionally-arranged track: song structure + key/tempo, per-section MIDI, and an exported Ableton Live Set (.als), with per-genre engines. Ported from the Audio-Haxor generators behind a host-provided sample source. Powers zpwr-daw's one-click production. Private internal engine.</p>
                 <div class="proj-links">
                     <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zpwr-algo-production" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zpwr-file-browser</code></h5>
+                <p>Shared file browser (Rust + JS) &mdash; a host-agnostic file-tree / list front end (taken verbatim from Audio-Haxor) backed by a pure-Rust filesystem crate. Builds for all four apps &mdash; Audio-Haxor / traderview / ztranslator (Tauri) and zpwr-daw (JUCE WebView). Private shared component.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zpwr-file-browser" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zpwr-file-browser/report" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zpwr-file-browser" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
         </div>
@@ -1022,9 +1031,9 @@
         </div>
     </div>
 
-    <!-- Tier 6 — Apps, extensions, web APIs, site (14) -->
+    <!-- Tier 6 — Apps, extensions, web APIs, site (16) -->
     <div class="tier-section">
-        <h4>Tier 6 &mdash; Apps, Extensions, Web APIs &amp; Site (14)</h4>
+        <h4>Tier 6 &mdash; Apps, Extensions, Web APIs &amp; Site (16)</h4>
         <p class="tier-note">Browser extension, disk-usage TUI, web API services, the meta umbrella's own public site.</p>
         <div class="proj-grid">
             <div class="proj-card">
@@ -1143,6 +1152,24 @@
                 <p>Paid publications (private) &mdash; companion books, reference manuals/PDFs, and the zpwr encyclopedia for strykelang / zshrs / zpwr, plus their pandoc + LaTeX build pipeline.</p>
                 <div class="proj-links">
                     <a class="proj-link primary" href="https://github.com/MenkeTechnologies/MenkeTechnologiesPublications" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zpwr-i18n</code></h5>
+                <p>Shared i18n runtime (vanilla JS) &mdash; a portable JSON-catalog loader extracted from Audio-Haxor (not its SQLite/Tauri loader), 27 locales, runs in Tauri apps and JUCE WebViews. Used by all four apps. Private shared component.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zpwr-i18n" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zpwr-i18n/report" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zpwr-i18n" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zpwr-theme</code></h5>
+                <p>Cyberpunk editor theme &mdash; VS Code (5 color schemes &times; dark/light = 10 themes) plus a matching JetBrains UI theme + editor scheme, all generated from one <code>palette/schemes.json</code>. Palette shared with the app stack's cyberpunk HUD.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/zpwr-theme/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/zpwr-theme/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zpwr-theme" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
         </div>
