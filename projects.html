@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Abel|Amatic+SC|Roboto:100|Pacifico|Raleway:100,200,300,400,500,600,700,800,900"
           rel="stylesheet">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
-    <meta name="description" content="Project docs index — links to every MenkeTechnologies project's GitHub Pages documentation site. 98 first-party projects across 6 tiers: the strykelang language, the zshrs shell, the fusevm bytecode VM, Rust CLI tools, Tauri desktop apps, Stryke ecosystem connectors, zsh plugin family, the meta umbrella.">
+    <meta name="description" content="Project docs index — links to every MenkeTechnologies project's GitHub Pages documentation site. 104 first-party projects across 6 tiers: the strykelang language, the zshrs shell, the fusevm bytecode VM, Rust CLI tools, Tauri desktop apps, Stryke ecosystem connectors, zsh plugin family, the meta umbrella.">
 
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/startup.css" rel="stylesheet">
@@ -198,7 +198,7 @@
     <h3 class="blue">Projects &mdash; Documentation Index</h3>
 
     <div class="proj-summary">
-        <strong>107 submodules</strong> across 6 tiers &mdash; the
+        <strong>113 submodules</strong> across 6 tiers &mdash; the
         <code>strykelang</code> language, the <code>zshrs</code> shell, the
         <code>fusevm</code> bytecode VM, Rust CLI tools, Tauri v2 desktop apps,
         the 31-repo Stryke ecosystem, 28 zsh plugins, and the umbrella meta
@@ -213,7 +213,7 @@
         <div class="proj-grid">
             <div class="proj-card">
                 <h5><code>MenkeTechnologiesMeta</code></h5>
-                <p>107-submodule umbrella: language, shell, VM, CLIs, GUIs, audio plugins, shared components, zsh plugins, completions. Helper scripts, CI gate suite, per-tier README.</p>
+                <p>113-submodule umbrella: language, shell, VM, CLIs, GUIs, audio plugins, shared components, zsh plugins, completions. Helper scripts, CI gate suite, per-tier README.</p>
                 <div class="proj-links">
                     <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/" target="_blank" rel="noopener noreferrer">Docs</a>
                     <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/report.html" target="_blank" rel="noopener noreferrer">Report</a>
@@ -223,9 +223,9 @@
         </div>
     </div>
 
-    <!-- Tier 1 — Core (18) -->
+    <!-- Tier 1 — Core (24) -->
     <div class="tier-section">
-        <h4>Tier 1 &mdash; Core (18)</h4>
+        <h4>Tier 1 &mdash; Core (24)</h4>
         <p class="tier-note">The set of projects sharing the unified strykelang-authored documentation template: README header, ToC convention <code>[0xNN]</code>, <code>docs/index.html</code> chrome, <code>docs/report.html</code> engineering report, man pages.</p>
         <div class="proj-grid">
             <div class="proj-card">
@@ -386,6 +386,48 @@
                     <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zpwr-file-browser" target="_blank" rel="noopener noreferrer">Docs</a>
                     <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zpwr-file-browser/report" target="_blank" rel="noopener noreferrer">Report</a>
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/zpwr-file-browser" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zpdf</code></h5>
+                <p>PDF editor replacing Adobe Acrobat + Preview (Rust, Tauri v2 desktop app) &mdash; full editing, annotation/markup, AcroForms, digital & certificate signatures, OCR, redaction, page management, convert/export. Consumes zpdf-core. Paid product (in the app-store).</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zpdf" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zpdf-core</code></h5>
+                <p>Embeddable PDF engine (pure Rust, no GUI deps) &mdash; parse/render/edit/annotate/sign/page-ops behind zpdf; rlib + staticlib + cdylib so it embeds into traderview and the other GUI apps. Ships a source-derived feature port report. Private.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zpdf-core" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zemail</code></h5>
+                <p>Email client (Rust, Tauri v2 desktop app) &mdash; a fast, owned desktop mail app behind a cyberpunk HUD. Consumes zemail-core. Paid product (in the app-store).</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zemail" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zemail-core</code></h5>
+                <p>Embeddable mail engine (pure Rust, no GUI deps) extracted from zemail so the same engine embeds across the GUI stack. Private.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zemail-core" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zoffice</code></h5>
+                <p>Office suite replacing Microsoft Office (Rust, Tauri v2 desktop app) &mdash; documents, spreadsheets, presentations. Consumes zoffice-core. Paid product (in the app-store).</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zoffice" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zoffice-core</code></h5>
+                <p>Embeddable office engine (pure Rust, no GUI deps) &mdash; document/spreadsheet/presentation parse + edit, extracted from zoffice.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zoffice-core" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
         </div>
