@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Abel|Amatic+SC|Roboto:100|Pacifico|Raleway:100,200,300,400,500,600,700,800,900"
           rel="stylesheet">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
-    <meta name="description" content="Project docs index — links to every MenkeTechnologies project's GitHub Pages documentation site. 105 first-party projects across 6 tiers: the strykelang language, the zshrs shell, the fusevm bytecode VM, Rust CLI tools, Tauri desktop apps, Stryke ecosystem connectors, zsh plugin family, the meta umbrella.">
+    <meta name="description" content="Project docs index — links to every MenkeTechnologies project's GitHub Pages documentation site. 147 first-party projects across 6 tiers: the strykelang language, the zshrs shell, the fusevm bytecode VM, Rust CLI tools, Tauri desktop apps, Stryke ecosystem connectors, zsh plugin family, the meta umbrella.">
 
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/startup.css" rel="stylesheet">
@@ -198,7 +198,7 @@
     <h3 class="blue">Projects &mdash; Documentation Index</h3>
 
     <div class="proj-summary">
-        <strong>114 submodules</strong> across 6 tiers &mdash; the
+        <strong>147 submodules</strong> across 6 tiers &mdash; the
         <code>strykelang</code> language, the <code>zshrs</code> shell, the
         <code>fusevm</code> bytecode VM, Rust CLI tools, Tauri v2 desktop apps,
         the 31-repo Stryke ecosystem, 28 zsh plugins, and the umbrella meta
@@ -213,7 +213,7 @@
         <div class="proj-grid">
             <div class="proj-card">
                 <h5><code>MenkeTechnologiesMeta</code></h5>
-                <p>114-submodule umbrella: language, shell, VM, CLIs, GUIs, audio plugins, shared components, zsh plugins, completions. Helper scripts, CI gate suite, per-tier README.</p>
+                <p>147-submodule umbrella: language, shell, VM, CLIs, GUIs, audio plugins, shared components, zsh plugins, completions. Helper scripts, CI gate suite, per-tier README.</p>
                 <div class="proj-links">
                     <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/" target="_blank" rel="noopener noreferrer">Docs</a>
                     <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/report.html" target="_blank" rel="noopener noreferrer">Report</a>
@@ -223,12 +223,12 @@
         </div>
     </div>
 
-    <!-- Tier 1 — Core (25) -->
+    <!-- Tier 1 &mdash; Core (51) -->
     <div class="tier-section">
-        <h4>Tier 1 &mdash; Core (25)</h4>
-        <p class="tier-note">The set of projects sharing the unified strykelang-authored documentation template: README header, ToC convention <code>[0xNN]</code>, <code>docs/index.html</code> chrome, <code>docs/report.html</code> engineering report, man pages.</p>
+        <h4>Tier 1 &mdash; Core (51)</h4>
+        <p class="tier-note">The set of projects sharing the unified strykelang-authored documentation template: README header, ToC convention <code>[0xNN]</code>, <code>docs/index.html</code> chrome, <code>docs/report.html</code> engineering report, man pages. Includes the five fusevm-hosted languages, the Rust CLI tools & TUIs, the Tauri v2 / JUCE desktop apps and their embeddable <code>*-core</code> engines, and the shared audio / GUI components.</p>
         <div class="proj-grid">
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>strykelang</code></h5>
                 <p>The fastest dynamic language for parallel ops. Perl 5 compatible interpreter in Rust, bytecode VM + Cranelift JIT, 10,450 builtins.</p>
                 <div class="proj-links">
@@ -238,7 +238,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/strykelang" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>zshrs</code></h5>
                 <p>The first compiled Unix shell. 1:1 zsh C-port + extensions, persistent worker pool, AOP intercept, rkyv bytecode cache.</p>
                 <div class="proj-links">
@@ -249,7 +249,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/zshrs" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>fusevm</code></h5>
                 <p>Language-agnostic bytecode VM with fused superinstructions and 3-tier Cranelift JIT. The execution engine behind strykelang, zshrs, awkrs.</p>
                 <div class="proj-links">
@@ -258,7 +258,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/fusevm" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>lsofrs</code></h5>
                 <p>Rust rewrite of <code>lsof</code> &mdash; 5-21&times; faster, 7-tab TUI (ratatui), 31 cyberpunk themes.</p>
                 <div class="proj-links">
@@ -267,7 +267,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/lsofrs" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>temprs</code></h5>
                 <p>Temporary file stack manager. Atomic <code>flock</code>-protected master record, dual indexing (position or <code>@name</code>).</p>
                 <div class="proj-links">
@@ -276,7 +276,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/temprs" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>awkrs</code></h5>
                 <p>AWK in Rust. Bytecode VM + Cranelift JIT + persistent rkyv bytecode cache + parallel records.</p>
                 <div class="proj-links">
@@ -286,6 +286,24 @@
                 </div>
             </div>
             <div class="proj-card">
+                <h5><code>vimlrs</code></h5>
+                <p>VimL (Vimscript) in Rust — the first compiled <strong>standalone</strong> VimL interpreter, run outside Vim. A faithful port of Neovim's C eval engine (lex/parse → AST → <code>fusevm</code> bytecode → Cranelift JIT), the same VM behind <code>strykelang</code> / <code>zshrs</code> / <code>awkrs</code> / <code>elisprs</code>. Standalone binary, with a DAP debugger (<code>vimlrs --dap</code>), LSP (<code>vimlrs --lsp</code>), AOT native compiler, and rkyv bytecode cache; editor plugins <code>vscode-viml</code> / <code>vim-viml</code> / <code>emacs-viml</code>. <strong>Free / OSS</strong> (MIT).</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/vimlrs/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/vimlrs/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/vimlrs" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>elisprs</code></h5>
+                <p>Emacs Lisp in Rust — run <code>.el</code> outside Emacs. A <strong>Lisp-2</strong> obarray (separate value/function cells) with dynamic binding and an elisp-correct reader on the <code>rust_lisp</code> (MIT) value model, <strong>running on</strong> the <code>fusevm</code> bytecode VM (the engine behind <code>zshrs</code> / <code>strykelang</code> / <code>awkrs</code> / <code>vimlrs</code>) — a pure frontend that lowers each form to a <code>fusevm::Chunk</code>, no bespoke VM or JIT. Standalone <code>elisp</code> binary + REPL; ships <code>--lsp</code> / <code>--dap</code> servers, a <strong>JetBrains plugin</strong>, native-object / standalone-executable <code>--aot</code>, and lexical + dynamic binding; <code>vscode</code> / <code>vim</code> / <code>emacs</code> editor plugins planned. <strong>Free / OSS</strong> (MIT).</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/elisprs/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/elisprs/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/elisprs" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
                 <h5><code>iftoprs</code></h5>
                 <p>Real-time bandwidth monitor. TUI built on ratatui, 31 themes, process attribution via <code>lsof</code>, NDJSON streaming.</p>
                 <div class="proj-links">
@@ -295,24 +313,24 @@
                 </div>
             </div>
             <div class="proj-card">
-                <h5><code>Audio-Haxor</code></h5>
-                <p>Tauri v2 desktop GUI app + JUCE engine. VST2/VST3/AU/CLAP scanner, sample vault, DAW project index, KVR version checker.</p>
+                <h5><code>htoprs</code></h5>
+                <p><strong>A Rust port of htop</strong> — the interactive process viewer (process tree, per-core CPU/memory meters, sort/filter/search, signal sending, renice), ported from the upstream htop C sources rather than wrapping them — the bulk of the htop 3.5.1 C surface faithfully ported function-for-function, each <code>fn</code> citing its <code><File>.c:<line></code> origin. <strong>GPL-2.0</strong>.</p>
                 <div class="proj-links">
-                    <a class="proj-link primary" href="https://menketechnologies.github.io/Audio-Haxor/" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a class="proj-link" href="https://menketechnologies.github.io/Audio-Haxor/report.html" target="_blank" rel="noopener noreferrer">Report</a>
-                    <a class="proj-link" href="https://github.com/MenkeTechnologies/Audio-Haxor" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/htoprs/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/htoprs/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/htoprs" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
             <div class="proj-card">
-                <h5><code>traderview</code></h5>
-                <p>Tauri v2 desktop GUI app &mdash; TraderVue-style trading journal with embedded Postgres, vanilla JS + uPlot frontend. Multi-user axum web service from the same workspace.</p>
+                <h5><code>zcolorizer</code></h5>
+                <p>Real-time log file colorizer. <strong>CLI</strong> 31 themes</p>
                 <div class="proj-links">
-                    <a class="proj-link primary" href="https://menketechnologies.github.io/traderview/" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a class="proj-link" href="https://menketechnologies.github.io/traderview/report.html" target="_blank" rel="noopener noreferrer">Report</a>
-                    <a class="proj-link" href="https://github.com/MenkeTechnologies/traderview" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/zcolorizer/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/zcolorizer/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zcolorizer" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>ztranslator</code></h5>
                 <p>Real-time event-translation desktop app in pure Rust &mdash; also embeddable as a routing engine. Bridges MIDI, OSC, DMX, and file-watcher triggers to MIDI/OSC/DMX out, keystroke, mouse, AppleScript, or host commands, with a per-translator rules VM and BOME <code>.bmtp</code> import/export.</p>
                 <div class="proj-links">
@@ -321,7 +339,73 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/ztranslator" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
+<div class="proj-card">
+                <h5><code>Audio-Haxor</code></h5>
+                <p>Tauri v2 desktop GUI app + JUCE engine. VST2/VST3/AU/CLAP scanner, sample vault, DAW project index, KVR version checker.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/Audio-Haxor/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/Audio-Haxor/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/Audio-Haxor" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
+                <h5><code>traderview</code></h5>
+                <p>Tauri v2 desktop GUI app &mdash; TraderVue-style trading journal with embedded Postgres, vanilla JS + uPlot frontend. Multi-user axum web service from the same workspace.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/traderview/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/traderview/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/traderview" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
+                <h5><code>zpwr-daw</code></h5>
+                <p>DAW arranger + the 4th patch-graph plugin (standalone app, VST3/AU/CLAP, embeddable library; formerly zpwr-clip-engine). One generalized grid engine over notes / arrangement / automation / trigger domains, with a JUCE-free C++ core exposing a C ABI + Rust bindings. Private &mdash; docs vendored to meta.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zpwr-daw" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zpwr-daw/report" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zpwr-daw" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
+                <h5><code>zpwr-crate</code></h5>
+                <p>Shared sample-library &ldquo;crate&rdquo; browser (Rust) &mdash; the audio stack's filesystem + SQLite/FTS5 sample scanner and faceted query layer. Builds rlib + staticlib + cdylib: consumed natively by Audio-Haxor and over a C ABI by zpwr-daw. Private internal shared library.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zpwr-crate" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
+                <h5><code>zpwr-embed-terminal</code></h5>
+                <p>Shared embedded PTY terminal (Rust) &mdash; one portable-pty core + xterm.js front end extracted from Audio-Haxor. Builds rlib + staticlib + cdylib: used natively by Audio-Haxor / traderview / ztranslator and over the C ABI by zpwr-daw (JUCE/C++). Private internal shared library.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zpwr-embed-terminal" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
             <div class="proj-card">
+                <h5><code>zwire-host</code></h5>
+                <p><strong>Chrome native-messaging host for <code>zwire</code></strong> (Rust) — one self-contained ~500 KB binary (no Python/<code>psutil</code>) that the <code>hud-internal</code> extension talks to over a single length-prefixed-JSON stdio pipe. Bridges the shared color scheme + visual-effect prefs to/from <code>~/.zwire</code>, streams live system stats (<code>sysinfo</code>: cpu / mem / net / disk / temp / battery / …) for the HUD statusbar, and runs a PTY login shell (<code>portable-pty</code>) behind the embedded terminal. Cross-platform (macOS / Linux / Windows). <strong>Private</strong> — internal shared binary, not published to crates.io.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zwire-host" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zwire-host/report" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zwire-host" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
+                <h5><code>zpwr-file-browser</code></h5>
+                <p>Shared file browser (Rust + JS) &mdash; a host-agnostic file-tree / list front end (taken verbatim from Audio-Haxor) backed by a pure-Rust filesystem crate. Builds for all four apps &mdash; Audio-Haxor / traderview / ztranslator (Tauri) and zpwr-daw (JUCE WebView). Private shared component.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zpwr-file-browser" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zpwr-file-browser/report" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zpwr-file-browser" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
+                <h5><code>zpwr-algo-production</code></h5>
+                <p>Algorithmic music-production engine (Rust) &mdash; one action generates a complete, professionally-arranged track: song structure + key/tempo, per-section MIDI, and an exported Ableton Live Set (.als), with per-genre engines. Ported from the Audio-Haxor generators behind a host-provided sample source. Powers zpwr-daw's one-click production. Private internal engine.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zpwr-algo-production" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
                 <h5><code>nmaprs</code></h5>
                 <p>Rust port of <code>nmap</code>. Full async TCP/UDP/SCTP/IP-protocol scans, idle/zombie scans, NSE-style script probes.</p>
                 <div class="proj-links">
@@ -330,7 +414,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/nmaprs" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>powerliners</code></h5>
                 <p>Mature Rust port of Python's <code>powerline-status</code>. 5-binary suite, sub-millisecond render replacing the ~100&nbsp;ms python startup tax.</p>
                 <div class="proj-links">
@@ -340,7 +424,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/powerliners" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>zpwr</code></h5>
                 <p>The terminal OS. 505 verbs, 190k LOC, zinit-based, stryke-powered.</p>
                 <div class="proj-links">
@@ -349,55 +433,16 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/zpwr" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
-                <h5><code>zpwr-daw</code></h5>
-                <p>DAW arranger + the 4th patch-graph plugin (standalone app, VST3/AU/CLAP, embeddable library; formerly zpwr-clip-engine). One generalized grid engine over notes / arrangement / automation / trigger domains, with a JUCE-free C++ core exposing a C ABI + Rust bindings. Private &mdash; docs vendored to meta.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zpwr-daw" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zpwr-daw/report" target="_blank" rel="noopener noreferrer">Report</a>
-                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zpwr-daw" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>zpwr-crate</code></h5>
-                <p>Shared sample-library &ldquo;crate&rdquo; browser (Rust) &mdash; the audio stack's filesystem + SQLite/FTS5 sample scanner and faceted query layer. Builds rlib + staticlib + cdylib: consumed natively by Audio-Haxor and over a C ABI by zpwr-daw. Private internal shared library.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zpwr-crate" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>zpwr-embed-terminal</code></h5>
-                <p>Shared embedded PTY terminal (Rust) &mdash; one portable-pty core + xterm.js front end extracted from Audio-Haxor. Builds rlib + staticlib + cdylib: used natively by Audio-Haxor / traderview / ztranslator and over the C ABI by zpwr-daw (JUCE/C++). Private internal shared library.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zpwr-embed-terminal" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>zpwr-algo-production</code></h5>
-                <p>Algorithmic music-production engine (Rust) &mdash; one action generates a complete, professionally-arranged track: song structure + key/tempo, per-section MIDI, and an exported Ableton Live Set (.als), with per-genre engines. Ported from the Audio-Haxor generators behind a host-provided sample source. Powers zpwr-daw's one-click production. Private internal engine.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zpwr-algo-production" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>zpwr-file-browser</code></h5>
-                <p>Shared file browser (Rust + JS) &mdash; a host-agnostic file-tree / list front end (taken verbatim from Audio-Haxor) backed by a pure-Rust filesystem crate. Builds for all four apps &mdash; Audio-Haxor / traderview / ztranslator (Tauri) and zpwr-daw (JUCE WebView). Private shared component.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zpwr-file-browser" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zpwr-file-browser/report" target="_blank" rel="noopener noreferrer">Report</a>
-                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zpwr-file-browser" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>zpdf</code></h5>
-                <p>PDF editor replacing Adobe Acrobat + Preview (Rust, Tauri v2 desktop app) &mdash; full editing, annotation/markup, AcroForms, digital & certificate signatures, OCR, redaction, page management, convert/export. Consumes zpdf-core. Paid product (in the app-store).</p>
+                <p>PDF editor replacing Adobe Acrobat + Preview (Rust, Tauri v2 desktop app) &mdash; full editing, annotation/markup, AcroForms, digital &amp; certificate signatures, OCR, redaction, page management, convert/export. Consumes zpdf-core. Paid product (in the app-store).</p>
                 <div class="proj-links">
                     <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zpdf" target="_blank" rel="noopener noreferrer">Docs</a>
                     <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zpdf/report" target="_blank" rel="noopener noreferrer">Report</a>
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/zpdf" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>zpdf-core</code></h5>
                 <p>Embeddable PDF engine (pure Rust, no GUI deps) &mdash; parse/render/edit/annotate/sign/page-ops behind zpdf; rlib + staticlib + cdylib so it embeds into traderview and the other GUI apps. Ships a source-derived feature port report. Private.</p>
                 <div class="proj-links">
@@ -406,7 +451,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/zpdf-core" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>zemail</code></h5>
                 <p>Email client (Rust, Tauri v2 desktop app) &mdash; a fast, owned desktop mail app behind a cyberpunk HUD. Consumes zemail-core. Paid product (in the app-store).</p>
                 <div class="proj-links">
@@ -415,7 +460,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/zemail" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>zemail-core</code></h5>
                 <p>Embeddable mail engine (pure Rust, no GUI deps) extracted from zemail so the same engine embeds across the GUI stack. Private.</p>
                 <div class="proj-links">
@@ -424,7 +469,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/zemail-core" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>zoffice</code></h5>
                 <p>Office suite replacing Microsoft Office (Rust, Tauri v2 desktop app) &mdash; documents, spreadsheets, presentations. Consumes zoffice-core. Paid product (in the app-store).</p>
                 <div class="proj-links">
@@ -434,6 +479,24 @@
                 </div>
             </div>
             <div class="proj-card">
+                <h5><code>zphoto</code></h5>
+                <p><strong>Photo suite replacing GIMP and Photostop</strong> (Rust, Tauri v2 desktop app) — images. Consumes <code>zphoto-core</code>. <strong>Paid product</strong> — in the app-store.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zphoto" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zphoto/report" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zphoto" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zphoto-core</code></h5>
+                <p><strong>Embeddable photo engine</strong> (pure Rust, no GUI deps) — images parse + edit, extracted from <code>zphoto</code>.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zphoto-core" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zphoto-core/report" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zphoto-core" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
                 <h5><code>zoffice-core</code></h5>
                 <p>Embeddable office engine (pure Rust, no GUI deps) &mdash; document/spreadsheet/presentation parse + edit, extracted from zoffice.</p>
                 <div class="proj-links">
@@ -443,6 +506,24 @@
                 </div>
             </div>
             <div class="proj-card">
+                <h5><code>zstation</code></h5>
+                <p><strong>Workspace of isolated web apps replacing Station</strong> (Rust, Tauri v2 desktop app) — one window arranges your web apps (Slack, Gmail, Discord, Notion, …) as Trello-like draggable/resizable tiles, each in its own native session-isolated webview so a login never leaks cookies or storage across services. Consumes <code>zstation-core</code>. A station.app port plus added features. <strong>Paid product</strong> — in the app-store.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zstation" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zstation/report" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zstation" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zstation-core</code></h5>
+                <p><strong>Embeddable workspace engine</strong> (pure Rust, no GUI deps) behind <code>zstation</code> — service catalog, tile board and on-disk persistence behind one JSON command surface, plus a mountable web view. Builds <code>rlib</code> + <code>staticlib</code> + <code>cdylib</code> so the same station board embeds across the GUI stack. <strong>Private.</strong></p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zstation-core" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zstation-core/report" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zstation-core" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
                 <h5><code>ztranslator-core</code></h5>
                 <p>Embeddable event-translation engine (pure Rust, no GUI deps) &mdash; the real-time MIDI/OSC/DMX/file-watcher routing engine behind ztranslator; integer-VM rule matching, BOME .bmtp import/export, JSON projects. rlib + staticlib + cdylib so it embeds across the GUI stack.</p>
                 <div class="proj-links">
@@ -451,15 +532,171 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/ztranslator-core" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
+            <div class="proj-card">
+                <h5><code>zemacs-gui-core</code></h5>
+                <p><strong>Embeddable GUI surface for <code>zemacs-gui</code></strong> (webui-only, all <code>zgui-core</code> widgets) — the MacVim-style menu bar, ⌘-shortcuts, Open/Save/Help dialogs and drag-drop that bridge to the <code>zemacs</code> IDE PTY, extracted from <code>zemacs-gui</code>.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zemacs-gui-core" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zemacs-gui-core/report" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zemacs-gui-core" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zcite</code></h5>
+                <p><strong>Reference manager replacing Zotero</strong> (Rust, Tauri v2 desktop app) — library, collections, tags &amp; saved searches, citations/bibliographies (APA/MLA/Chicago/IEEE), BibTeX/RIS/CSL-JSON import-export, DOI/ISBN/PMID lookup, duplicate detection. Bundles its embeddable pure-Rust <code>zcite-core</code> engine (<code>rlib</code> + <code>staticlib</code> + <code>cdylib</code>) so the same reference engine embeds across the GUI stack. A Zotero port plus added features. <strong>Paid product</strong> — in the app-store.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zcite" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zcite/report" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zcite" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zreq</code></h5>
+                <p><strong>API client replacing Postman</strong> (Rust, Tauri v2 desktop app) — workspaces, collections, requests, environments, variables, auth, HTTP execution + history, code generation, import/export. Consumes <code>zreq-core</code>. A Postman port plus added features. <strong>Paid product</strong> — in the app-store.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zreq" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zreq/report" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zreq" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zreq-core</code></h5>
+                <p><strong>Embeddable API-client engine</strong> (pure Rust, no GUI deps) behind <code>zreq</code> — workspaces / collections / requests / environments / auth / HTTP execution / history / codegen / import-export. Builds <code>rlib</code> + <code>staticlib</code> + <code>cdylib</code> so the same request engine embeds across the GUI stack. <strong>Private.</strong></p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zreq-core" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zreq-core/report" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zreq-core" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>ztunnel</code></h5>
+                <p><strong>VPN tunnel manager replacing Tunnelblick</strong> (Rust, Tauri v2 desktop app) — manage OpenVPN + WireGuard tunnels (configs, connection manager, OpenVPN-process control, logs, stats, credentials) from one owned, cross-platform desktop app, with an embeddable pure-Rust <code>ztunnel-core</code> engine. A Tunnelblick port plus added features. <strong>Paid product</strong> — in the app-store.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/ztunnel" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/ztunnel/report" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/ztunnel" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>ztunnel-core</code></h5>
+                <p><strong>Embeddable VPN-tunnel engine</strong> (pure Rust, no GUI deps) behind <code>ztunnel</code> — OpenVPN-process control + boringtun WireGuard, tunnel/config model, connection manager, logs, stats, credentials, and a privileged-helper boundary. Builds <code>rlib</code> + <code>staticlib</code> + <code>cdylib</code> so the same tunnel engine embeds across the GUI stack. <strong>Private.</strong></p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/ztunnel-core" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/ztunnel-core/report" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/ztunnel-core" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zgo</code></h5>
+                <p><strong>Launcher replacing Alfred</strong> (Rust, Tauri v2 desktop app) — workflows (objects + connections), Script Filter feedback (JSON + legacy XML), fuzzy matching, variable/token expansion, web searches, clipboard history, snippets + auto-expansion. Consumes <code>zgo-core</code>. An Alfred port plus added features. <strong>Paid product</strong> — in the app-store.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zgo" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zgo/report" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zgo" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zgo-core</code></h5>
+                <p><strong>Embeddable launcher engine</strong> (pure Rust, no GUI deps) behind <code>zgo</code> — workflows / Script Filter feedback / fuzzy matching / variable expansion / web searches / clipboard history / snippets. Builds <code>rlib</code> + <code>staticlib</code> + <code>cdylib</code> so the same launcher engine embeds across the GUI stack. <strong>Private.</strong></p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zgo-core" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zgo-core/report" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zgo-core" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zftp</code></h5>
+                <p><strong>File-transfer client replacing Cyberduck</strong> (Rust, Tauri v2 desktop app) — bookmarks and connections over FTP/FTPS/SFTP/WebDAV plus S3, GCS, Azure, Backblaze B2, Swift, Google Drive, Dropbox, OneDrive and Box; <code>.duck</code> bookmark import; session manager; download/upload/sync transfer queue; per-session logs and throughput; stored credentials. Consumes <code>zftp-core</code>. A Cyberduck port plus added features. <strong>Paid product</strong> — in the app-store.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zftp" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zftp/report" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zftp" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zftp-core</code></h5>
+                <p><strong>Embeddable file-transfer engine</strong> (pure Rust, no GUI deps) behind <code>zftp</code> — bookmark model, protocol/URL parsing, <code>.duck</code> import, session-lifecycle manager, download/upload/sync transfer queue, per-session logs + throughput, a remote-filesystem transport boundary, credentials. Builds <code>rlib</code> + <code>staticlib</code> + <code>cdylib</code> so the same transfer engine embeds across the GUI stack. <strong>Private.</strong></p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zftp-core" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zftp-core/report" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zftp-core" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zcontainer</code></h5>
+                <p><strong>Container &amp; Kubernetes GUI replacing Docker Desktop + Lens</strong> (Rust, Tauri v2 desktop app) — Docker containers/images/volumes/networks + Compose stacks; multi-cluster Kubernetes (pods, workloads, services, CRDs, Helm releases); live log streaming, in-pod exec, port-forwarding, YAML editing. Consumes <code>zcontainer-core</code>. The first compiled-native desktop GUI for both — every other tool is Electron (Lens/FreeLens/Headlamp) or a TUI (k9s). <strong>Paid product</strong> — in the app-store.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zcontainer" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zcontainer/report" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zcontainer" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zcontainer-core</code></h5>
+                <p><strong>Embeddable container/k8s engine</strong> (pure Rust, no GUI deps) behind <code>zcontainer</code> — Docker + Kubernetes resource CRUD, watch streams, logs, exec, port-forward, Compose, Helm. Builds <code>rlib</code> + <code>staticlib</code> + <code>cdylib</code> so the same engine embeds across the GUI stack. <strong>Private.</strong></p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zcontainer-core" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zcontainer-core/report" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zcontainer-core" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zterminal</code></h5>
+                <p><strong>GPU-accelerated terminal emulator</strong> (Rust, OpenGL); BSD/Linux/macOS/Windows, sensible defaults, extensive TOML config, high-throughput VTE performance. Native tmux control via the wire protocol (no subprocess), cross-pane search, broadcast, unified exposé, and tmux-resurrect-style session save/restore from the command palette. <strong>Paid product</strong> — in the app-store.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zterminal" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zterminal/report" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zterminal" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>ztmux-core</code></h5>
+                <p><strong>Embeddable native tmux client engine</strong> (Rust, no GUI deps) extracted from <code>zterminal</code> — speaks tmux's imsg wire protocol straight to the server socket (no <code>tmux</code> subprocess): <code>transport</code> (raw imsg client), <code>proc</code> (per-pane full command line via libproc / <code>/proc</code>), <code>ops</code> (session tree / cross-pane search / broadcast / send-keys / sync / focus → JSON), and <code>snapshot</code> (dir-parameterized resurrect-style session save/restore). Other GUI apps add the submodule + a path dep to get full tmux control. <strong>Private.</strong></p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/ztmux-core" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/ztmux-core/report" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/ztmux-core" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>ztmux</code></h5>
+                <p><strong>A Rust port of tmux</strong> — the full terminal multiplexer (server + client, grid/screen model, input parser, layouts, command language, formats, tty backend), not a wrapper around the <code>tmux</code> binary and not control mode: the multiplexer itself. Seeded from <code>tmux-rs</code> and ported forward against the upstream tmux C sources, both vendored read-only under <code>vendor/</code>. Distinct from <code>ztmux-core</code> (the embeddable wire-protocol client engine). <strong>Free / OSS</strong> (MIT).</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/ztmux/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/ztmux/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/ztmux" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zemacs</code></h5>
+                <p><strong>Rust Emacs port</strong> — a terminal modal IDE with a Vim-style modal editing core and full Spacemacs functionality layered on top; a windowed GUI build ships as <code>zemacs-gui</code>. <strong>Free / OSS</strong> (MPL-2.0) — in the app-store.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zemacs" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zemacs-gui</code></h5>
+                <p><strong>Native desktop GUI for <code>zemacs</code></strong> — wraps the zemacs modal-editing core in a windowed front-end (GUI tabs, menus, font rendering, mouse, native open/save dialogs), the way MacVim wraps Vim. <strong>Free / OSS</strong> (MPL-2.0) — in the app-store.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zemacs-gui" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Tier 2 — Stryke ecosystem (31) -->
+    <!-- Tier 2 &mdash; Stryke ecosystem + tap (32) -->
     <div class="tier-section">
-        <h4>Tier 2 &mdash; Stryke Ecosystem (31)</h4>
-        <p class="tier-note">Per-service connector libraries for <code>stryke</code> &mdash; opt-in packages kept out of the daily-driver binary so the install stays slim.</p>
+        <h4>Tier 2 &mdash; Stryke ecosystem + tap (32)</h4>
+        <p class="tier-note">The Stryke connector ecosystem &mdash; per-backend integration crates (cloud, databases, streaming, GPU, k8s, &hellip;) plus the Homebrew tap.</p>
         <div class="proj-grid">
             <div class="proj-card">
+                <h5><code>homebrew-menketech</code></h5>
+                <p>Single Homebrew tap for 16 MenkeTechnologies CLI formulas (<code>awkrs</code> / <code>elisprs</code> / <code>htoprs</code> / <code>iftoprs</code> / <code>lsofrs</code> / <code>nmaprs</code> / <code>powerliners</code> / <code>storageshower</code> / <code>stryke</code> / <code>temprs</code> / <code>vimlrs</code> / <code>zemacs</code> / <code>zpwrchrome-host</code> / <code>zshrs</code> / <code>zshrs-all</code> / <code>zshrs-daemon</code>). Formulas auto-bumped by each tool's <code>Release</code> workflow via <code>HOMEBREW_TAP_TOKEN</code>.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/homebrew-menketech" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
                 <h5><code>stryke-arrow</code></h5>
                 <p>Apache Arrow + Parquet + Feather + arrow-CSV/JSON integration.</p>
                 <div class="proj-links">
@@ -468,7 +705,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-arrow" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>stryke-aws</code></h5>
                 <p>AWS SDK bindings (S3, EC2, SQS, Lambda, &hellip;).</p>
                 <div class="proj-links">
@@ -477,7 +714,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-aws" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>stryke-azure</code></h5>
                 <p>Microsoft Azure SDK bindings.</p>
                 <div class="proj-links">
@@ -486,196 +723,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-azure" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
-                <h5><code>stryke-demo</code></h5>
-                <p>Demo scripts + example programs.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-demo/" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-demo/report.html" target="_blank" rel="noopener noreferrer">Report</a>
-                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-demo" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>stryke-docker</code></h5>
-                <p>Docker engine API client.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-docker/" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-docker/report.html" target="_blank" rel="noopener noreferrer">Report</a>
-                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-docker" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>stryke-duckdb</code></h5>
-                <p>DuckDB embedded analytics.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-duckdb/" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-duckdb/report.html" target="_blank" rel="noopener noreferrer">Report</a>
-                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-duckdb" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>stryke-fleet</code></h5>
-                <p>Parallel expect/PTY automation — transcripted sessions, declarative playbooks, multi-host fan-out.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-fleet/" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-fleet/report.html" target="_blank" rel="noopener noreferrer">Report</a>
-                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-fleet" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>stryke-gcp</code></h5>
-                <p>Google Cloud Platform SDK bindings.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-gcp/" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-gcp/report.html" target="_blank" rel="noopener noreferrer">Report</a>
-                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-gcp" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>stryke-grpc</code></h5>
-                <p>gRPC client/server.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-grpc/" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-grpc/report.html" target="_blank" rel="noopener noreferrer">Report</a>
-                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-grpc" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>stryke-gui</code></h5>
-                <p>GUI automation bridge &mdash; <code>stryke_gui</code> cdylib <code>dlopen</code>ed in-process on <code>use GUI</code>, fronting mouse/keyboard synthesis (enigo) + screen capture (xcap). Persistent <code>Enigo</code> handle in <code>OnceCell</code>, no fork-per-call. Isolates X11 / Wayland / CGEvent / SendInput linkage out of the stryke core.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-gui/" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-gui/report.html" target="_blank" rel="noopener noreferrer">Report</a>
-                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-gui" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>stryke-k8s</code></h5>
-                <p>Kubernetes API client.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-k8s/" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-k8s/report.html" target="_blank" rel="noopener noreferrer">Report</a>
-                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-k8s" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>stryke-kafka</code></h5>
-                <p>Kafka producer/consumer (rdkafka bindings).</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-kafka/" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-kafka/report.html" target="_blank" rel="noopener noreferrer">Report</a>
-                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-kafka" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>stryke-mcpd</code></h5>
-                <p>MCP servers as single native binaries — validated tool specs, crash-isolated serving, root-jailed tool pack.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-mcpd/" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-mcpd/report.html" target="_blank" rel="noopener noreferrer">Report</a>
-                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-mcpd" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>stryke-mongo</code></h5>
-                <p>MongoDB driver.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-mongo/" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-mongo/report.html" target="_blank" rel="noopener noreferrer">Report</a>
-                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-mongo" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>stryke-mysql</code></h5>
-                <p>MySQL/MariaDB driver.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-mysql/" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-mysql/report.html" target="_blank" rel="noopener noreferrer">Report</a>
-                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-mysql" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>stryke-office</code></h5>
-                <p>Office/ODF/PDF/image import+export — xlsx/docx/pptx, ods/odt/odp, PDF, images. All native (no LibreOffice).</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-office/" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-office/report.html" target="_blank" rel="noopener noreferrer">Report</a>
-                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-office" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>stryke-parquet</code></h5>
-                <p>Apache Parquet read/write.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-parquet/" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-parquet/report.html" target="_blank" rel="noopener noreferrer">Report</a>
-                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-parquet" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>stryke-polars</code></h5>
-                <p>Full pandas + numpy surface &mdash; DataFrame/Series/Index/IO + ndarray/ufuncs/linalg/random/fft/polynomial/masked/datetime64 &mdash; in one cdylib, <code>dlopen</code>ed in-process on <code>use Polars</code>. Heavy deps kept out of the stryke core.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-polars/" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-polars/report.html" target="_blank" rel="noopener noreferrer">Report</a>
-                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-polars" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>stryke-postgres</code></h5>
-                <p>PostgreSQL driver.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-postgres/" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-postgres/report.html" target="_blank" rel="noopener noreferrer">Report</a>
-                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-postgres" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>stryke-redis</code></h5>
-                <p>Redis client.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-redis/" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-redis/report.html" target="_blank" rel="noopener noreferrer">Report</a>
-                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-redis" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>stryke-selenium</code></h5>
-                <p>Selenium WebDriver bindings &mdash; browser automation.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-selenium/" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-selenium/report.html" target="_blank" rel="noopener noreferrer">Report</a>
-                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-selenium" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>stryke-spark</code></h5>
-                <p>Apache Spark integration.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-spark/" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-spark/report.html" target="_blank" rel="noopener noreferrer">Report</a>
-                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-spark" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>stryke-utils</code></h5>
-                <p>Pure stryke library &mdash; shared helpers written in stryke itself, no Rust or external deps.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-utils/" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-utils/report.html" target="_blank" rel="noopener noreferrer">Report</a>
-                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-utils" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>stryke-zmq</code></h5>
-                <p>ZeroMQ client — brokerless req/rep, pub/sub, push/pull, dealer/router. cdylib with libzmq vendored.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-zmq/" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-zmq/report.html" target="_blank" rel="noopener noreferrer">Report</a>
-                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-zmq" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>stryke-clickhouse</code></h5>
                 <p>ClickHouse OLAP client.</p>
                 <div class="proj-links">
@@ -684,7 +732,34 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-clickhouse" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
+                <h5><code>stryke-demo</code></h5>
+                <p>Demo scripts + example programs.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-demo/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-demo/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-demo" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
+                <h5><code>stryke-docker</code></h5>
+                <p>Docker engine API client.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-docker/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-docker/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-docker" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
+                <h5><code>stryke-duckdb</code></h5>
+                <p>DuckDB embedded analytics.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-duckdb/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-duckdb/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-duckdb" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
                 <h5><code>stryke-email</code></h5>
                 <p>Email send/receive (SMTP / IMAP / POP3) + MIME.</p>
                 <div class="proj-links">
@@ -693,7 +768,79 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-email" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
+                <h5><code>stryke-fleet</code></h5>
+                <p>Parallel expect/PTY automation — transcripted sessions, declarative playbooks, multi-host fan-out.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-fleet/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-fleet/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-fleet" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
+                <h5><code>stryke-gcp</code></h5>
+                <p>Google Cloud Platform SDK bindings.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-gcp/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-gcp/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-gcp" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
+                <h5><code>stryke-grpc</code></h5>
+                <p>gRPC client/server.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-grpc/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-grpc/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-grpc" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
+                <h5><code>stryke-gui</code></h5>
+                <p>GUI automation bridge &mdash; <code>stryke_gui</code> cdylib <code>dlopen</code>ed in-process on <code>use GUI</code>, fronting mouse/keyboard synthesis (enigo) + screen capture (xcap). Persistent <code>Enigo</code> handle in <code>OnceCell</code>, no fork-per-call. Isolates X11 / Wayland / CGEvent / SendInput linkage out of the stryke core.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-gui/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-gui/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-gui" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
+                <h5><code>stryke-k8s</code></h5>
+                <p>Kubernetes API client.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-k8s/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-k8s/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-k8s" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
+                <h5><code>stryke-kafka</code></h5>
+                <p>Kafka producer/consumer (rdkafka bindings).</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-kafka/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-kafka/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-kafka" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
+                <h5><code>stryke-mcpd</code></h5>
+                <p>MCP servers as single native binaries — validated tool specs, crash-isolated serving, root-jailed tool pack.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-mcpd/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-mcpd/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-mcpd" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
+                <h5><code>stryke-mongo</code></h5>
+                <p>MongoDB driver.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-mongo/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-mongo/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-mongo" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
                 <h5><code>stryke-mssql</code></h5>
                 <p>Microsoft SQL Server driver.</p>
                 <div class="proj-links">
@@ -702,7 +849,16 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-mssql" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
+                <h5><code>stryke-mysql</code></h5>
+                <p>MySQL/MariaDB driver.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-mysql/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-mysql/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-mysql" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
                 <h5><code>stryke-neo4j</code></h5>
                 <p>Neo4j graph database driver (Bolt).</p>
                 <div class="proj-links">
@@ -711,16 +867,52 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-neo4j" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
-                <h5><code>stryke-scylla</code></h5>
-                <p>ScyllaDB / Cassandra CQL driver.</p>
+<div class="proj-card">
+                <h5><code>stryke-office</code></h5>
+                <p>Office/ODF/PDF/image import+export — xlsx/docx/pptx, ods/odt/odp, PDF, images. All native (no LibreOffice).</p>
                 <div class="proj-links">
-                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-scylla/" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-scylla/report.html" target="_blank" rel="noopener noreferrer">Report</a>
-                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-scylla" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-office/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-office/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-office" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
+                <h5><code>stryke-parquet</code></h5>
+                <p>Apache Parquet read/write.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-parquet/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-parquet/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-parquet" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
+                <h5><code>stryke-polars</code></h5>
+                <p>Full pandas + numpy surface &mdash; DataFrame/Series/Index/IO + ndarray/ufuncs/linalg/random/fft/polynomial/masked/datetime64 &mdash; in one cdylib, <code>dlopen</code>ed in-process on <code>use Polars</code>. Heavy deps kept out of the stryke core.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-polars/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-polars/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-polars" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
+                <h5><code>stryke-postgres</code></h5>
+                <p>PostgreSQL driver.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-postgres/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-postgres/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-postgres" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
+                <h5><code>stryke-redis</code></h5>
+                <p>Redis client.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-redis/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-redis/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-redis" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
                 <h5><code>stryke-scrape</code></h5>
                 <p>HTML scraping &mdash; fetch + CSS/XPath extraction.</p>
                 <div class="proj-links">
@@ -729,7 +921,16 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-scrape" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
+                <h5><code>stryke-scylla</code></h5>
+                <p>ScyllaDB / Cassandra CQL driver.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-scylla/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-scylla/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-scylla" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
                 <h5><code>stryke-search</code></h5>
                 <p>Full-text search engine bindings (Elasticsearch / OpenSearch).</p>
                 <div class="proj-links">
@@ -738,15 +939,51 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-search" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
+<div class="proj-card">
+                <h5><code>stryke-selenium</code></h5>
+                <p>Selenium WebDriver bindings &mdash; browser automation.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-selenium/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-selenium/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-selenium" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
+                <h5><code>stryke-spark</code></h5>
+                <p>Apache Spark integration.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-spark/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-spark/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-spark" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
+                <h5><code>stryke-utils</code></h5>
+                <p>Pure stryke library &mdash; shared helpers written in stryke itself, no Rust or external deps.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-utils/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-utils/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-utils" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
+                <h5><code>stryke-zmq</code></h5>
+                <p>ZeroMQ client — brokerless req/rep, pub/sub, push/pull, dealer/router. cdylib with libzmq vendored.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/stryke-zmq/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/stryke-zmq/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/stryke-zmq" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Tier 3 — Completions Corpus (1) -->
+    <!-- Tier 3 &mdash; zsh-more-completions (1) -->
     <div class="tier-section">
-        <h4>Tier 3 &mdash; Completions Corpus (1)</h4>
-        <p class="tier-note">The largest curated zsh completion corpus in existence &mdash; data + completion functions, not an executable.</p>
+        <h4>Tier 3 &mdash; zsh-more-completions (1)</h4>
+        <p class="tier-note">The auto-generated completions corpus.</p>
         <div class="proj-grid">
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>zsh-more-completions</code></h5>
                 <p>47,316-completion zsh corpus: 8,360 <code>src/</code> + 34,481 <code>more_src/</code> + 3,398 <code>man_src/</code> + 1,067 <code>architecture_src/</code> + 10 <code>override_src/</code>.</p>
                 <div class="proj-links">
@@ -758,12 +995,12 @@
         </div>
     </div>
 
-    <!-- Tier 4 — Zsh plugins (28) -->
+    <!-- Tier 4 &mdash; Zsh ecosystem plugins (28) -->
     <div class="tier-section">
-        <h4>Tier 4 &mdash; Zsh Plugin Family (28)</h4>
-        <p class="tier-note">The plugin family that <code>zpwr</code> and any zsh user can load via zinit / oh-my-zsh.</p>
+        <h4>Tier 4 &mdash; Zsh ecosystem plugins (28)</h4>
+        <p class="tier-note">The zsh plugin family &mdash; completions, aliases, and workflow plugins, including vendored favourites.</p>
         <div class="proj-grid">
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>zsh-expand</code></h5>
                 <p>Expand aliases / global aliases / typos on space.</p>
                 <div class="proj-links">
@@ -772,7 +1009,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/zsh-expand" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>zsh-cargo-completion</code></h5>
                 <p>Cargo completion.</p>
                 <div class="proj-links">
@@ -781,7 +1018,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/zsh-cargo-completion" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>zsh-learn</code></h5>
                 <p>MySQL/MariaDB-backed learning collection &mdash; save, query, quiz.</p>
                 <div class="proj-links">
@@ -790,7 +1027,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/zsh-learn" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>zsh-git-acp</code></h5>
                 <p><code>git add commit push</code> in one keybinding.</p>
                 <div class="proj-links">
@@ -799,7 +1036,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/zsh-git-acp" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>zsh-better-npm-completion</code></h5>
                 <p>Better npm completion.</p>
                 <div class="proj-links">
@@ -808,7 +1045,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/zsh-better-npm-completion" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>zsh-cpan-completion</code></h5>
                 <p>CPAN completion.</p>
                 <div class="proj-links">
@@ -817,7 +1054,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/zsh-cpan-completion" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>zsh-dotnet-completion</code></h5>
                 <p>.NET completion.</p>
                 <div class="proj-links">
@@ -826,7 +1063,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/zsh-dotnet-completion" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>zsh-gem-completion</code></h5>
                 <p>Ruby gem completion.</p>
                 <div class="proj-links">
@@ -835,7 +1072,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/zsh-gem-completion" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>zsh-git-repo-cache</code></h5>
                 <p>Git repo cache helper.</p>
                 <div class="proj-links">
@@ -844,7 +1081,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/zsh-git-repo-cache" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>zsh-nginx</code></h5>
                 <p>nginx config completion.</p>
                 <div class="proj-links">
@@ -853,7 +1090,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/zsh-nginx" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>zsh-pip-description-completion</code></h5>
                 <p>pip completion with package descriptions.</p>
                 <div class="proj-links">
@@ -862,7 +1099,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/zsh-pip-description-completion" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>zsh-sed-sub</code></h5>
                 <p>sed substitution helper.</p>
                 <div class="proj-links">
@@ -871,7 +1108,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/zsh-sed-sub" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>zsh-sudo</code></h5>
                 <p><kbd>Esc Esc</kbd> to prepend <code>sudo</code> to the current line.</p>
                 <div class="proj-links">
@@ -880,7 +1117,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/zsh-sudo" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>zsh-xcode-completions</code></h5>
                 <p>Xcode CLI tools completion.</p>
                 <div class="proj-links">
@@ -889,70 +1126,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/zsh-xcode-completions" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
-                <h5><code>fzf-tab</code></h5>
-                <p>Replace zsh's default tab completion with fzf.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://menketechnologies.github.io/fzf-tab/" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a class="proj-link" href="https://menketechnologies.github.io/fzf-tab/report.html" target="_blank" rel="noopener noreferrer">Report</a>
-                    <a class="proj-link" href="https://github.com/MenkeTechnologies/fzf-tab" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>fzf-zsh-plugin</code></h5>
-                <p>fzf-shipped zsh keybindings + completion + history search.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://menketechnologies.github.io/fzf-zsh-plugin/" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a class="proj-link" href="https://menketechnologies.github.io/fzf-zsh-plugin/report.html" target="_blank" rel="noopener noreferrer">Report</a>
-                    <a class="proj-link" href="https://github.com/MenkeTechnologies/fzf-zsh-plugin" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>zunit</code></h5>
-                <p>Powerful zsh unit-testing framework.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://menketechnologies.github.io/zunit/" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a class="proj-link" href="https://menketechnologies.github.io/zunit/report.html" target="_blank" rel="noopener noreferrer">Report</a>
-                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zunit" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>revolver</code></h5>
-                <p>Spinner / progress widget for zsh scripts.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://menketechnologies.github.io/revolver/" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a class="proj-link" href="https://menketechnologies.github.io/revolver/report.html" target="_blank" rel="noopener noreferrer">Report</a>
-                    <a class="proj-link" href="https://github.com/MenkeTechnologies/revolver" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>gh_reveal</code></h5>
-                <p><code>reveal</code> &mdash; open the current git project in the default browser.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://menketechnologies.github.io/gh_reveal/" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a class="proj-link" href="https://menketechnologies.github.io/gh_reveal/report.html" target="_blank" rel="noopener noreferrer">Report</a>
-                    <a class="proj-link" href="https://github.com/MenkeTechnologies/gh_reveal" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>kubectl-aliases</code></h5>
-                <p>790 <code>kubectl</code> aliases (kg=get, kgp=get-pods, &hellip;).</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://menketechnologies.github.io/kubectl-aliases/" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a class="proj-link" href="https://menketechnologies.github.io/kubectl-aliases/report.html" target="_blank" rel="noopener noreferrer">Report</a>
-                    <a class="proj-link" href="https://github.com/MenkeTechnologies/kubectl-aliases" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>jhipster-oh-my-zsh-plugin</code></h5>
-                <p>JHipster CLI completion + aliases.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://menketechnologies.github.io/jhipster-oh-my-zsh-plugin/" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a class="proj-link" href="https://menketechnologies.github.io/jhipster-oh-my-zsh-plugin/report.html" target="_blank" rel="noopener noreferrer">Report</a>
-                    <a class="proj-link" href="https://github.com/MenkeTechnologies/jhipster-oh-my-zsh-plugin" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>zsh-docker-aliases</code></h5>
                 <p>Docker aliases + functions.</p>
                 <div class="proj-links">
@@ -961,7 +1135,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/zsh-docker-aliases" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>zsh-openshift-aliases</code></h5>
                 <p>52 <code>oc</code>-* aliases + login macros + auto-sourced <code>oc</code> completion.</p>
                 <div class="proj-links">
@@ -970,7 +1144,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/zsh-openshift-aliases" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>zsh-travis</code></h5>
                 <p><code>tg</code>/<code>tb</code>/<code>tbr</code>/<code>tpr</code> &mdash; open Travis CI build pages from inside the project.</p>
                 <div class="proj-links">
@@ -979,7 +1153,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/zsh-travis" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>zsh-very-colorful-manuals</code></h5>
                 <p>Neon-tints <code>man</code> page output via <code>LESS_TERMCAP_*</code> env.</p>
                 <div class="proj-links">
@@ -988,7 +1162,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/zsh-very-colorful-manuals" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>zsh-z</code></h5>
                 <p><code>z &lt;dir&gt;</code> &mdash; frecency-jump to recently visited directories.</p>
                 <div class="proj-links">
@@ -997,7 +1171,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/zsh-z" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>zsh-zinit-final</code></h5>
                 <p>Empty-by-design latch for zinit <code>atinit</code> / <code>atload</code> ices that need to fire after every other plugin.</p>
                 <div class="proj-links">
@@ -1006,7 +1180,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/zsh-zinit-final" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>fasd-simple</code></h5>
                 <p>Frecency <code>cd</code> / file picker. v1.0.x cleanup of the original fasd.</p>
                 <div class="proj-links">
@@ -1015,15 +1189,78 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/fasd-simple" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
+<div class="proj-card">
+                <h5><code>fzf-tab</code></h5>
+                <p>Replace zsh's default tab completion with fzf.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/fzf-tab/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/fzf-tab/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/fzf-tab" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
+                <h5><code>fzf-zsh-plugin</code></h5>
+                <p>fzf-shipped zsh keybindings + completion + history search.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/fzf-zsh-plugin/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/fzf-zsh-plugin/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/fzf-zsh-plugin" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
+                <h5><code>gh_reveal</code></h5>
+                <p><code>reveal</code> &mdash; open the current git project in the default browser.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/gh_reveal/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/gh_reveal/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/gh_reveal" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
+                <h5><code>jhipster-oh-my-zsh-plugin</code></h5>
+                <p>JHipster CLI completion + aliases.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/jhipster-oh-my-zsh-plugin/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/jhipster-oh-my-zsh-plugin/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/jhipster-oh-my-zsh-plugin" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
+                <h5><code>kubectl-aliases</code></h5>
+                <p>790 <code>kubectl</code> aliases (kg=get, kgp=get-pods, &hellip;).</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/kubectl-aliases/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/kubectl-aliases/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/kubectl-aliases" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
+                <h5><code>revolver</code></h5>
+                <p>Spinner / progress widget for zsh scripts.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/revolver/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/revolver/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/revolver" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
+                <h5><code>zunit</code></h5>
+                <p>Powerful zsh unit-testing framework.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/zunit/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/zunit/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zunit" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Tier 5 — Editor / multiplexer (11) -->
+    <!-- Tier 5 &mdash; Editor / multiplexer plugins (14) -->
     <div class="tier-section">
-        <h4>Tier 5 &mdash; Editor &amp; Multiplexer Plugins (11)</h4>
-        <p class="tier-note">Plugins that hook editors and the terminal multiplexer into the broader CLI environment.</p>
+        <h4>Tier 5 &mdash; Editor / multiplexer plugins (14)</h4>
+        <p class="tier-note">Editor &amp; multiplexer plugins &mdash; Vim / VS Code / Emacs language support and the tmux URL picker.</p>
         <div class="proj-grid">
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>VimColorSchemes</code></h5>
                 <p>732 hand-curated Vim colorschemes packaged as a single Pathogen / vim-plug / lazy.nvim bundle. The largest one-bundle scheme collection.</p>
                 <div class="proj-links">
@@ -1032,7 +1269,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/VimColorSchemes" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>vim-stryke</code></h5>
                 <p>Vim / Neovim support for the stryke language &mdash; <code>*.stk</code> filetype detection, a syntax grammar generated from the stryke binary's reflection tables, brace indent, ALE linting, and LSP via <code>stryke --lsp</code>.</p>
                 <div class="proj-links">
@@ -1041,7 +1278,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/vim-stryke" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>vscode-stryke</code></h5>
                 <p>VS Code / VSCodium extension for stryke &mdash; <code>*.stk</code> detection, a stryke-native TextMate grammar from the binary's reflection tables, and LSP via <code>stryke --lsp</code>.</p>
                 <div class="proj-links">
@@ -1050,7 +1287,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/vscode-stryke" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>emacs-stryke</code></h5>
                 <p><code>stryke-mode</code> for Emacs &mdash; a generated stdlib carrying the full language surface, font-lock, brace indent, and LSP via <code>stryke --lsp</code> (eglot + lsp-mode).</p>
                 <div class="proj-links">
@@ -1059,7 +1296,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/emacs-stryke" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>vim-zsh</code></h5>
                 <p>Vim / Neovim support for the zshrs shell &mdash; <code>*.zsh</code> / dotfile / shebang detection, a grammar from <code>zshrs --dump-reflection</code>, ALE via <code>zshrs -n</code>, and LSP via <code>zshrs --lsp</code>.</p>
                 <div class="proj-links">
@@ -1068,7 +1305,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/vim-zsh" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>vscode-zsh</code></h5>
                 <p>VS Code / VSCodium support for zshrs &mdash; a <code>source.zshrs</code> TextMate grammar from <code>zshrs --dump-reflection</code>, filetype detection, and LSP via <code>zshrs --lsp</code>.</p>
                 <div class="proj-links">
@@ -1077,7 +1314,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/vscode-zsh" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>emacs-zsh</code></h5>
                 <p><code>zshrs-mode</code> for Emacs &mdash; font-lock from <code>zshrs --dump-reflection</code>, shell-block-aware indent, and LSP via <code>zshrs --lsp</code> (eglot + lsp-mode).</p>
                 <div class="proj-links">
@@ -1086,7 +1323,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/emacs-zsh" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>vscode-awk</code></h5>
                 <p>VS Code / VSCodium extension for AWK (awkrs) &mdash; *.awk detection, a hand-written source.awk TextMate grammar (BEGIN/END, control keywords, built-in vars + functions, field refs, /regex/), an awk.run command, LSP via <code>awkrs --lsp</code>, and DAP debugging via <code>awkrs --dap</code>.</p>
                 <div class="proj-links">
@@ -1095,7 +1332,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/vscode-awk" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>vim-awk</code></h5>
                 <p>Vim / Neovim support for AWK (awkrs) &mdash; *.awk filetype detection, syntax + brace-aware indent, run / :make via <code>awkrs</code>, and LSP via <code>awkrs --lsp</code>.</p>
                 <div class="proj-links">
@@ -1104,7 +1341,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/vim-awk" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>emacs-awk</code></h5>
                 <p>awkrs-mode for Emacs &mdash; font-lock for AWK (keywords, built-in vars/functions, field refs, /regex/), indent, run via <code>awkrs</code>, eldoc + completion from a built-in-function stdlib, and LSP via <code>awkrs --lsp</code> (eglot + lsp-mode).</p>
                 <div class="proj-links">
@@ -1114,6 +1351,33 @@
                 </div>
             </div>
             <div class="proj-card">
+                <h5><code>vscode-viml</code></h5>
+                <p>VS Code / VSCodium extension for VimL / Vimscript (<code>vimlrs</code>) — <code>*.vim</code> + <code>vimrc</code> / <code>gvimrc</code> / <code>init.vim</code> filetype detection, a hand-written <code>source.viml</code> TextMate grammar (control keywords, ex commands, scope sigils <code>g:</code> / <code>s:</code> / <code>v:</code>, built-in functions, both string forms), a <code>vim.run</code> command, LSP via <code>vimlrs --lsp</code>, and DAP debugging via <code>vimlrs --dap</code>.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/vscode-viml/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/vscode-viml/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/vscode-viml" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>vim-viml</code></h5>
+                <p>Vim / Neovim support for VimL / Vimscript (<code>vimlrs</code>) — <code>*.vim</code> + <code>vimrc</code> / <code>gvimrc</code> / <code>init.vim</code> filetype detection, syntax + keyword-aware indent, run / <code>:make</code> (<code>:VimlRun</code>) via <code>vimlrs</code>, ALE linting, and LSP via <code>vimlrs --lsp</code> (vim-lsp / coc.nvim) plus nvim-dap via <code>vimlrs --dap</code>.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/vim-viml/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/vim-viml/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/vim-viml" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>emacs-viml</code></h5>
+                <p><code>vimlrs-mode</code> for Emacs — font-lock for VimL / Vimscript (keywords, ex commands, scope + special <code>v:</code> vars, built-in functions), keyword-aware indent, run via <code>vimlrs</code>, eldoc + completion from a built-in-function stdlib, and LSP via <code>vimlrs --lsp</code> (eglot + lsp-mode).</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/emacs-viml/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/emacs-viml/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/emacs-viml" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
                 <h5><code>tmux-fzf-url</code></h5>
                 <p>Pop a fzf picker over every URL currently visible in the tmux pane; selected URL opens in the default browser.</p>
                 <div class="proj-links">
@@ -1123,12 +1387,20 @@
         </div>
     </div>
 
-    <!-- Tier 6 — Apps, extensions, web APIs, site (17) -->
+    <!-- Tier 6 &mdash; Apps, extensions, web &amp; web-APIs (21) -->
     <div class="tier-section">
-        <h4>Tier 6 &mdash; Apps, Extensions, Web APIs &amp; Site (17)</h4>
-        <p class="tier-note">Browser extension, disk-usage TUI, web API services, the meta umbrella's own public site.</p>
+        <h4>Tier 6 &mdash; Apps, extensions, web &amp; web-APIs (21)</h4>
+        <p class="tier-note">Apps, browser extensions, web-API services, shared runtime components, the storefront, publications, and the meta umbrella's own public site.</p>
         <div class="proj-grid">
             <div class="proj-card">
+                <h5><code>zwire</code></h5>
+                <p><strong>A Chromium superset</strong> in the cyberpunk HUD, via two build paths. Default is a <strong>runtime rebrand</strong> (no compile): preloads the <code>zpwrchrome</code> power-tool, HUD chrome colors, and a HUD new-tab page on a pinned <strong>unbranded Chromium snapshot</strong> (no Google branding, no "for automated testing" banner; it keeps the <code>--load-extension</code> switch dropped from branded Chrome 137+), launched against a dedicated <code>~/.zwire</code> profile; <code>scripts/rebrand-macos.sh</code> patches the base bundle's Dock name + icon in place. Optional <strong>source fork</strong> (<code>fork/</code>, compiles Chromium) takes the HUD into the whole chrome — tab shapes, UI fonts, neon toolbar. Reuses <code>zpwrchrome</code> as a submodule. <strong>MIT.</strong></p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/zwire/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zwire" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
                 <h5><code>zpwrchrome</code></h5>
                 <p>The fastest recent-tabs Chrome extension with the most keyboard shortcuts. Manifest V3, cross-window MRU stack, 54 commands, UNIX <code>pass</code> integration via the bundled <code>zpwrchrome-host</code> Rust port.</p>
                 <div class="proj-links">
@@ -1137,7 +1409,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/zpwrchrome" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>storageshower</code></h5>
                 <p>Disk-usage TUI in Rust (sibling to <code>iftoprs</code>). Walks a directory tree and presents space-by-folder with sort + drill-down.</p>
                 <div class="proj-links">
@@ -1147,7 +1419,22 @@
                     <a class="proj-link" href="https://crates.io/crates/storageshower" target="_blank" rel="noopener noreferrer">crates.io</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
+                <h5><code>zpwr-jobs</code></h5>
+                <p>CLI job-application pipeline manager &mdash; tracks job postings, resumes, and cover letters through an application workflow.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zpwr-jobs" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
+                <h5><code>MenkeTechnologies.github.io</code></h5>
+                <p>The public site &mdash; this index of project docs, the landing page, screenshot history. Source for <code>menketechnologies.github.io</code>.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/" target="_blank" rel="noopener noreferrer">Site</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/MenkeTechnologies.github.io" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
                 <h5><code>api-rest-generator</code></h5>
                 <p>REST API generator from raw SQL DDL dumps. Targets Spring Boot (Java/Kotlin/Groovy) and Loco (Rust/Axum/SeaORM). Published on crates.io.</p>
                 <div class="proj-links">
@@ -1158,7 +1445,7 @@
                     <a class="proj-link" href="https://docs.rs/api-rest-generator" target="_blank" rel="noopener noreferrer">docs.rs</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>LearningCollectionAPI</code></h5>
                 <p>Java/Kotlin Spring Boot REST service — backing service for the <code>zsh-learn</code> plugin (save / query / quiz / search vocabulary cards over HTTP).</p>
                 <div class="proj-links">
@@ -1167,22 +1454,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/LearningCollectionAPI" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
-                <h5><code>MenkeTechnologies.github.io</code></h5>
-                <p>The public site &mdash; this index of project docs, the landing page, screenshot history. Source for <code>menketechnologies.github.io</code>.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://menketechnologies.github.io/" target="_blank" rel="noopener noreferrer">Site</a>
-                    <a class="proj-link" href="https://github.com/MenkeTechnologies/MenkeTechnologies.github.io" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>zpwr-jobs</code></h5>
-                <p>CLI job-application pipeline manager &mdash; tracks job postings, resumes, and cover letters through an application workflow.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zpwr-jobs" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>zpwr-synth</code></h5>
                 <p>JUCE software synthesizer (C++) &mdash; fully modular patch-graph instrument on the shared zpwr-patch-core engine. Instrument &rarr; Layer[16] &rarr; Voice, 299 voice modules, PERFORM stage, Stereo Lock. Builds VST3 / AU / CLAP / Standalone. Paid product.</p>
                 <div class="proj-links">
@@ -1191,7 +1463,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/zpwr-synth" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>zpwr-fx</code></h5>
                 <p>JUCE fully modular multi-effects plugin (C++) &mdash; a free patch graph over 2,772 DSP modules on the shared zpwr-patch-core engine, per-param mod matrix, EZ-wire auto-routing, Stereo Lock. Builds VST3 / AU / CLAP / Standalone. Paid product.</p>
                 <div class="proj-links">
@@ -1200,7 +1472,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/zpwr-fx" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>zpwr-midi-fx</code></h5>
                 <p>JUCE fully modular MIDI-effects plugin &mdash; the same patch-graph engine on the note stream: 66 note-stream modules (arp / chord / scale / Euclidean seq / humanize), mod matrix, EZ-wire. Builds VST3 / AU / CLAP / Standalone. Paid product.</p>
                 <div class="proj-links">
@@ -1209,7 +1481,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/zpwr-midi-fx" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>zpwr-patch-core</code></h5>
                 <p>Signal-agnostic modular patch graph (C++20) &mdash; the shared cable-routing core behind the plugin stack (patch graph, soft knobs, shared WebEditor, versioning/migration). Reused by zpwr-fx, zpwr-synth, zpwr-midi-fx. Private.</p>
                 <div class="proj-links">
@@ -1218,7 +1490,7 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/zpwr-patch-core" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>zpwr-hooks-editor</code></h5>
                 <p>Shared stryke Hooks code editor (JS) &mdash; a Monaco editor (+ monaco-vim, monaco-emacs, thin stryke-LSP adapter) esbuild-bundled into vendored artifacts. Build-on-each-consumer; used by all four apps &mdash; Audio-Haxor, traderview, ztranslator (Tauri) and zpwr-daw (JUCE WebView). Private shared component.</p>
                 <div class="proj-links">
@@ -1226,29 +1498,15 @@
                 </div>
             </div>
             <div class="proj-card">
-                <h5><code>app-store</code></h5>
-                <p>Static storefront (HTML/CSS/JS) for the entire MenkeTechnologies catalog &mdash; paid Tauri/JUCE apps &amp; plugins plus every free/OSS repo, with GitHub download links, Shopify-style checkout, search + category filters.</p>
+                <h5><code>zpwr-modal-editor</code></h5>
+                <p><strong>Shared modal-editing editor</strong> (TypeScript) — one Vim/Emacs modal-editing surface for every GUI app. The Vim and Emacs engines are vendored from <code>monaco-vim</code> / <code>monaco-emacs</code> and adapted behind a thin surface adapter so the editor drops into any app (word / ppt / …) regardless of its host. esbuild-bundled to a vendored IIFE (<code>window.ZModal</code>); <code>monaco-editor</code> is a peer dependency resolved from the consuming app. Sibling to <code>zpwr-hooks-editor</code> — that one is the stryke-LSP code editor, this one is the reusable modal-key layer. <strong>MIT</strong> — shared component.</p>
                 <div class="proj-links">
-                    <a class="proj-link primary" href="https://menketechnologies.github.io/app-store/" target="_blank" rel="noopener noreferrer">Store</a>
-                    <a class="proj-link" href="https://menketechnologies.github.io/app-store/docs/" target="_blank" rel="noopener noreferrer">Docs</a>
-                    <a class="proj-link" href="https://github.com/MenkeTechnologies/app-store" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zpwr-modal-editor" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zpwr-modal-editor/report" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zpwr-modal-editor" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
-                <h5><code>zpwr-license</code></h5>
-                <p>Offline-first software licensing for the paid catalog (private). Ed25519-signed keys, issuer CLI, optional activation server, offline node-locking, embedded anti-tamper. Rust workspace, no licensing SaaS.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zpwr-license" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>MenkeTechnologiesPublications</code></h5>
-                <p>Paid publications (private) &mdash; companion books, reference manuals/PDFs, and the zpwr encyclopedia for strykelang / zshrs / zpwr, plus their pandoc + LaTeX build pipeline.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/MenkeTechnologiesPublications" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
+<div class="proj-card">
                 <h5><code>zpwr-i18n</code></h5>
                 <p>Shared i18n runtime (vanilla JS) &mdash; a portable JSON-catalog loader extracted from Audio-Haxor (not its SQLite/Tauri loader), 27 locales, runs in Tauri apps and JUCE WebViews. Used by all four apps. Private shared component.</p>
                 <div class="proj-links">
@@ -1257,7 +1515,32 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/zpwr-i18n" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
+<div class="proj-card">
+                <h5><code>zpwr-clip-engine</code></h5>
+                <p>Shared DAW arranger/sequencer frontend (JS) &mdash; the canvas clip-grid + swappable domains (arranger, piano-roll, session launcher, automation lanes) extracted from zpwr-daw so every GUI app embeds one arranger via <code>initClipSeq()</code>. zpwr-daw supplies a native audio backend; synth / fx / midi-fx use the bundled non-audio JS backend. Private shared component.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zpwr-clip-engine" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
             <div class="proj-card">
+                <h5><code>zgui-core</code></h5>
+                <p><strong>Shared cyberpunk GUI toolkit</strong> (JS) — one canonical implementation of the shell, settings, dialog, table, command-palette, fzf matcher, colorscheme builder and notification chrome (namespace <code>window.ZGui</code>) so the GUI apps (<code>Audio-Haxor</code>, <code>traderview</code>, <code>ztranslator</code>, <code>zpdf</code>, <code>zemail</code>, <code>zoffice</code>, <code>zreq</code>, <code>ztunnel</code>, <code>zgo</code>, …) stop drifting their own divergent copies. Host-agnostic webui modules extracted from the apps themselves (Audio-Haxor, zreq, <code>zpwr-patch-core</code>); consume like <code>zpwr-i18n</code> / <code>zpwr-file-browser</code> — add as a submodule and copy <code>webui/*</code> into <code>frontend/</code> at build time. <strong>Private</strong> — internal shared component.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zgui-core" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zgui-core/report" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zgui-core" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zdsp-core</code></h5>
+                <p><strong>Shared real-time audio DSP engine</strong> (C++, header-only, JUCE-based) — the audio-stack analog of <code>zgui-core</code>: one implementation of the core DSP units + playback pipeline, vendored by every audio app instead of each re-deriving its own. Seven verbatim-ported units on <code>zdsp::core</code>: <code>OlaTimeStretch</code> (+ <code>SpeedMode</code> — Hann-windowed overlap-add time-stretch, speed without pitch shift), <code>channel_strip</code> (lock-free 3-band IIR EQ + gain/pan via RT-safe <code>DspAtomics</code>), <code>ToneAudioSource</code> (sine test-tone), <code>InputPeakCallback</code> (input peak meter), <code>computeSpectrogramGrid</code> (offline STFT → dBFS grid, the DSP half of <code>ZGui.viz</code>), <code>LockFreeStreamSource</code> (RT-safe streaming + glitch-free stream→RAM hot-swap), and <code>DspStereoFileSource</code> (the transport-ready playback orchestrator composing all of the above, with an app-implemented <code>InsertChain</code> for the plugin rack). Consumers <code>add_subdirectory(zdsp-core)</code> and link <code>zdsp::core</code>; JUCE (<code>juce_audio_basics</code> + <code>juce_core</code>) must already be present — the library does not fetch JUCE itself. Consumed by <code>Audio-Haxor</code>, <code>zpwr-patch-core</code>, and the plugin apps (<code>zpwr-daw</code> / <code>zpwr-synth</code> / <code>zpwr-fx</code> / <code>zpwr-midi-fx</code>). <strong>Paid product</strong> — proprietary (<code>UNLICENSED</code>), part of the paid audio stack.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zdsp-core" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zdsp-core/report" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zdsp-core" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
                 <h5><code>zpwr-theme</code></h5>
                 <p>Cyberpunk editor theme &mdash; VS Code (5 color schemes &times; dark/light = 10 themes) plus a matching JetBrains UI theme + editor scheme, all generated from one <code>palette/schemes.json</code>. Palette shared with the app stack's cyberpunk HUD.</p>
                 <div class="proj-links">
@@ -1266,11 +1549,27 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/zpwr-theme" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
-                <h5><code>zpwr-clip-engine</code></h5>
-                <p>Shared DAW arranger/sequencer frontend (JS) &mdash; the canvas clip-grid + swappable domains (arranger, piano-roll, session launcher, automation lanes) extracted from zpwr-daw so every GUI app embeds one arranger via <code>initClipSeq()</code>. zpwr-daw supplies a native audio backend; synth / fx / midi-fx use the bundled non-audio JS backend. Private shared component.</p>
+<div class="proj-card">
+                <h5><code>app-store</code></h5>
+                <p>Static storefront (HTML/CSS/JS) for the entire MenkeTechnologies catalog &mdash; paid Tauri/JUCE apps &amp; plugins plus every free/OSS repo, with GitHub download links, Shopify-style checkout, search + category filters.</p>
                 <div class="proj-links">
-                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zpwr-clip-engine" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/app-store/" target="_blank" rel="noopener noreferrer">Store</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/app-store/docs/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/app-store" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
+                <h5><code>zpwr-license</code></h5>
+                <p>Offline-first software licensing for the paid catalog (private). Ed25519-signed keys, issuer CLI, optional activation server, offline node-locking, embedded anti-tamper. Rust workspace, no licensing SaaS.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zpwr-license" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+<div class="proj-card">
+                <h5><code>MenkeTechnologiesPublications</code></h5>
+                <p>Paid publications (private) &mdash; companion books, reference manuals/PDFs, and the zpwr encyclopedia for strykelang / zshrs / zpwr, plus their pandoc + LaTeX build pipeline.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/MenkeTechnologiesPublications" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
         </div>
