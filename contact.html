@@ -85,15 +85,13 @@
 
         <h5>Send me an email</h5>
 
-        <form action="https://formsubmit.co/linux.dev25@gmail.com" class="well form-horizontal" id="contact_form" method="post">
+        <form action="https://api.web3forms.com/submit" class="well form-horizontal" id="contact_form" method="post">
             <fieldset>
 
-                <!-- FormSubmit config -->
-                <input type="hidden" name="_subject" value="New contact from MenkeTechnologies.github.io">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="https://menketechnologies.github.io/contact.html?sent=1">
-                <input type="text" name="_honey" style="display:none">
+                <!-- Web3Forms config -->
+                <input type="hidden" name="access_key" value="7937cf02-fe17-4a96-8869-98165c3a1f73">
+                <input type="hidden" name="subject" value="New contact from MenkeTechnologies.github.io">
+                <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
 
                 <!-- Form Name -->
 
@@ -338,7 +336,7 @@
       var payload = {};
       $form.serializeArray().forEach(function (f) { payload[f.name] = f.value; });
 
-      fetch('https://formsubmit.co/ajax/linux.dev25@gmail.com', {
+      fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
         body: JSON.stringify(payload),
