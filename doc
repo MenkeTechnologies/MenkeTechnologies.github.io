@@ -1,0 +1,18 @@
+Form Access Key
+Your unique form id to send form submissions
+7937cf02-fe17-4a96-8869-98165c3a1f73
+
+This is a public key. You can use it in client side code. Visit Docs
+
+Quick Start Examples
+Choose your preferred method and copy the code snippet
+HTML
+JavaScript
+React
+<form action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="7937cf02-fe17-4a96-8869-98165c3a1f73">
+  <input type="text" name="name" required>
+  <input type="email" name="email" required>
+  <textarea name="message" required></textarea>
+  <button type="submit">Submit</button>
+</form>
