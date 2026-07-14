@@ -293,6 +293,12 @@
                     shortly.
                 </div>
 
+                <!-- Error message -->
+                <div class="alert alert-danger" id="error_message" role="alert" style="display:none">Sorry <i
+                        class="glyphicon glyphicon-warning-sign"></i> the message could not be sent right now. Please
+                    try again shortly.
+                </div>
+
                 <!-- Button -->
                 <div class="form-group">
                     <label class="col-md-4 control-label"></label>
@@ -314,13 +320,42 @@
 <script>
   $(document).ready(function () {
 
-    // Show success message only after a successful FormSubmit redirect (?sent=1)
-    if (/[?&]sent=1(&|$)/.test(window.location.search)) {
-      $('#success_message').show();
-      if (window.history.replaceState) {
-        window.history.replaceState(null, '', window.location.pathname);
-      }
-    }
+    // AJAX submit so the page never hangs on a slow/unreachable relay.
+    var $form = $('#contact_form');
+    var $btn = $form.find('button[type="submit"]');
+    var btnHtml = $btn.html();
+
+    $form.on('submit', function (e) {
+      e.preventDefault();
+
+      $('#success_message, #error_message').hide();
+      $btn.prop('disabled', true).html('Sending…');
+
+      // Hard timeout so a dead backend surfaces an error instead of hanging.
+      var controller = new AbortController();
+      var timer = setTimeout(function () { controller.abort(); }, 15000);
+
+      var payload = {};
+      $form.serializeArray().forEach(function (f) { payload[f.name] = f.value; });
+
+      fetch('https://formsubmit.co/ajax/linux.dev25@gmail.com', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+        body: JSON.stringify(payload),
+        signal: controller.signal
+      }).then(function (res) {
+        if (!res.ok) { throw new Error('HTTP ' + res.status); }
+        return res.json();
+      }).then(function () {
+        $('#success_message').show();
+        $form[0].reset();
+      }).catch(function () {
+        $('#error_message').show();
+      }).then(function () {
+        clearTimeout(timer);
+        $btn.prop('disabled', false).html(btnHtml);
+      });
+    });
 
 //        $('#contact_form').bootstrapValidator({
 //            // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
