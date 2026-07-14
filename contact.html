@@ -92,7 +92,7 @@
                 <input type="hidden" name="_subject" value="New contact from MenkeTechnologies.github.io">
                 <input type="hidden" name="_template" value="table">
                 <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="https://menketechnologies.github.io/contact.html">
+                <input type="hidden" name="_next" value="https://menketechnologies.github.io/contact.html?sent=1">
                 <input type="text" name="_honey" style="display:none">
 
                 <!-- Form Name -->
@@ -288,7 +288,7 @@
                 </div>
 
                 <!-- Success message -->
-                <div class="alert alert-success" id="success_message" role="alert">Success <i
+                <div class="alert alert-success" id="success_message" role="alert" style="display:none">Success <i
                         class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you
                     shortly.
                 </div>
@@ -313,6 +313,14 @@
 
 <script>
   $(document).ready(function () {
+
+    // Show success message only after a successful FormSubmit redirect (?sent=1)
+    if (/[?&]sent=1(&|$)/.test(window.location.search)) {
+      $('#success_message').show();
+      if (window.history.replaceState) {
+        window.history.replaceState(null, '', window.location.pathname);
+      }
+    }
 
 //        $('#contact_form').bootstrapValidator({
 //            // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
