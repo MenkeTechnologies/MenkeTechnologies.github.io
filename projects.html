@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Abel|Amatic+SC|Roboto:100|Pacifico|Raleway:100,200,300,400,500,600,700,800,900"
           rel="stylesheet">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
-    <meta name="description" content="Project docs index — links to every MenkeTechnologies project's GitHub Pages documentation site. 152 first-party projects across 6 tiers: the strykelang language, the zshrs shell, the fusevm bytecode VM, Rust CLI tools, Tauri desktop apps, Stryke ecosystem connectors, zsh plugin family, the meta umbrella.">
+    <meta name="description" content="Project docs index — links to every MenkeTechnologies project's GitHub Pages documentation site. 163 first-party projects across 6 tiers: the strykelang language, the zshrs shell, the fusevm bytecode VM, Rust CLI tools, Tauri desktop apps, Stryke ecosystem connectors, zsh plugin family, the meta umbrella.">
 
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/startup.css" rel="stylesheet">
@@ -198,7 +198,7 @@
     <h3 class="blue">Projects &mdash; Documentation Index</h3>
 
     <div class="proj-summary">
-        <strong>152 submodules</strong> across 6 tiers &mdash; the
+        <strong>163 submodules</strong> across 6 tiers &mdash; the
         <code>strykelang</code> language, the <code>zshrs</code> shell, the
         <code>fusevm</code> bytecode VM, Rust CLI tools, Tauri v2 desktop apps,
         the 31-repo Stryke ecosystem, 28 zsh plugins, and the umbrella meta
@@ -213,7 +213,7 @@
         <div class="proj-grid">
             <div class="proj-card">
                 <h5><code>MenkeTechnologiesMeta</code></h5>
-                <p>152-submodule umbrella: language, shell, VM, CLIs, GUIs, audio plugins, shared components, zsh plugins, completions. Helper scripts, CI gate suite, per-tier README.</p>
+                <p>163-submodule umbrella: language, shell, VM, CLIs, GUIs, audio plugins, shared components, zsh plugins, completions. Helper scripts, CI gate suite, per-tier README.</p>
                 <div class="proj-links">
                     <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/" target="_blank" rel="noopener noreferrer">Docs</a>
                     <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/report.html" target="_blank" rel="noopener noreferrer">Report</a>
@@ -226,7 +226,7 @@
     <!-- Tier 1 &mdash; Core (51) -->
     <div class="tier-section">
         <h4>Tier 1 &mdash; Core (51)</h4>
-        <p class="tier-note">The set of projects sharing the unified strykelang-authored documentation template: README header, ToC convention <code>[0xNN]</code>, <code>docs/index.html</code> chrome, <code>docs/report.html</code> engineering report, man pages. Includes the five fusevm-hosted languages, the Rust CLI tools & TUIs, the Tauri v2 / JUCE desktop apps and their embeddable <code>*-core</code> engines, and the shared audio / GUI components.</p>
+        <p class="tier-note">The set of projects sharing the unified strykelang-authored documentation template: README header, ToC convention <code>[0xNN]</code>, <code>docs/index.html</code> chrome, <code>docs/report.html</code> engineering report, man pages. Includes the seven fusevm-hosted languages, the Rust CLI tools & TUIs, the Tauri v2 / JUCE desktop apps and their embeddable <code>*-core</code> engines, and the shared audio / GUI components.</p>
         <div class="proj-grid">
 <div class="proj-card">
                 <h5><code>strykelang</code></h5>
@@ -301,6 +301,25 @@
                     <a class="proj-link primary" href="https://menketechnologies.github.io/elisprs/" target="_blank" rel="noopener noreferrer">Docs</a>
                     <a class="proj-link" href="https://menketechnologies.github.io/elisprs/report.html" target="_blank" rel="noopener noreferrer">Report</a>
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/elisprs" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>rubylang</code></h5>
+                <p>Ruby in Rust — a compiled Ruby runtime that runs <code>.rb</code> outside MRI. Lexes and parses Ruby to an AST, lowers it to <code>fusevm</code> bytecode, and executes on the shared three-tier Cranelift JIT (the engine behind <code>strykelang</code> / <code>zshrs</code> / <code>awkrs</code> / <code>vimlrs</code> / <code>elisprs</code>): arithmetic and comparisons lower to native VM ops while method dispatch, blocks, and object construction run on a thread-local <code>RubyHost</code> heap. Classes / <code>super</code> / modules + <code>include</code> / exceptions / splat params / <code>&amp;:sym</code> block-pass, checked against reference <code>ruby</code> by a 35-snippet differential parity harness; standalone <code>ruby</code> binary + REPL, <code>--lsp</code> / <code>--dap</code>, rkyv bytecode cache, AOP intercepts. <strong>Free / OSS</strong> (MIT).</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/rubylang/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/rubylang/reference.html" target="_blank" rel="noopener noreferrer">Reference</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/rubylang/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/rubylang" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>arb</code></h5>
+                <p>Visualize and modify Unix pipelines — pipe a stream in and arb spawns a dynamic ratatui TUI (served <code>zgui</code> web target later) from a declarative, Tcl/Tk-flavored spec. An original language (not a port) in stryke's class: a <code>jq</code> / <code>xpath</code> / <code>css</code> / <code>yq</code> superset query engine, an interactive megafilter/map over the live passthrough, and a compute core (<code>calc</code> / expressions) that lowers to a <code>fusevm::Chunk</code> and runs on the Cranelift JIT. Widgets (<code>text</code> / <code>tail</code> / <code>list</code> / <code>gauge</code> / <code>bars</code> / <code>histo</code>) arranged by <code>grid</code>; source query pipeline (<code>match</code> / <code>reject</code> / <code>field</code> / <code>count</code> / <code>rate</code> / <code>tally</code> over line + JSON). <strong>Free / OSS</strong> (MIT).</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/arb/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/arb/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/arb" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
 <div class="proj-card">
@@ -700,7 +719,7 @@
         <div class="proj-grid">
             <div class="proj-card">
                 <h5><code>homebrew-menketech</code></h5>
-                <p>Single Homebrew tap for 19 MenkeTechnologies CLI formulas (<code>awkrs</code> / <code>elisprs</code> / <code>htoprs</code> / <code>iftoprs</code> / <code>lsofrs</code> / <code>nmaprs</code> / <code>powerliners</code> / <code>storageshower</code> / <code>stryke</code> / <code>temprs</code> / <code>vimlrs</code> / <code>zcolorizer</code> / <code>zmax</code> / <code>zpwrchrome-host</code> / <code>zshrs</code> / <code>zshrs-all</code> / <code>zshrs-daemon</code> / <code>ztmux</code> / <code>zwire-host</code>). Formulas auto-bumped by each tool's <code>Release</code> workflow via <code>HOMEBREW_TAP_TOKEN</code>.</p>
+                <p>Single Homebrew tap for 22 MenkeTechnologies CLI formulas (<code>arb</code> / <code>awkrs</code> / <code>elisprs</code> / <code>grcrs</code> / <code>htoprs</code> / <code>iftoprs</code> / <code>lsofrs</code> / <code>nmaprs</code> / <code>powerliners</code> / <code>rubylang</code> / <code>storageshower</code> / <code>stryke</code> / <code>temprs</code> / <code>vimlrs</code> / <code>zcolorizer</code> / <code>zmax</code> / <code>zpwrchrome-host</code> / <code>zshrs</code> / <code>zshrs-all</code> / <code>zshrs-daemon</code> / <code>ztmux</code> / <code>zwire-host</code>). Formulas auto-bumped by each tool's <code>Release</code> workflow via <code>HOMEBREW_TAP_TOKEN</code>.</p>
                 <div class="proj-links">
                     <a class="proj-link primary" href="https://github.com/MenkeTechnologies/homebrew-menketech" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
