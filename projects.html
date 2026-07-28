@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Abel|Amatic+SC|Roboto:100|Pacifico|Raleway:100,200,300,400,500,600,700,800,900"
           rel="stylesheet">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
-    <meta name="description" content="Project docs index — links to every MenkeTechnologies project's GitHub Pages documentation site. 180 first-party projects across 6 tiers: the strykelang language, the zshrs shell, the fusevm bytecode VM, Rust CLI tools, Tauri desktop apps, Stryke ecosystem connectors, zsh plugin family, the meta umbrella.">
+    <meta name="description" content="Project docs index — links to every MenkeTechnologies project's GitHub Pages documentation site. 181 first-party projects across 6 tiers: the strykelang language, the zshrs shell, the fusevm bytecode VM, Rust CLI tools, Tauri desktop apps, Stryke ecosystem connectors, zsh plugin family, the meta umbrella.">
 
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/startup.css" rel="stylesheet">
@@ -201,7 +201,7 @@
     <h3 class="blue">Projects &mdash; Documentation Index</h3>
 
     <div class="proj-summary">
-        <strong>180 submodules</strong> across 6 tiers &mdash; the
+        <strong>181 submodules</strong> across 6 tiers &mdash; the
         <code>strykelang</code> language, the <code>zshrs</code> shell, the
         <code>fusevm</code> bytecode VM, Rust CLI tools, Tauri v2 desktop apps,
         the 33-repo Stryke ecosystem, 36 zsh plugins, and the umbrella meta
@@ -216,7 +216,7 @@
         <div class="proj-grid">
             <div class="proj-card">
                 <h5><code>MenkeTechnologiesMeta</code></h5>
-                <p>180-submodule umbrella: language, shell, VM, CLIs, GUIs, audio plugins, shared components, zsh plugins, completions. Helper scripts, CI gate suite, per-tier README.</p>
+                <p>181-submodule umbrella: language, shell, VM, CLIs, GUIs, audio plugins, shared components, zsh plugins, completions. Helper scripts, CI gate suite, per-tier README.</p>
                 <div class="proj-links">
                     <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/" target="_blank" rel="noopener noreferrer">Docs</a>
                     <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/report.html" target="_blank" rel="noopener noreferrer">Report</a>
@@ -226,9 +226,9 @@
         </div>
     </div>
 
-    <!-- Tier 1 &mdash; Core (68) -->
+    <!-- Tier 1 &mdash; Core (69) -->
     <div class="tier-section">
-        <h4>Tier 1 &mdash; Core (68)</h4>
+        <h4>Tier 1 &mdash; Core (69)</h4>
         <p class="tier-note">The set of projects sharing the unified strykelang-authored documentation template: README header, ToC convention <code>[0xNN]</code>, <code>docs/index.html</code> chrome, <code>docs/report.html</code> engineering report, man pages. Includes the sixteen fusevm-hosted languages, the Rust CLI tools & TUIs, the Tauri v2 / JUCE desktop apps and their embeddable <code>*-core</code> engines, and the shared audio / GUI components.</p>
         <div class="proj-grid">
 <div class="proj-card">
@@ -806,6 +806,13 @@
                 <p>Go in Rust — Go as a <code>fusevm</code> frontend (lex/parse → AST → <code>fusevm</code> bytecode) on the shared 3-tier Cranelift JIT: no bespoke VM, no goroutine runtime, no gc, and no <code>go</code> toolchain. The sixteenth fusevm frontend: single-file <code>package main</code>, top-level <code>func</code> + methods, <code>:=</code> / <code>var</code>, Go automatic semicolon insertion, static <code>int</code>/<code>float</code> typing, slices and maps, structs with value-copy semantics, interfaces with dynamic method dispatch, closures, and goroutines / channels / <code>select</code> on a cooperative scheduler added to the shared <code>fusevm</code> VM itself (<code>fusevm::sched</code>, v0.14.14–0.14.15), plus <code>fmt</code>/<code>strings</code>/<code>strconv</code>/<code>math</code>/<code>sort</code>/<code>os</code> — checked byte-for-byte against reference <code>go</code>. Full toolchain parity: standalone <code>go</code> binary with <code>--lsp</code> / <code>--dap</code>, man pages, <code>_go</code> completion, inline <code>rust {}</code> FFI, <code>--dump-tokens</code> / <code>--dump-ast</code> / <code>--disasm</code>. <strong>Free / OSS</strong> (MIT).</p>
                 <div class="proj-links">
                     <a class="proj-link primary" href="https://github.com/MenkeTechnologies/go-rs" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>tclrs</code></h5>
+                <p>Tcl in Rust — Tcl as a <code>fusevm</code> frontend (parse → <code>fusevm</code> bytecode): no bespoke VM, no interpreter loop, no code generator in the crate. The seventeenth fusevm frontend and the newest, at phase 2 of 7: a library with the parser (all twelve syntax rules of <code>Tcl(n)</code>) and the compiler landed — <code>set</code> / <code>puts</code> / <code>expr</code> / <code>incr</code> / <code>if</code> / <code>while</code> / <code>break</code> / <code>continue</code> lower to bytecode, and the whole <code>expr(n)</code> operator set compiles straight from a braced word with no runtime parse. Braces suppress substitution, so a braced body is fully known at parse time and compiles once instead of being re-parsed per evaluation. tclsh 9.0.4 is the specification: 27 word-splitting cases and 69 whole programs are diffed byte-for-byte against it, and everything unimplemented (<code>proc</code>, arrays, lists, <code>{*}</code>, math functions, bignum) is refused at compile time rather than approximated. CLI in phase 4, JIT features in phase 6, toolchain parity in phase 7. <strong>Free / OSS</strong> (MIT).</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/tclrs" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
             <div class="proj-card">
