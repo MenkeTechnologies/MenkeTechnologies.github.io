@@ -287,21 +287,35 @@ li:hover, .btn:hover {
     }
 }
 
-/* MenkeTechnologies corporate lockup in the navbar. The wordmark is part of
-   the logo, so the brand element is the full lockup rather than the mark alone.
+/* MenkeTechnologies corporate lockup in the navbar.
+
+   The lockup carries the wordmark, so it IS the brand element -- the literal
+   text "Jacob Menke" that used to sit beside it is now sr-only. That is not
+   only de-duplication: .navbar .container is a fixed 1170px, the nav list alone
+   needs 973px of it, and the brand had only 39px of slack before this logo
+   existed. Lockup plus text measured 299px, overflowed by 102px, and dropped
+   the nav onto a second line at every viewport width. Lockup alone measures
+   ~137px and restores the slack.
+
+   The vertical padding is trimmed from Bootstrap's 15px so a 38px logo fits the
+   50px bar exactly; at the default padding the navbar grew to 109px tall.
 
    Colours are literal rather than inherited: this site predates the HUD
    custom-property system the store and docs pages use, and .navbar-brand's own
    colour is the link colour, which the logo should not take. On this white
    navbar the package is the dark house navy and the monogram is the paper-safe
    cyan; #00b0ff does not carry enough contrast on white. */
+.navbar-brand {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    height: 50px;
+}
 .brand-lockup {
     color: #0b1020;
     --neon: #0069a8;
-    height: 2.6em;
+    height: 38px;
     width: auto;
-    vertical-align: -1em;
-    margin-right: 0.5em;
+    display: block;
 }
 .brand-lockup text {
     font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
