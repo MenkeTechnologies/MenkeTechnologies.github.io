@@ -287,16 +287,20 @@ li:hover, .btn:hover {
     }
 }
 
-/* MenkeTechnologies corporate mark in the navbar. The compact variant, because
-   the navbar sets it near 24px and the full variant's pin stubs fuse into the
-   package edge below 32px. Colours are literal rather than inherited: this site
-   predates the HUD custom-property system the store and docs pages use, and
-   .navbar-brand's own colour is the link colour, which the mark should not take. */
+/* MenkeTechnologies corporate mark in the navbar. The full variant with the
+   pin stubs, sized so they stay legible -- the compact variant drops them and
+   reads as a different mark.
+
+   Colours are literal rather than inherited: this site predates the HUD
+   custom-property system the store and docs pages use, and .navbar-brand's own
+   colour is the link colour, which the mark should not take. On this white
+   navbar the package is the dark house navy and the monogram is the paper-safe
+   cyan; #00b0ff does not carry enough contrast on white. */
 .brand-mark {
     color: #0b1020;
     --neon: #0069a8;
-    width: 1.4em;
-    height: 1.4em;
-    vertical-align: -0.3em;
-    margin-right: 0.35em;
+    width: 2em;
+    height: 2em;
+    vertical-align: -0.7em;
+    margin-right: 0.4em;
 }
