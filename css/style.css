@@ -287,20 +287,22 @@ li:hover, .btn:hover {
     }
 }
 
-/* MenkeTechnologies corporate mark in the navbar. The full variant with the
-   pin stubs, sized so they stay legible -- the compact variant drops them and
-   reads as a different mark.
+/* MenkeTechnologies corporate lockup in the navbar. The wordmark is part of
+   the logo, so the brand element is the full lockup rather than the mark alone.
 
    Colours are literal rather than inherited: this site predates the HUD
    custom-property system the store and docs pages use, and .navbar-brand's own
-   colour is the link colour, which the mark should not take. On this white
+   colour is the link colour, which the logo should not take. On this white
    navbar the package is the dark house navy and the monogram is the paper-safe
    cyan; #00b0ff does not carry enough contrast on white. */
-.brand-mark {
+.brand-lockup {
     color: #0b1020;
     --neon: #0069a8;
-    width: 2em;
-    height: 2em;
-    vertical-align: -0.7em;
-    margin-right: 0.4em;
+    height: 2.6em;
+    width: auto;
+    vertical-align: -1em;
+    margin-right: 0.5em;
+}
+.brand-lockup text {
+    font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
 }
