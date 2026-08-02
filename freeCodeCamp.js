@@ -1,5 +1,5 @@
 /**
- * Created by jacobmenke on 5/15/17.
+ * Created by menketechnologies on 5/15/17.
  */
 function factorialize(num) {
 
