@@ -310,18 +310,3 @@ li:hover, .btn:hover {
     padding-bottom: 6px;
     height: 50px;
 }
-.brand-lockup {
-    /* This navbar is always white, so the mark uses the light-ground pairing:
-       the accent carries the package and the paper-safe value the monogram,
-       keeping the monogram the darker of the two. The package was #0b1020,
-       which is the house navy -- effectively black against a white bar, and the
-       one thing the mark is never allowed to be. */
-    color: #00b0ff;
-    --neon: #0069a8;
-    height: 38px;
-    width: auto;
-    display: block;
-}
-.brand-lockup text {
-    font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
-}
