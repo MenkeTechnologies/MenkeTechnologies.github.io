@@ -290,7 +290,7 @@ li:hover, .btn:hover {
 /* MenkeTechnologies corporate lockup in the navbar.
 
    The lockup carries the wordmark, so it IS the brand element -- the literal
-   text "Jacob Menke" that used to sit beside it is now sr-only. That is not
+   the wordmark text that used to sit beside it is now sr-only. That is not
    only de-duplication: .navbar .container is a fixed 1170px, the nav list alone
    needs 973px of it, and the brand had only 39px of slack before this logo
    existed. Lockup plus text measured 299px, overflowed by 102px, and dropped

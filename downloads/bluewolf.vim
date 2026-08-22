@@ -10,7 +10,7 @@
 "       I take the words. I scatter them in time and space.
 "        A message to lead myself here.
 "
-" A Vim colorscheme pieced together by Jacob Menke
+" A Vim colorscheme pieced together by MenkeTechnologies
 " jakobmenke.com
 "
 " Supporting code -------------------------------------------------------------

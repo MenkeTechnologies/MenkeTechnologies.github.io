@@ -9,7 +9,7 @@
  ╚═════╝   ╚═╝   ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═════╝ ╚══════╝ ╚═════╝╚═╝  ╚═╝
 ```
 
-> *// jacking into the personal node of* **Jacob Menke** *— signal locked //*
+> *// jacking into the personal node of* **MenkeTechnologies** *— signal locked //*
 
 [![Status](https://img.shields.io/badge/STATUS-ONLINE-00ff41?style=flat-square&labelColor=0d0d0d)](https://menketechnologies.github.io/)
 [![Signal](https://img.shields.io/badge/SIGNAL-ENCRYPTED-ff00ff?style=flat-square&labelColor=0d0d0d)](#)
