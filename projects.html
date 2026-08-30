@@ -189,11 +189,11 @@
     <h3 class="blue">Projects &mdash; Documentation Index</h3>
 
     <div class="proj-summary">
-        <strong>181 submodules</strong> across 6 tiers &mdash; the
+        <strong>189 submodules</strong> across 7 tiers &mdash; the
         <code>strykelang</code> language, the <code>zshrs</code> shell, the
         <code>fusevm</code> bytecode VM, Rust CLI tools, Tauri v2 desktop apps,
-        the 33-repo Stryke ecosystem, 36 zsh plugins, and the umbrella meta
-        repo that vendors them all. Every site is mirrored under
+        the 33-repo Stryke ecosystem, 28 zsh plugins, 8 native <code>zshrs</code>
+        plugins, and the umbrella meta repo that vendors them all. Every site is mirrored under
         <code>https://menketechnologies.github.io/&lt;repo&gt;/</code>.
     </div>
 
@@ -204,7 +204,7 @@
         <div class="proj-grid">
             <div class="proj-card">
                 <h5><code>MenkeTechnologiesMeta</code></h5>
-                <p>181-submodule umbrella: language, shell, VM, CLIs, GUIs, audio plugins, shared components, zsh plugins, completions. Helper scripts, CI gate suite, per-tier README.</p>
+                <p>189-submodule umbrella: language, shell, VM, CLIs, GUIs, audio plugins, shared components, zsh plugins, completions. Helper scripts, CI gate suite, per-tier README.</p>
                 <div class="proj-links">
                     <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/" target="_blank" rel="noopener noreferrer">Docs</a>
                     <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/report.html" target="_blank" rel="noopener noreferrer">Report</a>
@@ -214,14 +214,14 @@
         </div>
     </div>
 
-    <!-- Tier 1 &mdash; Core (69) -->
+    <!-- Tier 1 &mdash; Core (75) -->
     <div class="tier-section">
-        <h4>Tier 1 &mdash; Core (69)</h4>
-        <p class="tier-note">The set of projects sharing the unified strykelang-authored documentation template: README header, ToC convention <code>[0xNN]</code>, <code>docs/index.html</code> chrome, <code>docs/report.html</code> engineering report, man pages. Includes the sixteen fusevm-hosted languages, the Rust CLI tools & TUIs, the Tauri v2 / JUCE desktop apps and their embeddable <code>*-core</code> engines, and the shared audio / GUI components.</p>
+        <h4>Tier 1 &mdash; Core (75)</h4>
+        <p class="tier-note">The set of projects sharing the unified strykelang-authored documentation template: README header, ToC convention <code>[0xNN]</code>, <code>docs/index.html</code> chrome, <code>docs/report.html</code> engineering report, man pages. Includes the eighteen fusevm-hosted languages, the Rust CLI tools & TUIs, the Tauri v2 / JUCE desktop apps and their embeddable <code>*-core</code> engines, and the shared audio / GUI components.</p>
         <div class="proj-grid">
 <div class="proj-card">
                 <h5><code>strykelang</code></h5>
-                <p>The fastest dynamic language for parallel ops. Perl 5 compatible interpreter in Rust, bytecode VM + Cranelift JIT, 10,450 builtins.</p>
+                <p>The fastest dynamic language for parallel ops. Perl 5 compatible interpreter in Rust, bytecode VM + Cranelift JIT, 10,488 builtins.</p>
                 <div class="proj-links">
                     <a class="proj-link primary" href="https://menketechnologies.github.io/strykelang/" target="_blank" rel="noopener noreferrer">Docs</a>
                     <a class="proj-link" href="https://menketechnologies.github.io/strykelang/reference.html" target="_blank" rel="noopener noreferrer">Reference</a>
@@ -242,7 +242,7 @@
             </div>
 <div class="proj-card">
                 <h5><code>fusevm</code></h5>
-                <p>Language-agnostic bytecode VM with fused superinstructions and 3-tier Cranelift JIT. The execution engine behind strykelang, zshrs, awkrs.</p>
+                <p>Language-agnostic bytecode VM with fused superinstructions and 3-tier Cranelift JIT. The execution engine behind eighteen language frontends &mdash; <code>zshrs</code>, <code>strykelang</code>, <code>awkrs</code>, <code>vimlrs</code>, <code>elisprs</code>, <code>rubylang</code>, <code>arb</code>, <code>pythonrs</code>, <code>phplang</code>, <code>node-js</code>, <code>javars</code>, <code>kotlinrs</code>, <code>scalars</code>, <code>groovyrs</code>, <code>rlang</code>, <code>go-rs</code>, <code>tclrs</code> and <code>texrs</code>. Also ships a cooperative green-thread scheduler + channels + <code>select</code> (<code>fusevm::sched</code>) hosting go-rs's goroutines.</p>
                 <div class="proj-links">
                     <a class="proj-link primary" href="https://menketechnologies.github.io/fusevm/" target="_blank" rel="noopener noreferrer">Docs</a>
                     <a class="proj-link" href="https://menketechnologies.github.io/fusevm/report.html" target="_blank" rel="noopener noreferrer">Report</a>
@@ -287,7 +287,7 @@
             </div>
             <div class="proj-card">
                 <h5><code>elisprs</code></h5>
-                <p>Emacs Lisp in Rust — run <code>.el</code> outside Emacs. A <strong>Lisp-2</strong> obarray (separate value/function cells) with dynamic binding and an elisp-correct reader on the <code>rust_lisp</code> (MIT) value model, <strong>running on</strong> the <code>fusevm</code> bytecode VM (the engine behind <code>zshrs</code> / <code>strykelang</code> / <code>awkrs</code> / <code>vimlrs</code>) — a pure frontend that lowers each form to a <code>fusevm::Chunk</code>, no bespoke VM or JIT. Standalone <code>elisp</code> binary + REPL; ships <code>--lsp</code> / <code>--dap</code> servers, a <strong>JetBrains plugin</strong>, native-object / standalone-executable <code>--aot</code>, and lexical + dynamic binding; <code>vscode</code> / <code>vim</code> / <code>emacs</code> editor plugins planned. <strong>Free / OSS</strong> (MIT).</p>
+                <p>Emacs Lisp in Rust — run <code>.el</code> outside Emacs. A <strong>Lisp-2</strong> obarray (separate value/function cells) with dynamic binding and an elisp-correct reader on the <code>rust_lisp</code> (MIT) value model, <strong>running on</strong> the <code>fusevm</code> bytecode VM (the engine behind <code>zshrs</code> / <code>strykelang</code> / <code>awkrs</code> / <code>vimlrs</code>) — a pure frontend that lowers each form to a <code>fusevm::Chunk</code>, no bespoke VM or JIT. Standalone <code>elisp</code> binary + REPL; ships <code>--lsp</code> / <code>--dap</code> servers, a <strong>JetBrains plugin</strong>, native-object / standalone-executable <code>--aot</code>, and lexical + dynamic binding; <code>vscode</code> / <code>vim</code> / <code>emacs</code> editor plugins shipped. <strong>Free / OSS</strong> (MIT).</p>
                 <div class="proj-links">
                     <a class="proj-link primary" href="https://menketechnologies.github.io/elisprs/" target="_blank" rel="noopener noreferrer">Docs</a>
                     <a class="proj-link" href="https://menketechnologies.github.io/elisprs/report.html" target="_blank" rel="noopener noreferrer">Report</a>
@@ -351,7 +351,7 @@
             </div>
             <div class="proj-card">
                 <h5><code>zcolorizer</code></h5>
-                <p>Real-time log file colorizer. <strong>CLI</strong> 31 themes</p>
+                <p>Real-time log file colorizer. <strong>CLI</strong> 32 themes</p>
                 <div class="proj-links">
                     <a class="proj-link primary" href="https://menketechnologies.github.io/zcolorizer/" target="_blank" rel="noopener noreferrer">Docs</a>
                     <a class="proj-link" href="https://menketechnologies.github.io/zcolorizer/report.html" target="_blank" rel="noopener noreferrer">Report</a>
@@ -454,7 +454,7 @@
             </div>
 <div class="proj-card">
                 <h5><code>zpwr</code></h5>
-                <p>The terminal OS. 505 verbs, 190k LOC, zinit-based, stryke-powered.</p>
+                <p>The terminal OS. 457 verbs, zinit-based, stryke-powered.</p>
                 <div class="proj-links">
                     <a class="proj-link primary" href="https://menketechnologies.github.io/zpwr/" target="_blank" rel="noopener noreferrer">Docs</a>
                     <a class="proj-link" href="https://menketechnologies.github.io/zpwr/report.html" target="_blank" rel="noopener noreferrer">Report</a>
@@ -669,6 +669,56 @@
                 </div>
             </div>
             <div class="proj-card">
+                <h5><code>zlatex</code></h5>
+                <p>LaTeX editor (Rust, Tauri v2 desktop app) &mdash; a Monaco pane on the left, live-typeset <strong>pages</strong> on the right: preamble, title block, table of contents, numbered sectioning, justified paragraphs broken by TeX's own algorithm, lists, tables, floats, cross-references, citations, bibliography, and math. <strong>No TeX distribution is involved</strong> &mdash; the typesetter is <code>zlatex-core</code>, compiled in, fonts included. A document exports as a multi-page PDF carrying its own LaTeX source, so dropping the file back in reopens editable source. Consumes zlatex-core. Paid product (in the app-store).</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zlatex" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zlatex/report" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zlatex" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zlatex-core</code></h5>
+                <p>Embeddable LaTeX engine (pure Rust, no GUI deps) behind <code>zlatex</code> &mdash; TeX's mouth (catcodes, macro expansion), a text-mode grammar producing a document model, <strong>Knuth-Plass</strong> total-fit line breaking, page building with a second reference-resolving pass, and math-mode box-and-glue layout (<code>mlist_to_hlist</code>, the Chapter 18 spacing table, Appendix G placement) with its parameters read from the face's OpenType MATH table instead of TFM fontdimens. Emits the same render-tree shape zoffice draws, plus multi-page PDF and outline-based SVG / PNG export. rlib + staticlib + cdylib. Private.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zlatex-core" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zlatex-core/report" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/zlatex-core" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zmusic</code></h5>
+                <p>Play-along instrument trainer for keys, pads and drums (Rust + Tauri v2 desktop app over a C++20 / JUCE 8 audio sidecar) &mdash; grades you against <strong>your own</strong> MIDI and audio instead of a closed subscription library: drop in a <code>.mid</code>, attach any backing track, and the notes fall toward a judgment line while every hit is scored. Charts are <code>zpwr-clip-engine</code> ClipSeq patterns &mdash; the same grid and sequencer engine as <code>zpwr-daw</code>, not a second note format &mdash; and the JUCE sidecar owns the scoring clock so MIDI input and playhead share one process. Ships a bundled <code>.mid</code> lesson library whose backing tracks are rendered from the same charts at the same tempo. Consumes zmusic-core. Paid product (in the app-store).</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zmusic" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zmusic-core</code></h5>
+                <p>Embeddable play-along trainer engine (pure Rust, no GUI deps) behind <code>zmusic</code> &mdash; SMF import into a <code>Chart</code> that serializes to the same pattern shape <code>zpwr-clip-engine</code> already schedules, controller-surface description, and the lesson-library / take-history store. Grading is deliberately excluded: it belongs to the process owning the audio device and MIDI input, so the JUCE sidecar decides every verdict off one clock and this crate holds only the shared vocabulary (<code>HitWindows</code> down, <code>Hit</code> / <code>TakeSummary</code> back up). rlib + staticlib + cdylib. Private.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zmusic-core" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>ztorrent</code></h5>
+                <p>BitTorrent client replacing Transmission (Rust, Tauri v2 desktop app) &mdash; torrents, files, peers, trackers and labels, a download/seed queue, ratio and idle seeding limits, the alt-speed (turtle) scheduler, blocklists, watch folders, <code>.torrent</code> creation and a Transmission RPC surface. Consumes ztorrent-core. Paid product (in the app-store).</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/ztorrent" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/ztorrent/report" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/ztorrent" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>ztorrent-core</code></h5>
+                <p>Embeddable BitTorrent engine (Rust, no GUI deps) behind <code>ztorrent</code> &mdash; the session model, queue, seeding limits, turtle scheduler, blocklists and watch folders, byte-exact bencode / <code>.torrent</code> create-parse, magnet handling and Transmission RPC translation; the wire itself is <code>librqbit</code>, behind the default <code>net</code> feature. rlib + staticlib + cdylib. Private.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/ztorrent-core" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/ztorrent-core/report" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/ztorrent-core" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
                 <h5><code>zterminal</code></h5>
                 <p><strong>GPU-accelerated terminal emulator</strong> (Rust, OpenGL); BSD/Linux/macOS/Windows, sensible defaults, extensive TOML config, high-throughput VTE performance. Native tmux control via the wire protocol (no subprocess), cross-pane search, broadcast, unified exposé, and tmux-resurrect-style session save/restore from the command palette. <strong>Paid product</strong> — in the app-store.</p>
                 <div class="proj-links">
@@ -798,9 +848,19 @@
             </div>
             <div class="proj-card">
                 <h5><code>tclrs</code></h5>
-                <p>Tcl in Rust — Tcl as a <code>fusevm</code> frontend (parse → <code>fusevm</code> bytecode): no bespoke VM, no interpreter loop, no code generator in the crate. The seventeenth fusevm frontend, at phase 2 of 7: a library with the parser (all twelve syntax rules of <code>Tcl(n)</code>) and the compiler landed — <code>set</code> / <code>puts</code> / <code>expr</code> / <code>incr</code> / <code>if</code> / <code>while</code> / <code>break</code> / <code>continue</code> lower to bytecode, and the whole <code>expr(n)</code> operator set compiles straight from a braced word with no runtime parse. Braces suppress substitution, so a braced body is fully known at parse time and compiles once instead of being re-parsed per evaluation. tclsh 9.0.4 is the specification: 27 word-splitting cases and 69 whole programs are diffed byte-for-byte against it, and everything unimplemented (<code>proc</code>, arrays, lists, <code>{*}</code>, math functions, bignum) is refused at compile time rather than approximated. CLI in phase 4, JIT features in phase 6, toolchain parity in phase 7. <strong>Free / OSS</strong> (MIT).</p>
+                <p>Tcl in Rust &mdash; Tcl as a <code>fusevm</code> frontend (parse &rarr; <code>fusevm</code> bytecode): no bespoke VM, no interpreter loop, no code generator in the crate. The seventeenth fusevm frontend, at full toolchain parity. The parser covers all twelve syntax rules of <code>Tcl(n)</code> &mdash; word splitting, quotes, brace nesting, command and variable substitution, the full backslash table, first-word comments, single-pass order &mdash; and the compiler lowers commands, procedures, coroutines, the <code>string</code> / <code>array</code> / <code>dict</code> ensembles and the list commands to bytecode, with the whole <code>expr(n)</code> operator set compiled straight from a braced word and no runtime parse. Braces suppress substitution, so a braced body is fully known at parse time and compiles once instead of being re-parsed per evaluation. tclsh 9.0.4 is the specification: 17 test binaries diff whole programs against it byte for byte, with a differential fuzzer holding the floor, and everything unimplemented (<code>{*}</code> expansion, math functions, bignum) is refused by name at compile time rather than approximated. A hot loop inside a <code>proc</code> reaches a compiled trace, <code>--aot</code> links a native binary carrying no Tcl interpreter, and the toolchain is complete: reedline REPL, <code>--lsp</code> / <code>--dap</code>, <code>_tclrs</code>, man pages, generated <code>reference.html</code>, inline <code>rust {}</code> FFI, <code>--dump-tokens</code> / <code>--dump-ast</code> / <code>--disasm</code> / <code>--tiers</code>. <strong>Free / OSS</strong> (MIT).</p>
                 <div class="proj-links">
                     <a class="proj-link primary" href="https://github.com/MenkeTechnologies/tclrs" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>texrs</code></h5>
+                <p>TeX in Rust &mdash; Knuth's <strong>mouth</strong> and <strong>expander</strong> lowered onto <code>fusevm</code> bytecode and run on the shared 3-tier Cranelift JIT; every TeX since 1982 interprets the expander, this one compiles it. The eighteenth and newest fusevm frontend: the mouth turns bytes into tokens under a mutable category-code table, the expander turns tokens into other tokens (<code>\def</code> / <code>\csname</code> / <code>\the</code> / the conditionals) &mdash; the half a macro-heavy document spends its time in. The <em>stomach</em> (box building, DVI shipping) is not implemented, so this is not a typesetter yet. Ships the CLI, <code>--lsp</code> / <code>--dap</code>, <code>_texrs</code>, man pages, an HTML docs site, a generated <code>reference.html</code>, and <code>--dump-tokens</code> / <code>--disasm</code> / <code>--tiers</code>; inline <code>rust {}</code> FFI and <code>--dump-ast</code> still ahead of it. <strong>Free / OSS</strong> (MIT).</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://menketechnologies.github.io/texrs/" target="_blank" rel="noopener noreferrer">Docs</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/texrs/reference.html" target="_blank" rel="noopener noreferrer">Reference</a>
+                    <a class="proj-link" href="https://menketechnologies.github.io/texrs/report.html" target="_blank" rel="noopener noreferrer">Report</a>
+                    <a class="proj-link" href="https://github.com/MenkeTechnologies/texrs" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
             <div class="proj-card">
@@ -830,13 +890,6 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/zthrottle-core" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
-                <h5><code>zgui-bridge</code></h5>
-                <p>The local-IPC host for the GUI Automation Bus — an app calls <code>serve</code> with its bus name and a <code>Handler</code>, and <code>zgui-bridge</code> opens a per-app endpoint (a Unix domain socket on macOS/Linux, a named pipe on Windows) so external tools can drive the GUI. Shared runtime component.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zgui-bridge" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
         </div>
     </div>
 
@@ -847,7 +900,7 @@
         <div class="proj-grid">
             <div class="proj-card">
                 <h5><code>homebrew-menketech</code></h5>
-                <p>Single Homebrew tap for 29 MenkeTechnologies CLI formulas (<code>arb</code> / <code>awkrs</code> / <code>elisprs</code> / <code>grcrs</code> / <code>htoprs</code> / <code>iftoprs</code> / <code>lsofrs</code> / <code>nmaprs</code> / <code>powerliners</code> / <code>rubylang</code> / <code>storageshower</code> / <code>stryke</code> / <code>temprs</code> / <code>vimlrs</code> / <code>zcolorizer</code> / <code>zmax</code> / <code>zpwrchrome-host</code> / <code>zshrs</code> / <code>zshrs-all</code> / <code>zshrs-daemon</code> / <code>ztmux</code> / <code>zwire-host</code>). Formulas auto-bumped by each tool's <code>Release</code> workflow via <code>HOMEBREW_TAP_TOKEN</code>.</p>
+                <p>Single Homebrew tap for 33 MenkeTechnologies CLI formulas (<code>arb</code> / <code>awkrs</code> / <code>elisprs</code> / <code>grcrs</code> / <code>groovyrs</code> / <code>htoprs</code> / <code>iftoprs</code> / <code>javars</code> / <code>kotlinrs</code> / <code>lsofrs</code> / <code>nmaprs</code> / <code>node-js</code> / <code>phplang</code> / <code>powerliners</code> / <code>pythonrs</code> / <code>rlang</code> / <code>rubylang</code> / <code>scalars</code> / <code>storageshower</code> / <code>stryke</code> / <code>tclrs</code> / <code>temprs</code> / <code>vimlrs</code> / <code>zcolorizer</code> / <code>zdbview</code> / <code>zmax</code> / <code>zpwrchrome-host</code> / <code>zshrs</code> / <code>zshrs-all</code> / <code>zshrs-daemon</code> / <code>ztmux</code> / <code>zvcs</code> / <code>zwire-host</code>). Formulas auto-bumped by each tool's <code>Release</code> workflow via <code>HOMEBREW_TAP_TOKEN</code>.</p>
                 <div class="proj-links">
                     <a class="proj-link primary" href="https://github.com/MenkeTechnologies/homebrew-menketech" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
@@ -1157,7 +1210,7 @@
         <div class="proj-grid">
 <div class="proj-card">
                 <h5><code>zsh-more-completions</code></h5>
-                <p>47,316-completion zsh corpus: 8,360 <code>src/</code> + 34,481 <code>more_src/</code> + 3,398 <code>man_src/</code> + 1,067 <code>architecture_src/</code> + 10 <code>override_src/</code>.</p>
+                <p>47,393-completion zsh corpus: 8,360 <code>src/</code> + 34,547 <code>more_src/</code>&ndash;<code>more_src8/</code> + 3,398 <code>man_src/</code> + 1,067 <code>architecture_src/</code> + 21 <code>override_src/</code>.</p>
                 <div class="proj-links">
                     <a class="proj-link primary" href="https://menketechnologies.github.io/zsh-more-completions/" target="_blank" rel="noopener noreferrer">Docs</a>
                     <a class="proj-link" href="https://menketechnologies.github.io/zsh-more-completions/report.html" target="_blank" rel="noopener noreferrer">Report</a>
@@ -1167,9 +1220,9 @@
         </div>
     </div>
 
-    <!-- Tier 4 &mdash; Zsh ecosystem plugins (36) -->
+    <!-- Tier 4 &mdash; Zsh ecosystem plugins (28) -->
     <div class="tier-section">
-        <h4>Tier 4 &mdash; Zsh ecosystem plugins (36)</h4>
+        <h4>Tier 4 &mdash; Zsh ecosystem plugins (28)</h4>
         <p class="tier-note">The zsh plugin family &mdash; completions, aliases, and workflow plugins, including vendored favourites.</p>
         <div class="proj-grid">
 <div class="proj-card">
@@ -1424,62 +1477,6 @@
                     <a class="proj-link" href="https://github.com/MenkeTechnologies/zunit" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
-            <div class="proj-card">
-                <h5><code>zshrs-forgit</code></h5>
-                <p>The <code>forgit</code> fuzzy git UI reimplemented as native <code>zshrs</code> builtins — <code>git add</code>, log, diff, stash driven from the shell runtime, not sourced functions.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zshrs-forgit" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>zshrs-git-fuzzy</code></h5>
-                <p>A <code>git-fuzzy</code> port for <code>zshrs</code> — a self-reentrant fzf UI over git with no per-keystroke re-sourcing.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zshrs-git-fuzzy" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>zshrs-git-repos</code></h5>
-                <p>Find every git repo, classify clean / dirty across threads, and fzf-jump to it — a <code>zshrs</code>-native repo switcher.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zshrs-git-repos" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>zshrs-revolver</code></h5>
-                <p>The <code>revolver</code> spinner / progress library for <code>zshrs</code> — no fork, no statefile, just a thread.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zshrs-revolver" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>zshrs-kubectl-completion</code></h5>
-                <p><code>kubectl</code> completion for <code>zshrs</code> — delegates to <code>kubectl __complete</code>, so it stays in sync with the installed <code>kubectl</code>.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zshrs-kubectl-completion" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>zshrs-zsh-z</code></h5>
-                <p><code>z &lt;partial&gt;</code> — the frecency directory jump, reimplemented as a <code>zshrs</code> builtin in Rust.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zshrs-zsh-z" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>zshrs-fasd</code></h5>
-                <p><code>a</code>, <code>s</code>, <code>d</code>, <code>f</code>, <code>j</code> — the whole filesystem ranked by frecency, reimplemented for <code>zshrs</code> in Rust.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zshrs-fasd" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-            <div class="proj-card">
-                <h5><code>zshrs-reveal</code></h5>
-                <p><code>reveal</code> — one word opens the current repo's GitHub page, as a <code>zshrs</code> builtin.</p>
-                <div class="proj-links">
-                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zshrs-reveal" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
         </div>
     </div>
 
@@ -1669,9 +1666,9 @@
         </div>
     </div>
 
-    <!-- Tier 6 &mdash; Apps, extensions, web &amp; web-APIs (21) -->
+    <!-- Tier 6 &mdash; Apps, extensions, web &amp; web-APIs (23) -->
     <div class="tier-section">
-        <h4>Tier 6 &mdash; Apps, extensions, web &amp; web-APIs (21)</h4>
+        <h4>Tier 6 &mdash; Apps, extensions, web &amp; web-APIs (23)</h4>
         <p class="tier-note">Apps, browser extensions, web-API services, shared runtime components, the storefront, publications, and the meta umbrella's own public site.</p>
         <div class="proj-grid">
             <div class="proj-card">
@@ -1684,7 +1681,7 @@
             </div>
 <div class="proj-card">
                 <h5><code>zpwrchrome</code></h5>
-                <p>The fastest recent-tabs Chrome extension with the most keyboard shortcuts. Manifest V3, cross-window MRU stack, 54 commands, UNIX <code>pass</code> integration via the bundled <code>zpwrchrome-host</code> Rust port.</p>
+                <p>The fastest recent-tabs Chrome extension with the most keyboard shortcuts. Manifest V3, cross-window MRU stack, 55 commands, UNIX <code>pass</code> integration via the bundled <code>zpwrchrome-host</code> Rust port.</p>
                 <div class="proj-links">
                     <a class="proj-link primary" href="https://menketechnologies.github.io/zpwrchrome/" target="_blank" rel="noopener noreferrer">Docs</a>
                     <a class="proj-link" href="https://menketechnologies.github.io/zpwrchrome/report.html" target="_blank" rel="noopener noreferrer">Report</a>
@@ -1738,7 +1735,7 @@
             </div>
 <div class="proj-card">
                 <h5><code>zpwr-synth</code></h5>
-                <p>JUCE software synthesizer (C++) &mdash; fully modular patch-graph instrument on the shared zpwr-patch-core engine. Instrument &rarr; Layer[16] &rarr; Voice, 299 voice modules, PERFORM stage, Stereo Lock. Builds VST3 / AU / CLAP / Standalone. Paid product.</p>
+                <p>JUCE software synthesizer (C++) &mdash; fully modular patch-graph instrument on the shared zpwr-patch-core engine. Instrument &rarr; Layer[16] &rarr; Voice, 309 voice modules, PERFORM stage, Stereo Lock. Builds VST3 / AU / CLAP / Standalone. Paid product.</p>
                 <div class="proj-links">
                     <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zpwr-synth" target="_blank" rel="noopener noreferrer">Docs</a>
                     <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zpwr-synth/report" target="_blank" rel="noopener noreferrer">Report</a>
@@ -1747,7 +1744,7 @@
             </div>
 <div class="proj-card">
                 <h5><code>zpwr-fx</code></h5>
-                <p>JUCE fully modular multi-effects plugin (C++) &mdash; a free patch graph over 2,772 DSP modules on the shared zpwr-patch-core engine, per-param mod matrix, EZ-wire auto-routing, Stereo Lock. Builds VST3 / AU / CLAP / Standalone. Paid product.</p>
+                <p>JUCE fully modular multi-effects plugin (C++) &mdash; a free patch graph over 3,366 audio modules on the shared zpwr-patch-core engine, per-param mod matrix, EZ-wire auto-routing, Stereo Lock. Builds VST3 / AU / CLAP / Standalone. Paid product.</p>
                 <div class="proj-links">
                     <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zpwr-fx" target="_blank" rel="noopener noreferrer">Docs</a>
                     <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zpwr-fx/report" target="_blank" rel="noopener noreferrer">Report</a>
@@ -1756,7 +1753,7 @@
             </div>
 <div class="proj-card">
                 <h5><code>zpwr-midi-fx</code></h5>
-                <p>JUCE fully modular MIDI-effects plugin &mdash; the same patch-graph engine on the note stream: 66 note-stream modules (arp / chord / scale / Euclidean seq / humanize), mod matrix, EZ-wire. Builds VST3 / AU / CLAP / Standalone. Paid product.</p>
+                <p>JUCE fully modular MIDI-effects plugin &mdash; the same patch-graph engine on the note stream: 563 note-stream modules (arp / chord / scale / Euclidean seq / humanize), mod matrix, EZ-wire. Builds VST3 / AU / CLAP / Standalone. Paid product.</p>
                 <div class="proj-links">
                     <a class="proj-link primary" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zpwr-midi-fx" target="_blank" rel="noopener noreferrer">Docs</a>
                     <a class="proj-link" href="https://menketechnologies.github.io/MenkeTechnologiesMeta/zpwr-midi-fx/report" target="_blank" rel="noopener noreferrer">Report</a>
@@ -1852,6 +1849,84 @@
                 <p>Paid publications (private) &mdash; companion books, reference manuals/PDFs, and the zpwr encyclopedia for strykelang / zshrs / zpwr, plus their pandoc + LaTeX build pipeline.</p>
                 <div class="proj-links">
                     <a class="proj-link primary" href="https://github.com/MenkeTechnologies/MenkeTechnologiesPublications" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zgui-bridge</code></h5>
+                <p>The local-IPC host for the GUI Automation Bus — an app calls <code>serve</code> with its bus name and a <code>Handler</code>, and <code>zgui-bridge</code> opens a per-app endpoint (a Unix domain socket on macOS/Linux, a named pipe on Windows) so external tools can drive the GUI. Shared runtime component.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zgui-bridge" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zpwr-account</code></h5>
+                <p>Accounts + subscriptions + device activation for the paid catalog (private) &mdash; the stateful commercial layer on top of <code>zpwr-license</code>'s offline crypto core. Axum + PostgreSQL service (<code>account-db</code> / <code>account-server</code> / <code>account-client</code>) serving a portal API, a device-activation API (<code>/v1/activate</code> &middot; <code>/validate</code> &middot; <code>/deactivate</code> &middot; <code>/crl</code>), an admin API and a static ZGui portal. Two-key design: the license issuer key stays offline in the <code>zpwr-license</code> CLI while a separate entitlement key signs the short-lived machine-bound entitlements subscribers receive, so a breach of the online service can never mint a license. <code>account-client</code> is the gate every paid app links &mdash; offline entitlement verification, background refresh, offline grace, run-or-lock.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zpwr-account" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tier 7 &mdash; znative plugins (8) -->
+    <div class="tier-section">
+        <h4>Tier 7 &mdash; znative plugins (8)</h4>
+        <p class="tier-note">Classic zsh utilities ported to native compiled <code>cdylib</code> <code>zshrs</code> plugins, installed via <code>znative</code> &mdash; no sourced functions, no per-keystroke re-eval.</p>
+        <div class="proj-grid">
+            <div class="proj-card">
+                <h5><code>zshrs-forgit</code></h5>
+                <p>The <code>forgit</code> fuzzy git UI reimplemented as native <code>zshrs</code> builtins — <code>git add</code>, log, diff, stash driven from the shell runtime, not sourced functions.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zshrs-forgit" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zshrs-git-fuzzy</code></h5>
+                <p>A <code>git-fuzzy</code> port for <code>zshrs</code> — a self-reentrant fzf UI over git with no per-keystroke re-sourcing.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zshrs-git-fuzzy" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zshrs-git-repos</code></h5>
+                <p>Find every git repo, classify clean / dirty across threads, and fzf-jump to it — a <code>zshrs</code>-native repo switcher.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zshrs-git-repos" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zshrs-revolver</code></h5>
+                <p>The <code>revolver</code> spinner / progress library for <code>zshrs</code> — no fork, no statefile, just a thread.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zshrs-revolver" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zshrs-kubectl-completion</code></h5>
+                <p><code>kubectl</code> completion for <code>zshrs</code> — delegates to <code>kubectl __complete</code>, so it stays in sync with the installed <code>kubectl</code>.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zshrs-kubectl-completion" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zshrs-zsh-z</code></h5>
+                <p><code>z &lt;partial&gt;</code> — the frecency directory jump, reimplemented as a <code>zshrs</code> builtin in Rust.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zshrs-zsh-z" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zshrs-fasd</code></h5>
+                <p><code>a</code>, <code>s</code>, <code>d</code>, <code>f</code>, <code>j</code> — the whole filesystem ranked by frecency, reimplemented for <code>zshrs</code> in Rust.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zshrs-fasd" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="proj-card">
+                <h5><code>zshrs-reveal</code></h5>
+                <p><code>reveal</code> — one word opens the current repo's GitHub page, as a <code>zshrs</code> builtin.</p>
+                <div class="proj-links">
+                    <a class="proj-link primary" href="https://github.com/MenkeTechnologies/zshrs-reveal" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
         </div>

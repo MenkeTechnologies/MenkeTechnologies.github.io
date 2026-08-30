@@ -72,7 +72,9 @@ PersonalWebsite/
 │   ├── dotfiles/ ───── //   env configs
 │   └── scripts/ ────── //   automation payloads
 ├── lib/ ────────────── // dependency implants
+├── brand/ ──────────── // corporate mark + favicon
 ├── __tests__/ ──────── // diagnostic protocols
+├── api.json / api.xml  // endpoint manifests
 ├── freeCodeCamp.js ─── // algorithm subroutines
 └── package.json ────── // manifest
 ```
