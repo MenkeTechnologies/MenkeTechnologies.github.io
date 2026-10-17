@@ -72,7 +72,7 @@ PersonalWebsite/
 ├── downloads/ ──────── // data drops
 │   ├── dotfiles/ ───── //   env configs
 │   └── scripts/ ────── //   automation payloads
-├── lib/ ────────────── // dependency implants
+├── lib/ ────────────── // shared JS modules
 ├── brand/ ──────────── // corporate mark + favicon
 ├── __tests__/ ──────── // diagnostic protocols
 ├── freeCodeCamp.js ─── // algorithm subroutines
