@@ -51,6 +51,7 @@
  [■■■■■■■■■■] CSS3          :: visual cortex
  [■■■■■■■■■■] JavaScript    :: logic engine
  [■■■■■■■■■■] jQuery        :: reflex enhancer
+ [■■■■■■■■■■] AngularJS    :: view binding
  [■■■■■■■■■■] Bootstrap     :: exoskeleton
  [■■■■■■■■■■] Jest          :: diagnostic suite
 
